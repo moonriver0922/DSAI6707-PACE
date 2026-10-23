@@ -1,0 +1,21 @@
+# PACE Gate 1a/1b — frozen AG News × Qwen matrix replay (0 new LLM)
+seed_split: 6707
+epsilon: 0.0
+n_min_common: 8
+n_bootstrap: 200
+mu: 8
+archive_k: 8
+init_common: 8
+racing_stop_r: 0.05
+n_contenders: 6
+max_pairs: 8
+pair_batch_samples: 8
+lambdas: [0.25, 0.5, 0.75]
+primary_lambda: 0.5
+cost_norm_min: 0.0
+cost_norm_max: 256.0
+budgets: [320, 640]
+primary_budget: 640
+replay_seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+# Gate 1b primary comparison labels
+methods: [b0_point_nsga, pace]

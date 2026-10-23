@@ -1,0 +1,10 @@
+.conda/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+outputs/
+*.parquet
+*.pt
+.hf_cache/
+.ipynb_checkpoints/

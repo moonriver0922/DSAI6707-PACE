@@ -1,0 +1,17 @@
+numpy
+pandas
+pyyaml
+pytest
+pyarrow
+tqdm
+scipy
+scikit-learn
+matplotlib
+# GPU / Gate 1–2 extras (install into the CUDA env, do not pin wheel URLs):
+# torch
+# transformers
+# accelerate
+# datasets
+# tokenizers
+# sentencepiece
+# pymoo

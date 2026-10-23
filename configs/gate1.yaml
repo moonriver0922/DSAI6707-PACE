@@ -1,0 +1,28 @@
+seed_split: 6707
+model_id: Qwen/Qwen2.5-7B-Instruct
+dtype: bfloat16
+max_new_tokens: 8
+do_sample: false
+batch_size: 8
+n_prompts: 16
+n_search: 160
+n_test: 200
+init_common: 8
+n_contenders: 6
+max_pairs: 8
+pair_batch_samples: 8
+n_bootstrap: 200
+lambdas: [0.25, 0.5, 0.75]
+primary_lambda: 0.5
+budgets: [320, 640, 1280]
+primary_budget: 640
+max_budget: 1280
+replay_seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+cost_norm_min: 0.0
+cost_norm_max: 256.0
+hv_ref_accuracy: 0.0
+hv_ref_cost_norm: 1.05
+racing_stop_r: 0.05
+w_in: 1.0
+w_out: 1.0
+policies: [uniform, racing, risk_only, dice]

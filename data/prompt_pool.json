@@ -1,0 +1,88 @@
+{
+  "task": "ag_news",
+  "labels": ["World", "Sports", "Business", "Sci/Tech"],
+  "generation_process": "Hand-authored and frozen before any model evaluation. Types: short-direct, role, format-constrained, definition-augmented. IDs are stable and must not be swapped after seeing results.",
+  "placeholder": "{text}",
+  "prompts": [
+    {
+      "id": "p00",
+      "type": "short_direct",
+      "text": "Classify the news article into one of: World, Sports, Business, Sci/Tech.\nArticle: {text}\nLabel:"
+    },
+    {
+      "id": "p01",
+      "type": "short_direct",
+      "text": "Category (World / Sports / Business / Sci/Tech):\n{text}\nAnswer:"
+    },
+    {
+      "id": "p02",
+      "type": "role",
+      "text": "You are a professional newspaper editor. Assign this article to exactly one desk: World, Sports, Business, or Sci/Tech.\nArticle: {text}\nDesk:"
+    },
+    {
+      "id": "p03",
+      "type": "format",
+      "text": "Reply with exactly one label from this set: World | Sports | Business | Sci/Tech.\nNo extra words.\nNews: {text}\nLabel:"
+    },
+    {
+      "id": "p04",
+      "type": "definition",
+      "text": "Label definitions:\n- World: international or national political news\n- Sports: games, athletes, matches\n- Business: markets, companies, economy\n- Sci/Tech: science, technology, research\nClassify:\n{text}\nLabel:"
+    },
+    {
+      "id": "p05",
+      "type": "role",
+      "text": "You are a careful news librarian. Read the article and output only the topic label.\nValid labels: World, Sports, Business, Sci/Tech.\nArticle: {text}\nTopic:"
+    },
+    {
+      "id": "p06",
+      "type": "format",
+      "text": "Output a single JSON object with key label and one of World, Sports, Business, Sci/Tech.\nArticle: {text}\nJSON:"
+    },
+    {
+      "id": "p07",
+      "type": "format",
+      "text": "Read the article. Think silently. Then print only the class name.\nClasses: World, Sports, Business, Sci/Tech.\nArticle: {text}\nClass:"
+    },
+    {
+      "id": "p08",
+      "type": "short_direct",
+      "text": "Which section does this belong to? World, Sports, Business, or Sci/Tech.\n{text}\nSection:"
+    },
+    {
+      "id": "p09",
+      "type": "format",
+      "text": "Do not explain. Do not punctuate. Output one of World, Sports, Business, Sci/Tech.\nTEXT: {text}\nOUT:"
+    },
+    {
+      "id": "p10",
+      "type": "role",
+      "text": "You are a wire-service copy taster. Choose the beat.\nBeats = World / Sports / Business / Sci/Tech.\nCopy:\n{text}\nBeat:"
+    },
+    {
+      "id": "p11",
+      "type": "definition",
+      "text": "If the story is about geopolitics or world affairs choose World. If it is about athletic competition choose Sports. If it is about firms, money, or markets choose Business. If it is about science or technology choose Sci/Tech.\nStory: {text}\nChoice:"
+    },
+    {
+      "id": "p12",
+      "type": "short_direct",
+      "text": "classify this ag news item as world, sports, business, or sci/tech.\n{text}\nlabel:"
+    },
+    {
+      "id": "p13",
+      "type": "definition",
+      "text": "Use Sci/Tech only for science or technology. Use Sports only for sport. Use Business only for economic or company news. Otherwise World.\nArticle: {text}\nFinal label:"
+    },
+    {
+      "id": "p14",
+      "type": "format",
+      "text": "Map the article to a number then the name. 1=World 2=Sports 3=Business 4=Sci/Tech.\nArticle: {text}\nAnswer as NAME only:"
+    },
+    {
+      "id": "p15",
+      "type": "role",
+      "text": "You are an expert annotator for AG News. Return one canonical label: World, Sports, Business, Sci/Tech. Keep the answer short.\nInput: {text}\nLabel:"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+name: dice-po
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - pyyaml
+  - pytest
+  - pyarrow
+  - tqdm
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pip

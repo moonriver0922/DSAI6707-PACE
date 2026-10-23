@@ -1,0 +1,3614 @@
+{
+  "task": "ag_news",
+  "search": [
+    {
+      "sample_id": "train-089674-d690aed59403",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 89674,
+      "text": "Gulf veterans back illness report British veterans' groups welcome a US report linking Gulf War syndrome  to toxins, including nerve gas.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-081641-f22ec9fb3160",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 81641,
+      "text": " #39;Escalation of success #39; is groundwork for disaster INDIANAPOLIS -- With a package of academic reforms in place, the NCAA #39;s next crusade will address what its president calls a dangerous drift toward professionalism and sports entertainment.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-019949-4fa62b44e28c",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 19949,
+      "text": "EU may back Santanders bid for Abbey Europes biggest cross-border financial services deal in recent years was given a significant boost over the weekend when Mario Monti, European Union competition chief, in effect confirmed that EU regulators would approve the 8.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-104227-15ee0ea1fd23",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 104227,
+      "text": "Recording Industry, Kazaa Square Off (AP) AP - Lawyers for Australia's recording industry branded the popular Kazaa computer file-swapping network \"an engine of copyright piracy to a degree of magnitude never before seen\" as they launched a court battle Monday to shut down its activities.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-107991-463a57fa32a9",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 107991,
+      "text": "Landslide leaves 65 missing in south China A landslide struck a village in southwest China early Friday, destroying 25 homes and leaving 65 people missing, Xinhua news agency reported.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-102480-9245d6c02351",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 102480,
+      "text": "COL BKB: Maryland 84, Memphis 61 Nik Caner-Medley scored 17 points Friday night to send No. 14 Maryland to an easier-than-expected, 84-61 win over 24th-ranked Memphis.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-009787-bdc604a68c95",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 9787,
+      "text": "US Stocks Gain as Oil Prices Tumble US stocks made strong gains in late-day trading on Wednesday, as a tumble in oil prices boosted investor confidence about the economy, but thin volume meant dealers were skeptical about the strength of the rally.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-103981-b6d2c31fe482",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 103981,
+      "text": "Russian-US Crew Re-Docks Soyuz Spacecraft at ISS After Half-Hour &lt;b&gt;...&lt;/b&gt; The US-Russian crew of the international space station successfully re-docked a spaceship at a new port on the station Monday in preparation for two spacewalks early next year.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-015898-623c2c80af58",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 15898,
+      "text": "12 Nepalese Hostages Said Slain in Iraq BAGHDAD, Iraq - A gruesome video posted on a Web site purported to show militants beheading a Nepalese worker and shooting 11 others in the first mass slaying of foreign hostages during the Iraqi insurgency.    If confirmed, it would raise the number of foreign workers known to have been slain by extremists to at least 22 in a terror campaign aimed at forcing foreign troops and contract workers out of the country....",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-075915-208df37e413a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 75915,
+      "text": "Spaniard Lara Stung Into Action at Volvo Masters  SOTOGRANDE (Reuters) - Spain's Jose Manuel Lara was the  latest to be stung into action on the European Tour after  another wasp struck -- this time at the Volvo Masters.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-043627-3997815bc6ed",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 43627,
+      "text": "Computer Associates to Cut Workforce -WSJ Computer Associates International Inc. (CA.N: Quote, Profile, Research) will lay off about 5 percent of its work force in an attempt to cut costs, the Wall Street Journal reported on Wednesday.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-016011-5e54a86c3bdc",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 16011,
+      "text": "Cloning experiment condemned A cloning scientist yesterday rejected accusations that his work was exploitative, unsafe and socially unacceptable. Panayiotis Zavos, of the Centre for Reproductive Medicine in Lexington, Kentucky, claims ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-092203-df3fd4744d65",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 92203,
+      "text": "Africa music star awaits verdict A Paris court is set to deliver its verdict on Congolese pop star Papa Wemba, accused of people-smuggling.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-098119-505614b6b808",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 98119,
+      "text": "England wins second World Cup title The World Cup of Golf has been won by England, who won the title for just the second time in the event #39;s 50 year history and their first under the revised format introduced in 2000.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-048781-cdfb6710b1db",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 48781,
+      "text": "Automakers improve side-impact protection Responding to a tough insurance industry crash test, automakers are making major strides to improve the safety of family sedans, according to new data released Sunday.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-026483-7b7c561288f7",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 26483,
+      "text": "Intel, Hewlett-Packard Work on Giving Internet a Fundamental &lt;b&gt;...&lt;/b&gt; The decades-old design of the Internet is in need of a fundamental overhaul, and Intel and Hewlett-Packard believe they can make it more adaptable and intelligent.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-043096-3249abb7894d",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 43096,
+      "text": "Kidnappers Release Seven Hostages in Iraq (AP) AP - Kidnappers released two female Italian aid workers and five other hostages Tuesday, raising hopes for foreigners still in captivity. But insurgents showed no sign of easing their blood-soaked campaign against the U.S. presence in Iraq, staging a show of defiance in Samarra and striking twice with deadly force in Basra.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-005410-26f25e3cbb4c",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 5410,
+      "text": "Four Tied for Lead at Reno-Tahoe Open (AP) AP - Scott McCarron made four birdies in 12 holes, moving into a four-way tie for the lead in the second round of the Reno-Tahoe Open on Friday before thunderstorms forced play to be suspended.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-060956-4c2c83c289c1",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 60956,
+      "text": "UPDATE: Australia #39;s Qantas Raises Fuel Surcharge Again SYDNEY (Dow Jones)--Citing a continuation in rising fuel prices, Australia #39;s Qantas Airways Ltd. (QAN.AU) said Friday it will increase its passenger fuel surcharge for a second time in two months.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-099873-293a1ad9076f",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 99873,
+      "text": "Man Fined  #36;300K for Leaking 'Screeners' (AP) AP - A federal judge has imposed the maximum fine of  #36;300,000 against a former member of the Academy of Motion Picture Arts and Sciences who allegedly leaked \"screener\" copies of movies that were distributed on the Internet.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-074895-ade012b853b7",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 74895,
+      "text": "Milosevic #39;s Lawyers Ask to Be Taken Off War Crimes Case The lawyers who are defending Slobodan Milosevic have asked to be relieved of their duties, creating new hurdles for the troubled and drawn-out war crimes trial in The Hague.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-070197-d53a944ac789",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 70197,
+      "text": "UM in command of ACC RALEIGH, NC  The North Carolina state fair was taking place less than a half-mile from Carter-Finley Stadium, but it was the Miami Hurricanes who provided most of the fireworks Saturday night.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-085675-e64f920825b6",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 85675,
+      "text": "Sanofi Weight Loss Drug Effective in 2-Year Study (Reuters) Reuters - An experimental Sanofi-Aventis diet\\drug helped people lose much more weight than a placebo in an\\eagerly anticipated two-year trial, researchers said on\\Tuesday.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-081198-3ce26fd1afa2",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 81198,
+      "text": "Microsoft wins 500m NHS IT contract The worlds largest software supplier, Microsoft, has won a nine-year contract worth an estimated 500m to supply IT systems to the NHS.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-014032-4ea0efca167a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 14032,
+      "text": "How tragic fuse was lit in Darfur The UN determines this week whether Sudan's leaders have met Monday's deadline.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-095252-2a7a5af34d4b",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 95252,
+      "text": "Terps open ACC tournament The No. 7-seeded Terrapin volleyball team begins its ACC championship defense tonight in Charlottesville, Va., against No. 10-seed Wake Forest.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-052527-5a95a4e6fa09",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 52527,
+      "text": "US Files Grievance Over Airbus With WTO The Bush administration dramatically escalated a dispute with the European Union yesterday by filing one of the biggest complaints in World Trade Organization history, accusing European governments ",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-063445-a173ea68655d",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 63445,
+      "text": "Girl Gamers Tackle Male Field Les Seules, an all-girl Swedish video-game team, takes on the boys in a male-dominated competition at a New York technology and entertainment convention. The group placed fourth in the female division at the Electronic Sports World Cup in Paris.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-070543-5fc32f29441e",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 70543,
+      "text": "Widdecombe horror at navy Satanist The Royal Navy #39;s decision to officially recognise a non-commissioned officer as a Satanist - allowing him to practise rituals on board ship - was condemned as  quot;utterly shocking quot;.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-006400-f1e75be61f10",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 6400,
+      "text": "Maine #39;s new gold standard Michael Phelps gave Ian Crocker a gift and Crocker made the most of it Saturday. As Phelps watched from the stands, cheering and waving a small American flag, Crocker ",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-105444-7871d44c7974",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 105444,
+      "text": "Stocks Fall, Wal-Mart, Oil, Dollar Weigh  NEW YORK (Reuters) - U.S. stocks fell on Tuesday as shares  of Wal-Mart Stores Inc. &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=WMT.N target=/stocks/quickinfo/fullquote\"&gt;WMT.N&lt;/A&gt; extended their losses, oil  prices held near \\$50 a barrel and the dollar hit a record low  against the euro.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-012107-d8a04feb7ca6",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 12107,
+      "text": "Novell presses RP to begin shifting to Linux Novell Asia has urged the Philippine government to take a closer look at Linux, citing that adopting the open source operating system would be crucial to safeguarding the security and integrity of its computer networks.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-022537-2590627fea87",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 22537,
+      "text": "U.S. Jets Bomb Insurgent-Held Iraq Cities BAGHDAD, Iraq - U.S. jets on Thursday pounded the insurgent stronghold of Fallujah and a northern town astride a major smuggling route, killing dozens of people in the two attacks, officials and witnesses said...",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-106082-5757a0588876",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 106082,
+      "text": "Ferguson forgets the hype Manchester United manager Alex Ferguson has shrugged off the hype surrounding tonights Carling Cup meeting against Arsenal at Old Trafford.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-018572-50beaa0e698a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 18572,
+      "text": "Invest in Housing Without Buying a Home (Reuters) Reuters - Playing the U.S. housing market may no\\longer require actually buying a home.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-017902-e696e9a5dd4b",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 17902,
+      "text": "Genesis Reentry On September 8th, a daylight fireball will streak across the western United States. It's Genesis, returning samples of the Sun to Earth.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-069817-a3181c47bf04",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 69817,
+      "text": "Japan quakes kill eight Tokyo - A strong earthquake measuring 6.8 on the Richter scale and swarms of aftershocks rocked central Japan and the capital Tokyo on Saturday, killing at least eight people including four children, officials said.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-070394-764625c1dd8c",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 70394,
+      "text": "Smothering Defense Freezes Boilers Behind the dominant play of their defense and another stellar rushing effort from Mike Hart, the Michigan Wolverines escaped West Lafayette with a 16-14 victory over the Purdue BoilerMakers.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-054719-e30aabd6d34f",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 54719,
+      "text": "What Can Trump Do for You? Pennies make the difference as the teams sell products on a shopping channel.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-001459-56bb6cea4712",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 1459,
+      "text": "Real is playing for keeps in music price war (USATODAY.com) USATODAY.com - RealNetworks today is slashing the price of a digital download to 49 cents a song from 99 cents - a bold move in the war over digital music.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-036976-915b8c942443",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 36976,
+      "text": "Sources: N.Korea May Be Preparing Missile Launch  TOKYO (Reuters) - The United States and Japan have detected  signs that North Korea is preparing to launch a ballistic  missile capable of reaching almost anywhere in Japan, Japanese  government sources said Thursday.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-086177-fb12d05f2844",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 86177,
+      "text": "Australia delays announcing lineup Australia delayed announcing its squad for the first cricket Test against New Zealand next week and Kiwi skipper Stephen Fleming delayed his arrival in Sydney due to illness.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-119479-daa67605ba2d",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 119479,
+      "text": "Doctors Debate the Safety of Celebrex Concerns that Celebrex may increase the risk of heart attack could keep what is still a relatively safe medication away from patients who suffer from arthritis and other painful ailments, some doctors say.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-049133-da6b52e82c35",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 49133,
+      "text": "IBM swipes at security with fingerprint-reading Thinkpad IBM has released a biometric Thinkpad - the T42 laptop incorporates a fingerprint sensor for managing passwords and controlling access to sensitive documents and data.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-082921-c12b397bcbcc",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 82921,
+      "text": "Peru retries notorious rebel leader The 69-year-old founder of Peru #39;s Maoist Shining Path terrorist movement, which paralyzed the country for more than two decades, faced a civilian court Friday for the first time since he was arrested more than 12 years ago.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-107881-1cef82588e89",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 107881,
+      "text": "Steroid details rock sports A simmering steroid scandal that has plagued baseball for nearly a year began to boil over Thursday, with the promise of more eruptions tonight.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-015066-aa19aa268299",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 15066,
+      "text": "Dell Launches Help-Desk Service For Smaller Businesses PC Workspace Services initially will serve businesses with 500 or more employees and eventually will work with smaller companies. By Kevin Ferguson, SmallBiz Pipeline.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-015234-9d1f13f8fca8",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 15234,
+      "text": "Genes unravel mystery of schizophrenia Psychotic mice that flee other mice may offer insights into diseases such as schizophrenia, US researchers say. The genetically engineered mice have mutations in two key genes that make them suffer from psychosis ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-065477-97cb404f6b59",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 65477,
+      "text": "Raisin farmers meet yak herders? Must be the Slow Food f #234;te. The Slow Food movement builds an ivory tower in Italy to train holistic gastronomes.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-061112-31bd5eb584e1",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 61112,
+      "text": "Petrova Out, Kuznetsova Advances at WTA Moscow Russians were winners in four of five matches played Wednesday at the ATP stop in Moscow, with the only upset caused by Italian Francesca Schiavone knocking out No.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-052693-d6e171a5a873",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 52693,
+      "text": "VW recruits former Daimler cost-cutter Volkswagen has recruited Wolfgang Bernhard, who as DaimlerChrysler #39;s former star manager built a reputation as an aggressive cost-cutter, to join its board.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-012639-69dd1b5da86b",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 12639,
+      "text": "Microsoft to Release Next Windows in '06 (AP) AP - Microsoft Corp. will drop a much-touted new technology for organizing and storing data when it releases the next version of its Windows operating system as expected in 2006.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-074581-40a2fff20e0c",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 74581,
+      "text": "Turkey aids Syria on border fire Turkey sends army planes and helicopters to help extinguish a forest fire in neighbouring Syria.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-025472-a0ee29a26d1a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 25472,
+      "text": "Spurs frustrated by Norwich keeper Green Tottenham Hotspur were left to rue missed chances after being held to a 0-0 draw by Premier League newcomers Norwich City at White Hart Lane on Sunday.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-005064-58ff546a7607",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 5064,
+      "text": "Anadarko to Sell Gulf Assets for \\$1.3 Bln  NEW YORK (Reuters) - Anadarko Petroleum Corp. &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=APC.N target=/stocks/quickinfo/fullquote\"&gt;APC.N&lt;/A&gt; has  agreed to sell oil properties in the Gulf of Mexico to Apache  Corp. &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=APA.N target=/stocks/quickinfo/fullquote\"&gt;APA.N&lt;/A&gt; and a royalty interest to Morgan Stanley Capital  Group Inc. for a total of \\$1.31 billion as part of its plan to  slash debt and buy back stock, the company said on Friday.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-119760-4540662dd10f",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 119760,
+      "text": "Apple Releases Updated OS X to Fix FireWire, Game Issues Apple Computer Inc. of Cupertino, Calif., this week released an updater for its Mac OS X operating system, bringing it to Version 10.3.7.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-039498-1f6f8bf0a92a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 39498,
+      "text": "US soldier gets 25 years in death of Iraqi BAGHDAD, Iraq -- A US soldier was sentenced to a 25-year term Saturday after a court martial convicted him in the death of an Iraqi National Guard member in May, the military said.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-014997-0986c486f55d",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 14997,
+      "text": "A fight to stay on track They were so close to the finish, Athens and Vanderlei de Lima - the city and the athlete, each about to complete a job well done.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-029619-1a71c7b87b4f",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 29619,
+      "text": "Before-the-Bell: OmniVision, Nortel Down  NEW YORK (Reuters) - Shares of OmniVision Technologies Inc.  &lt;A HREF=\"http://www.investor.reuters.com/FullQuote.aspx?ticker=OVTI.O target=/stocks/quickinfo/fullquote\"&gt;OVTI.O&lt;/A&gt; fell 6.2 percent in premarket trading on Thursday, the  morning after the image sensor designer announced the  resignation of its chief financial officer.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-060790-f8824191d17e",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 60790,
+      "text": "Google Search Hits The Desktop Google #39;s (Quote, Chart) Desktop Search application, released today, sorts through desktop files of all sorts, as well as AOL Instant Messenger chats and Web sites the user has visited.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-037342-adffed9862b6",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 37342,
+      "text": "Bush Shrugs Off Bad Polls on Iraq Outlook (AP) AP - President Bush on Thursday shrugged off polls that suggest most Iraqis see Americans as occupiers not liberators. \"I saw a poll that said the right track-wrong track in Iraq was better than here in America,\" he told reporters.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-034261-5e4ba0b89498",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 34261,
+      "text": "No Passing Blame With four interceptions and seven turnovers in Sunday's loss to the Giants, quarterbacks Mark Brunell and Patrick Ramsey take the shots for the team's sloppy showing.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-058781-a3c76896b624",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 58781,
+      "text": "Aon  #39;comfortable #39; with past behaviour Aon, the world #39;s second largest insurance broker, yesterday denied its brokers had ever steered business to favoured insurance companies as a way of generating bigger commissions.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-079939-a6e8640f656a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 79939,
+      "text": "PalmOne to make Microsoft WindowsMobile Treo? First that team wins that thing, now thisPalmOne (PalmSources biggest customer and maker of the Treo 650) appears it really might be planning to use Microsofts WindowsMobile OS in its Treo line of SmartPhones.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-110631-5c31a9691b5b",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 110631,
+      "text": "Congress Passes Historic Spy Agencies Bill (AP) AP - Congress on Wednesday ordered the biggest overhaul of U.S. intelligence in a half-century, replacing a network geared to the Cold War fight against communism with a post-Sept. 11 structure requiring military and civilian spy agencies to work together against terrorists intent on holy war.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-031313-9d3113abf4de",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 31313,
+      "text": "Rain cancels Chase qualifying at New Hampshire Loudon, NH (Sports Network) - Jeff Gordon will assume the pole position for Sunday #39;s Sylvania 300 at the New Hampshire International Speedway after a steady rain washed out Friday #39;s qualifying session.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-007669-21e5502ce239",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 7669,
+      "text": "YUKOS Cuts 2004 Forecast Due to Tax Row  MOSCOW (Reuters) - Russia's top oil exporter YUKOS cut its  crude output forecast for 2004 on Monday due to a tax dispute  with the state, in a move analysts said was a sign that  Russia's prolific oil growth was set to slow down.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-092511-6c7722685685",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 92511,
+      "text": "As Microsoft Turns: The Soap Opera Plays On Opinion: In last week #39;s episode, Microsoft sent \\$546 million Novell #39;s way; this week, Microsoft launches a campaign to win over Novell customers.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-079802-1f0d600ee061",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 79802,
+      "text": "Kidnappers Release 2 of 4 Iraqi Guards A US Embassy spokesman said Tuesday that an American, a Nepalese, a Filipino and an Iraqi remain hostages after a kidnapping raid Monday night in Baghdad.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-082723-28055740e1eb",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 82723,
+      "text": "Capriati Fails Cut for WTA Championships Jennifer Capriati, of Saddlebrook, Fla., reacts as she loses the first set 6-0 to Russia #39;s Vera Zvonareva in their quarterfinal match Friday, Nov. 5, 2004, in the Advanta Championship in Villanova, Pa.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-112725-7221c2773982",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 112725,
+      "text": "Business News for Technology Leaders Delphi #39;s global production volumes and commodity price increases are expected to translate to Q4 revenue of \\$6.9-\\$7 billion, about \\$200 million below the company #39;s previously stated expectations.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-061937-a29c148647a6",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 61937,
+      "text": "Ottawa wants DNA from child pornographers OTTAWA - The federal government is proposing that DNA samples be collected from people convicted of making child pornography. The Liberals introduced legislation today that would give judges the power to authorize collection of the samples.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-007003-60bbeee3c953",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 7003,
+      "text": "Trials Set To Begin For Four at Guantanamo Four suspected al Qaeda terrorists will face military trials this week at the Navy base in Guantanamo Bay, Cuba, in historic legal proceedings that have not been conducted by the US government ",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-006970-d3bc045601c3",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 6970,
+      "text": "Honda Indy 225 Top-Three Finishers Transcript DAN WHELDON: Especially following last week, it was one of the most challenging races of the year. The flag was just changing completely the whole day.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-111085-653591c16c84",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 111085,
+      "text": "State reduces stake in Air France The French government sells 17.7 of its stake in Air France-KLM amid reports it may cut its holding in the airline to as little as 18.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-033071-162eb19764ea",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 33071,
+      "text": "Two Episodes of Banana Republicanism As a lifelong resident of Louisiana, the U.S. state that gave us  Huey Long and  David Duke, I have always  taken comfort in the fact that my home state is an island  of insanity in a country that mostly gets it right.    But lately I recognize some disturbingly familiar trends on  the national scene.  Listen if you will to the tale of two  elections, and decide for yourself if the USA as a whole is  turning into Louisiana.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-081548-1ca01b039e24",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 81548,
+      "text": "Seoul worried about Bush #39;s N. Korea stance South Korean officials were very cautious when they were waiting for the outcome of the closely contested US presidential election, refraining from making any prediction or comments.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-013158-246a622a2c9f",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 13158,
+      "text": "Argentina Wins First Olympic Gold in 52 Years  ATHENS (Reuters) - Argentina won its first Olympic gold  medal in 52 years in the soccer final Saturday, while the U.S.  women's basketball team atoned for their men's failure by  storming to victory.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-043698-939e613ada7a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 43698,
+      "text": "Imperial Oil moving HQ to Calgary TORONTO and CALGARY - Imperial Oil Ltd. will pull up its Toronto roots and move its head office to Calgary within the year, ending a long-term commitment to run its oil and gas operations out of Eastern Canada.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-069104-6e72a25eadde",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 69104,
+      "text": "The Elder Scrolls IV: Oblivion Developer Diary Well, we started the project soon after Morrowind, and our team was split into two groups -- one working on technology for Oblivion, and one working on expansion packs.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-090588-587bfba9b95b",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 90588,
+      "text": "Banned Basque party calls for peace talks unveiled a plan to end the long-running conflict in the region, saying it wants peace talks. demilitarising the 36-year-old conflict and a referendum in the Basque country on its future.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-055702-96a80bd3b23e",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 55702,
+      "text": "Gale force is with Luke THE almighty guddles that are the first three rounds of the Dunhill Links Championship finally began to untangle themselves last night.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-069848-3b978c996cb5",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 69848,
+      "text": "Iraq to phase out all subsidies: planning minister (AFP) AFP - The Iraqi government plans to phase out slowly subsidies on basic products, such as oil and electricity, which comprise 50 percent of public spending, equal to 15 billion dollars, the planning minister said.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-001066-2b03dbd85aab",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 1066,
+      "text": "Apple's colorful computer plans detailed U.S. Patent and Trademark Office publishes Apple patent for \"chameleon\" cases that change their look.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-011046-293e241d5942",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 11046,
+      "text": "Senior Islamic Militant Wounded in Gaza Blast An explosion wounded a senior Islamic Jihad field commander in a Gaza refugee camp Thursday in what the Palestinian militant group called an Israeli assassination attempt.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-078257-f7590eff59dc",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 78257,
+      "text": "Schilling makes pitch on behalf of president Apparently Curt Schilling doesn #39;t regret his endorsement of President Bush related, bio after all: The Sox hero has recorded automated phone calls backing Bush that will be made until Election Day.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-045191-ff1eb4967974",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 45191,
+      "text": "IMF Forecasts Growth in Sub-Saharan Economies THE International Monetary Fund forecast yesterday a substantial jump in economic growth in sub-Saharan Africa this year and next, saying the outlook for the region was better than in years.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-022427-464523828035",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 22427,
+      "text": "HDS Launches TagmaStore When it comes to storage technology, there are a number of vendors pushing back the frontiers in what is possible. This week Hitachi Data Systems (HDS), one of the giants in this extremely competitive space ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-047365-cb6bce30dd81",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 47365,
+      "text": "War On Terror Column The Israeli army killed nine Palestinians in Gaza yesterday as it poured its forces into the coastal strip, expanding a ground offensive intended to root out militants firing rockets into Israeli towns.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-015555-803868bdf983",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 15555,
+      "text": "Abraham #39;s down Knee sprain to keep No. 1 scoring defense #39;s best pass rusher out against 11-1 Steelers, winners of 10 in a row. BY KEN BERGER.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-078366-1ad0e25e1710",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 78366,
+      "text": "China opposes US import limits on cotton trousers Beijing, Oct. 31. (PTI): China has asked the US not to  quot;sabotage quot; booming bilateral trade ties by limiting imports of cotton trousers made by manufacturers of the Communist nation.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-044944-c631135938ba",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 44944,
+      "text": "Key Part of Patriot Act Ruled Unconstitutional A federal judge in New York ruled that a key component of the USA Patriot Act is unconstitutional because it allows the FBI to demand information from Internet service providers without judicial oversight or public review.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-007805-83a9dc53d64f",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 7805,
+      "text": "Wal-Mart Sales Slump Keeps Stocks Muddled NEW YORK - Wal-Mart Stores Inc.'s disappointing sales forecast sent stocks fluctuating Monday as investors' concerns about a slowing economy eclipsed their relief over a drop in oil prices.    October contracts for a barrel of light crude were quoted at \\$46.25, down 47 cents, on the New York Mercantile Exchange...",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-039272-e643d740f4ad",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 39272,
+      "text": "Ricky still in frame SACHIN Tendulkar yesterday worshipped at the feet of an elephant-headed statue but does not expect his prayers to be answered in time to play Australia next week.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-101866-93c7d783fdba",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 101866,
+      "text": "BT sells Eutelsat stake for 363m BT Group, the privatised former British telecoms monopoly, has sold its entire holding in the French satellite operator Eutelsat for 363m.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-015951-8d44be77d714",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 15951,
+      "text": "Is Google blocking third party GMail notifiers? Is Google blocking third party GMail notifiers?\\\\Slashdot has already reported it. And now users on some forums have started complaining about it. Google is apparently blocking access to its GMail service by third party applications like GMail notifiers and clients. Some of these free applications let user access GMail accounts ...",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-078960-61636efcad6d",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 78960,
+      "text": "Bomb in Tel Aviv Market Kills 3, Wounds 32 Police and rescue workers said the blast tore through the open-air Carmel market in Tel Aviv. Witnesses described a chaotic scene with the bodies of the dead and wounded shoppers scattered among the debris of wrecked market stalls.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-056134-1e544f51ebfa",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 56134,
+      "text": "Soderling Beats Malisse to Win Lyon Open (AP) AP - Sweden's Robin Soderling won his first ATP singles title, using a strong serve to defeat Belgium's Xavier Malisse 6-2, 3-6, 6-4 Sunday in the Lyon Open final.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-082550-f576f71b3724",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 82550,
+      "text": "Vornado Buys 4.3 Pct. Stake, Shares Soar (Reuters) Reuters - Shares of Sears, Roebuck and Co. were\\up about 20 percent on Friday after real estate company Vornado\\Realty Trust said it raised its stake in the retailer, a step\\that could mean Sears plans to convert some of its real estate\\assets into cash.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-011926-b62c84ab708a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 11926,
+      "text": "Hewlett-Packard debuts 'Apple iPod from HP' (MacCentral) MacCentral - Hewlett-Packard's online store, HPshopping.com, on Friday introduced \"Apple iPod from HP,\" the company's long-awaited version of the iPod. HP is selling 20GB and 40GB versions of the iPod for US #36;299.99 and  #36;399.99 respectively, the same price as Apple. HP's Web site indicates the device will begin shipping on September 15.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-047280-37c8c2f4c861",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 47280,
+      "text": "Second Day of Violence Breaks Out in Haiti (AP) AP - Violence erupted again Friday in the Haitian capital as the decapitated bodies of three police were found, bringing the death toll to at least seven people in two days of protests for the return of ousted President Jean-Bertrand Aristide.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-065247-133e3c4bf7b9",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 65247,
+      "text": "Jets' Moss Probable for Sunday  HEMPSTEAD, N.Y., (Sports Network) - New York Jets wide  receiver Santana Moss is probable for Sunday's AFC East  showdown against the red-hot New England Patriots. Both teams  are undefeated and will square off at Gillette Stadium in  Foxboro, MA.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-067607-7940f0ff3f47",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 67607,
+      "text": "Some U.S. Factories Recover, Outlook Dims (Reuters) Reuters - Factories in the U.S. Mid-Atlantic\\region rebounded in October, a survey showed on Thursday, but\\employment measures declined and the outlook for the future\\slid sharply.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-092050-395c776d6405",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 92050,
+      "text": "Half-Life 2's  Real Battle (washingtonpost.com) washingtonpost.com - If the video game industry is beginning to rake in revenue that rivals the movie industry, it's also beginning to accumulate Hollywood-like headaches.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-104839-528eaf6669e1",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 104839,
+      "text": "Sharon says early elections are a political and economic danger &lt;b&gt;...&lt;/b&gt; After losing two no-confidence motions, PM vows he will do everything in his power to expand Coalition and avoid elections, but stressed, If we are forced to declare elections, we shall.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-033746-d3448948402a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 33746,
+      "text": "Cubs Defeat Marlins, 5-1, in NL Showdown (AP) AP - Mark Prior allowed five hits in 7 2-3 innings to out-pitch Carl Pavano, and the Chicago Cubs moved one percentage point ahead of San Francisco atop the NL wild-card standings by beating the Florida Marlins 5-1 in the first game of a doubleheader Monday.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-042557-05737357b09a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 42557,
+      "text": "Comcast, Time Warner eye Adelphia Philadelphia #39;s Comcast and Time Warner are considering a bid to buy bankrupt Adelphia Communications, the New York Times reported Tuesday.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-029543-0c558ef12841",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 29543,
+      "text": "Airbus Sees Mobile Phones On Planes By 2006 European planemaker Airbus reported progress on Wednesday in plans to allow passengers to use mobile phones in flight, beginning in 2006.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-103369-c4b01c075229",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 103369,
+      "text": "Heir to Jordanian throne relieved of duties AMMAN - Jordans King Abdullah relieved his half brother Prince Hamza of his duties as crown prince, royal palace sources said on Sunday.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-045665-39427bc3532c",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 45665,
+      "text": "Blackhawks #39; Ruutu needs surgery Chicago, IL (Sports Network) - Chicago Blackhawks forward Tuomo Ruutu will undergo surgery Friday to repair a subluxation of his left shoulder.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-014237-542ae93fe81a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 14237,
+      "text": "Bethesda Magazine  Aims to Market  'The Good Life' The success of a start-up magazine rests on many factors, not the least of which is a catchy name.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-073743-950e2d8fb0da",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 73743,
+      "text": "Europe's Regulators Say It's OK If Oracle Acquires PeopleSoft (Investor's Business Daily) Investor's Business Daily - Oracle   Chief Executive Larry Ellison might well raise his offer of  #36;21 per share to buy business software rival PeopleSoft  , they say.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-024265-492615dea957",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 24265,
+      "text": "Former soldier turns himself in to US base in Japan A former US serviceman accused of deserting while serving in South Korea in 1965 turned himself in on Saturday to the US military at a base near Tokyo.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-027092-95ce9d53bb1d",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 27092,
+      "text": "Casey Defends Decision to Fire Caddie  BLOOMFIELD HILLS, Michigan (Reuters) - European Ryder Cup  debutant Paul Casey has defended his decision to sack his  caddie five days before the start of the biggest team event in  the sport.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-048623-9e7b8fdea0e5",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 48623,
+      "text": "Airbus prepares rival to Boeing #39;s Dreamliner Airbus, the aerospace giant, has started talks with suppliers about building a rival to Boeing #39;s new commercial airliner, the 7e7 Dreamliner.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-061383-5155ee86ab4a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 61383,
+      "text": "The Home PC, Perfected Three times is a charm, and never is this truer than with Microsoft products. With its brand new Windows XP Media Center Edition 2005 operating system, Microsoft may have unleashed the perfect OS for a home PC.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-058850-48a284999bd6",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 58850,
+      "text": "Terror and tourism THE devastating terrorist attacks in the Egyptian resorts of the Sinai Peninsula last week which left more than 30 people dead - mainly Israeli tourists - have been widely attributed to Al-Qaeda.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-000559-e6d826a2163b",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 559,
+      "text": "Rangers Designate Bacsik for Assignment (AP) AP - Pitcher Mike Bacsik was designated for assignment by the Texas Rangers on Sunday after going 1-1 with a 4.60 ERA in three starts.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-097019-a52723cfc972",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 97019,
+      "text": "PeopleSoft shareholders support Oracle takeover Ongoing battle between rival software makers enters new stage. Board has vowed to continue resistance. By Michael Liedtke. SAN FRANCISCO -- More than 60 percent of PeopleSoft Inc.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-105623-d29a34de00bc",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 105623,
+      "text": "Brief: IBM to market Sybase Linux database IBM and Sybase have agreed to add support for Sybase's database software on IBM's eServer OpenPower Linux servers, and the two companies will jointly sell and market each other's products.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-017138-e182557bee3a",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 17138,
+      "text": "French Schools Reopen Under New Religious Law Millions of French pupils have begun the new school year under controversial legislation banning Muslim headscarves and other religious insignia from state schools.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-071173-0648982ba8b1",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 71173,
+      "text": "Lions defenders get after Warner Like a big, real-life Buddha, he slumped on the stool in front of his locker stall espousing to his audience how it was that a Detroit Lions team that entered this ",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-040534-b4848e9289fd",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 40534,
+      "text": "Fannie Mae #39;s fall from grace A shocking expose hit the Street last week about one of the best-loved, most all-American companies out there: Fannie Mae, the mortgage and financial services giant.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-086483-47a5a6118712",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 86483,
+      "text": "Trojan horse can spread spam to mobile phones Get INQ7 breaking news on your Smart mobile phone in the Philippines. Send INQ7 BREAKING to 386. ANTIVIRUS firm Sophos has warned mobile phone users that spammers are using a newly ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-107959-371ed570fef5",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 107959,
+      "text": "10 vying to lead the Palestinian Authority RAMALLAH, West Bank -- A former communist who runs a respected Palestinian human rights organization, a professor with ties to Islamic groups, and a lawmaker known for exposing government corruption are among the 10 candidates vying to lead the Palestinian Authority, in what analysts here say will be the first truly competitive presidential election in the Arab world.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-010467-6c089eeeedff",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 10467,
+      "text": "Stronger Schilling stops Jays Curt Schilling hasn #39;t felt this good in months, and that #39;s great news for the Boston Red Sox. Schilling earned his 16th win, and David Ortiz homered twice and drove in four runs ",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-104523-eb07433f0f53",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 104523,
+      "text": "Smucker #39;s To Close Salinas Facility In 2005 SALINAS, Calif. -- The JM Smucker Co. announced Monday that it will close its Salinas facility by the end of 2005. The closure is the result of restructuring of operations, company officials said.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-104879-7663d1f7690e",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 104879,
+      "text": "Oracle Takes Over PeopleSoft (NewsFactor) NewsFactor - Oracle (Nasdaq: ORCL) finally has won control of PeopleSoft (Nasdaq: PSFT) after an 18-month takeover battle, making the Redwood Shores, California-based company the world's second-largest vendor of business management applications software.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-038188-c910d42bd331",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 38188,
+      "text": "North reported to be preparing missile launch South Korea and US intelligence sources have detected unusual activity in North Korea believed linked to possible preparation for a missile test, the Ministry of National Defense said yesterday.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-112711-cd4c6d194cf4",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 112711,
+      "text": "You know the Bears got jobbed when Pac-10 rivals come to their &lt;b&gt;...&lt;/b&gt;  quot;Looks like you were right on about Cal getting passed over for the Rose Bowl bid. I don #39;t think it would have made a bit of difference if Cal had won by 110 points instead of just 10.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-006982-a3c71025362d",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 6982,
+      "text": "Nikkei Up Over 1 Percent at Midday  TOKYO (Reuters) - The Nikkei stock average rose 1.02  percent by midsession on Monday as investors were encouraged to  seek bargains by a recovery in U.S. stocks after crude oil  prices retreated from record highs.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-010018-43afa0b8dc70",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 10018,
+      "text": "Feds Bust File-Sharing Sites Law enforcement agents have raided five homes and one ISP in what the Department of Justice calls the first federal enforcement action against piracy on peer-to-peer networks.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-109168-f4a98552ded4",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 109168,
+      "text": "Rumsfeld confirms will stay on, vows transformation of US military KUWAIT CITY, Dec 6 (AFP) - US Defence Secretary Donald Rumsfeld said Monday he would devote himself to transforming the military and bringing American troops out of Iraq as he confirmed he would remain in President George W. Bush #39;s administration.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-005187-7138e41566eb",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 5187,
+      "text": "Father of crew chief killed in crash Thompson, CT (Sports Network) - Tom Baldwin, 57, father of Nextel Cup driver Kasey Kahne #39;s crew chief Tommy Baldwin Jr., was killed in a crash at the Thompson International Speedway. He was driving in a Featherlite modified race on Thursday night. ",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-021801-9f59b1c00b04",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 21801,
+      "text": "SEC May Delay Reviews  A Securities and Exchange Commission official yesterday signaled that the agency may grant foreign companies whose stock trades on U.S. exchanges a brief delay to comply with a controversial accounting reform.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-101306-1ccc74de564c",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 101306,
+      "text": "Finnish authorities warn against using MS Internet Explorer 6 browser (AFP) AFP - Finnish authorities warned computer users against using the popular Microsoft Internet Explorer Six web browser as it has a \"serious\" security flaw that compromises computer systems.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-027916-26e0b685c2b1",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 27916,
+      "text": "Court upholds Anwar political ban PUTRAJAYA, Malaysia -- Former Malaysian Deputy Prime Minister Anwar Ibrahim will not be making a swift return to politics after the country #39;s Federal Court Wednesday upheld a 1998 corruption conviction against him.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-118485-ec18396e6ad1",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 118485,
+      "text": "Fox Sports Net to Televise AFL Games (AP) AP - Fox Sports Networks will carry Arena League regular-season games on 11 of its regional networks in a deal announced Thursday.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-053397-5198089c3b60",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 53397,
+      "text": "Four deals taking off in busy IPO day NEW YORK (CBS.MW) - Retailer New York  amp; Co. and medical equipment firm InterLace delivered premiums Thursday as the two initial public offerings distinguished themselves among a pack of four deals.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-110380-0388ca1193d3",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 110380,
+      "text": "Online Research Worries Many Educators (AP) AP - Go to Google, search and scroll results, click and copy. When students do research online these days, many educators worry, those are often about the only steps they take. If they can avoid a trip to the library at all, many students gladly will.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-077557-303a5e34d778",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 77557,
+      "text": "Constitution signing a springboard for Prodi #39;s return to Italy The signing of the European Constitution on Friday by the leaders of the 25 EU members will not only crown Romano Prodi #39;s five years as European Commission president but propel him into the political fray in his native Italy.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-097225-c0621940707c",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 97225,
+      "text": "Ohio State Surprises No. 7 Michigan  COLUMBUS, Ohio (Sports Network) - Troy Smith threw for 241  yards and two touchdowns and ran for 145 yards and a score to  lead the Ohio State Buckeyes to a 37-21 victory over No. 7  Michigan in the final game of the regular season for both  teams.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-088550-aa039c445e12",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 88550,
+      "text": "Union Sees Progress In Talks, Hotels Don #39;t Officials representing 14 major Washington hotels and Unite Here Local 25 yesterday gave mixed reports of progress in negotiations for a new contract for 3,800 hotel workers.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-099006-dc4324272aa2",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 99006,
+      "text": "Firefox more secure than Explorer Reams have already been written on what the newest internet browser on the block, the Mozilla Firefox, means for market leader Microsoft and for the domination that its product Internet Explorer enjoys.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-079739-e7119f903d24",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 79739,
+      "text": "Pak to sell arms to Nepal Pledging cooperation with Nepal in its fight against terrorism, Pakistan Prime Minister Shaukat Aziz today said his country would supply arms to the Himalyan kingdom on a credit basis.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-023833-b6ea3417a703",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 23833,
+      "text": "World No. 1 Vijay Singh tears up front nine, shoots 28 at Bell &lt;b&gt;...&lt;/b&gt; OAKVILLE, Ont. (CP) - Vijay Singh made history at Glen Abbey on Friday, shooting 28 on the front nine to post the lowest nine-hole score in the 100-year-old history of the Bell Canadian Open.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-048913-6190a34b1efd",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 48913,
+      "text": "Siemens buys BBC technology for 150m Siemens have landed a ten-year deal to provide IT services to the BBC in an outsourcing contract, worth about 200m a year. The German technology group has been selected as part of a cost-cutting initiative ",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-092012-66f8201f20bb",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 92012,
+      "text": "Yahoo Mail to use Domainkeys Washington: EarthLink Inc. and Yahoo Inc. have said they would begin tests of a new anti-spam technology that encodes digital signatures into customers #39; e-mail as a way to separate legitimate messages from unwanted spam.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-052728-2c2398c97687",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 52728,
+      "text": "Nepal troops face 'abuse' charge The US-based Human Rights Watch says both Nepalese troops and Maoist rebels are responsible for civilian killings and abductions.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-102185-4828e4004094",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 102185,
+      "text": "Chelsea Deny Chasing Defoe Chelsea have followed Tottenham in pouring cold water on rumours that England striker Jermain Defoe was set for a switch across London.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-057258-7111c51b7c3e",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 57258,
+      "text": "OPEC unable to influence market as oil prices scale new heights &lt;b&gt;...&lt;/b&gt; LONDON, Oct 11 (AFP) - The Organization of Petroleum Exporting Countries says it is doing everything possible to help cool record high oil prices but its inability to meet markets #39; wishes reduces its credibility and influence, analysts said Monday.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-044222-a0a1da702cab",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 44222,
+      "text": "Dell Aims To Drive Down Cost Of High-Performance Computing Vendor offers server, switch, and host-channel adapter bundle with increased I/O bandwidth, processing capability, and memory. By Larry Greenemeier.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-116374-a3e011082a4b",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 116374,
+      "text": "Afghans arrest 2 Taliban commanders KABUL, Afghanistan -- Information from a man caught in a vehicle loaded with explosives led to the arrests of two senior Taliban military commanders, including a former security chief of the hard-line regime's leader, Mullah Omar, an official said yesterday.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-098659-2ef1be496482",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 98659,
+      "text": "Packers 16, Texans 13 HOUSTON There were two minutes left to play, and the Houston Texans #39; defense was in a find. The Texans were tiring, and Brett Favre (FAHRV #39;) had the ball.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-048113-f91ba45ce0ea",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 48113,
+      "text": "Florida vacation? Fuggeddaboudit! Area travel agents say forget about taking that fall-break getaway to hurricane-hammered Florida. The situation may not be much better by Thanksgiving, Christmas or even spring break for ",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-100503-fbf4908cf4eb",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 100503,
+      "text": "Citrix buys hybrid VPN vendor Editor #39;s Summary: Citrix is acquiring VPN provider Net6 for \\$50 million in a move to expand its presence in the security space.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "train-109527-32838093032d",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 109527,
+      "text": "Blair petitioned to set up inquiry into Iraqi war dead Dozens of establishment figures, including five former ambassadors and leading military officers, signed an open letter to Tony Blair today calling for an inquiry into the deaths of Iraqis after the war.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "train-109524-c3afa482cec8",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 109524,
+      "text": "Clippers #39; Brand suspended one game New York, NY (Sports Network) - Los Angeles Clippers forward Elton Brand was suspended Tuesday for one game by the NBA for shoving Charlotte #39;s Emeka Okafor during the fourth quarter of Monday night #39;s game.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "train-100361-bc9f7f9f5f49",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 100361,
+      "text": "Gold Fields loses US bid judgment Gold Fields loses a key legal decision in its fight against Harmony's \\$8.2bn hostile takeover bid but remains confident that its shareholders will reject the bid.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "train-085503-3a7006f66a8b",
+      "split": "search",
+      "source_split": "train",
+      "source_index": 85503,
+      "text": "Summary: Student Finds New Amphibian (AP) AP - THE DISCOVERY: A University of Pittsburgh geology student on a field trip stumbles across the fossil of an oversized, salamander-like creature that lived about 300 million years ago.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    }
+  ],
+  "test": [
+    {
+      "sample_id": "test-001768-77a489a20b70",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1768,
+      "text": "Earthquake Rocks Indonesia's Bali, One Dead  BALI, Indonesia (Reuters) - A powerful earthquake rocked  Indonesia's premier tourist island of Bali Wednesday, killing  one person, injuring at least two and triggering some panic,  officials said.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-006825-2f76617c6e8a",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6825,
+      "text": "Rams' Faulk Downgraded to Questionable  ST. LOUIS, Mo., (Sports Network) - St. Louis Rams running  back Marshall Faulk has been downgraded from probable to  questionable for Sunday's game against the San Francisco 49ers  with a bruised left knee.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-000384-439763017d93",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 384,
+      "text": "Indexes in Japan fall short of hype Japanese stocks have failed to measure up to an assessment made in April by Merrill Lynch #39;s chief global strategist, David Bowers, who said Japan was  quot;very much everyone #39;s favorite equity market.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-002779-afcfa3d6ea7f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2779,
+      "text": "Will iTunes ever make a lot of money for Apple? On its latest earnings call (7/14/04), a question was asked about the profitability of iTunes, and management responded by stating that it made just a small profit.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-001636-c41870d8946c",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1636,
+      "text": "Afghan president replaces 2 governors KABUL, Afghanistan -- Afghan President Hamid Karzai #39;s government Saturday replaced two governors, including a strongman in the west, in a bold step to establish control ahead of landmark presidential elections.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-003525-7f91c4f10917",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3525,
+      "text": "Lima gem ends LA drought Jose Lima came to the Los Angeles Dodgers in February as a journeyman pitcher with a 71-77 win-loss record, a 5.13 ERA and a reputation as one of baseball #39;s hot dogs.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-005472-4347614ec872",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5472,
+      "text": "Forget Bextra NEW ORLEANS - This morning, Pfizer was blindsided as The New York Times reported information about a reanalysis of old data that say the drug giant #39;s Bextra, which is similar to Merck #39;s Vioxx, increased the risk of heart attacks and strokes.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-003012-336bb01021e2",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3012,
+      "text": "Oceanic storms make the Earth  #39;hum #39; Did you know that the Earth is constantly humming ie it produces a low frequency noise which can be picked up in the 2 to 7 mHz (millihertz) range, a range far below the one human ears can detect and scientist have now found that it is the energy produced ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-002076-6121a3b7e0d7",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2076,
+      "text": "Tropical Storm Kills at Least 90 in Haiti GONAIVES, Haiti - Tropical Storm Jeanne brought raging floodwaters to Haiti, killing at least 90 people and leaving dozens of families huddled on rooftops as the storm pushed further out into the open seas on Sunday, officials said.    Floods tore through the northwestern coastal town of Gonaives and surrounding areas, covering crops and turning roads into rivers...",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-001553-213a9bc1f1f2",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1553,
+      "text": "No. 9 Ohio State Edges Marshall on Last-Second FG COLUMBUS, Ohio (Sports Network) - Mike Nugent #39;s 55-yard field goal as time expired lifted the ninth-ranked Ohio State Buckeyes to a dramatic 24-21 win over the pesky Marshall Thundering Herd in the first-ever meeting between the teams.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-001853-c1c9d4ac9948",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1853,
+      "text": "Dollar Idles vs. Euro Before U.S. Data  LONDON (Reuters) - The dollar kept close to the previous  session's one-week highs against the euro on Thursday, holding  steady as investors awaited U.S. data to confirm fresh signs of  strength in U.S. manufacturing.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-003780-edf89192a429",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3780,
+      "text": "Russian Spacecraft Heads for International Space Station A Russian Soyuz spacecraft carrying two Russian cosmonauts and one American astronaut has reached orbit, after blasting off from the Baikonur cosmodrome in Kazakhstan.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-006588-e59ae8ac3a1e",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6588,
+      "text": "Musharraf Sees 'Light at End of Tunnel' with India (Reuters) Reuters - Pakistani President Pervez\\Musharraf said on Monday there were prospects for resolving all\\disputes with India, including over Kashmir, through peace\\talks now under way.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-007379-c72ecce6acfc",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7379,
+      "text": "Thomas still struggling Time slips away in a hurry as Tim Thomas runs around looking to make something happen in short order. The slumping forward #39;s on a short leash at the moment and wound up watching most of last ",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-003458-27113e27b528",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3458,
+      "text": "House Passes Corporate Tax Bill The House, by a vote of 280 to 141, gave final approval last night to a far-reaching tax bill that provides a rich array of breaks to manufacturing companies, energy producers and small businesses and underwrites a \\$10 billion buyout of American tobacco ",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-006450-719d7646ce45",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6450,
+      "text": "mmO2: i-mode launch looks certain mmO2 and NTT DoCoMo are reportedly planning to launch a UK i-mode mobile service. November 26, 2004 4:35 PM GMT (Datamonitor) - The much-touted tie-up between NTT DoCoMo and mmO2 to bring i-mode mobile content to the UK looks to be a done deal.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004162-6dfef522adf6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4162,
+      "text": "Spain arrests eight over plot to bomb court A terrorist attack believed to be aimed at the national court in Madrid seems to have been foiled by the arrest in the past two days of eight alleged radical Islamists.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-002235-0d95c120bac8",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2235,
+      "text": "Washington chooses a stadium site for Expos The DC Sports and Entertainment Commission outlined its plans Tuesday night in a meeting with city government officials. An official involved in the process, speaking on condition of anonymity, told The Associated ",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-005542-ee8f6f59879a",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5542,
+      "text": "Agilent Guides Sharply Lower Agilent #39;s (A:NYSE - news - research) fiscal fourth quarter came up light, and the company slashed first-quarter guidance. Blaming a weak chip business, the Palo Alto, Calif.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-005779-b5698803da20",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5779,
+      "text": "Wonkette: Blogs force quick action from major media Plus: Row brewing over peer-to-peer ads. News.com Extra",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-003474-25c2b97ed39f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3474,
+      "text": "California Official Rules on Gay Marriage SAN FRANCISCO - California's constitution permits laws against gay marriage, the state's attorney general declared Friday in a long-awaited legal opinion that sought to avoid offending either side of the debate.    While acknowledging that \"committed and loving relationships between two individuals deserve recognition under California law,\" Attorney General Bill Lockyer said it was up to the voters or the Legislature to decide questions about whether gay couples should be allowed to marry...",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000855-0c735934cac6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 855,
+      "text": "A  #39;new Greece #39; beams after success of Games As Greeks get a boost, it remains unclear if success will mean higher stature in Europe. By Peter Ford  Staff writer of The Christian Science Monitor.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-006860-3deb424e5360",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6860,
+      "text": "Bedding Blip? Go Back to Sleep This is getting old. Every time Hidden Gems selection Select Comfort (Nasdaq: SCSS) gets settled in and ready for a long night #39;s rest full of dreams of two-times-in-three-years capital gains, along ",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000706-64e847aebdba",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 706,
+      "text": "Bureaucracy Pins Rocket to Earth The da Vinci Project, a Toronto group planning to launch a homemade, manned spacecraft in October, is having trouble getting its paperwork off the ground. Canadian regulators are leery of approving the launch. And then there's the matter of finding insurance. By Dan Brekke.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-000742-dd5d856b1ff2",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 742,
+      "text": "Report: Explosion Kills 2 Near Chechyna (AP) AP - An explosion rocked a police building in the restive Dagestan region adjacent to Chechnya on Friday, and initial reports indicated two people were killed, the Interfax news agency said.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-002933-75dac9e6c7b5",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2933,
+      "text": "Two Millwall fans stabbed, hospitalized BUDAPEST, Hungary -- UEFA has charged Hungary #39;s Ferencvaros after their fans threw missiles and shouted racist abuse in Thursday #39;s UEFA Cup tie against Millwall.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-006797-53df9bbf1ac6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6797,
+      "text": "Barrick Acquires Stake in Celtic Resources Canada #39;s Barrick Gold Corp. said Thursday it was acquiring a 9 percent stake in London-based Celtic Resources Holding Ltd. - a deal that potentially gives the Canadian gold giant major clout ahead of next year #39;s auction of Russia #39;s biggest gold deposit.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-006975-dcc868c2f991",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6975,
+      "text": "Chicken Genome Should Boost DNA Research A red jungle fowl is seen in this undated handout photo. Researchers have assembled the genome sequence of the Red Jungle Fowl, the ancestor of all domestic chickens.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004334-e9ae5abc5187",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4334,
+      "text": "North Korea eases tough stance against US in nuclear talks North Korea on Friday eased its tough stance against the United States, saying it is willing to resume stalled six-way talks on its nuclear weapons if Washington is ready to consider its demands.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-005437-f7b72279041f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5437,
+      "text": "BRDC waiting for a proposal The Formula 1 teams say that the British Grand Prix is saved but the owners of Silverstone, the British Racing Drivers #39; Club do not yet have a deal with Formula One Management.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-003440-896b55a81c99",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3440,
+      "text": "Oil prices send US stocks lower INVESTORS sent stocks sharply lower today as oil prices continued their climb higher and new questions about the safety of arthritis drugs pressured pharmaceutical stocks.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-006599-209b3fa01696",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6599,
+      "text": "Sun acquisition to boost IT services portfolio Sun Microsystemshas agreed to purchase Ashburn, Virginia, IT services company SevenSpace, the companies announced Monday. With the purchase, Sun takes a further step away from its traditional focus on supporting only its Solaris operating system platform and beefs up its support for competing operating systems like Windows, HP-UX and AIX.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-003085-47a23dff7769",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3085,
+      "text": "Poland to cut Iraq troops by 2006 Poland will reduce its commitment of forces to the war in Iraq by 40 percent by the end of 2005, the Polish Defense Ministry in Warsaw says.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-006172-696a1ecefc2f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6172,
+      "text": "Michigan Gets Rose Bowl Berth Despite Loss to Ohio St.  COLUMBUS, Ohio (Sports Network) - Troy Smith threw for 241  yards and two touchdowns and ran for 145 yards and a score to  lead the Ohio State Buckeyes to a 37-21 victory over No. 7  Michigan in the final game of the regular season for both  teams.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-004297-47ca47569f7e",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4297,
+      "text": "Qwest: The end of the beginning Thursday #39;s agreement between Qwest Communications and federal regulator settles allegations of  quot;massive financial fraud quot; at a price of \\$250 million.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-007410-44aa9e815b88",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7410,
+      "text": "Google takes the competition to school While rivals scramble to catch up on the desktop, Google plans to digitize famous libraries. Its official. Google is the most dangerous media company on the planet.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-006578-eaeca61a127c",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6578,
+      "text": "Court Declines to Hear Gay Marriage Case (AP) AP - The Supreme Court on Monday sidestepped a dispute over gay marriages, rejecting a challenge to the nation's only law sanctioning such unions.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-004050-73a5ce5cd0bf",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4050,
+      "text": "He's His Own Adu Georgetown Prep defender Fro Adu is proud of brother Freddy, a forward for D.C. United, but wants to step out on his own.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-007115-f97499facf24",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7115,
+      "text": "DreamWorks, Pixar rule digital animation DreamWorks and Pixar both make cutting-edge digital animated films. But behind the scenes, the two studios are about as different as Shrek and Mr.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-003835-321eb11221dc",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3835,
+      "text": "Intel Cancels Revamped Chip The Intel Corporation said that it was canceling plans to market a faster version of its Pentium 4 chip to focus on products with \"more bang for the buck.\"",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-007018-3e7523c6133d",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7018,
+      "text": "Amputation rate for US troops twice that of past wars US troops injured in Iraq have required limb amputations at twice the rate of past wars, and as many as 20 percent have suffered head and neck injuries that may require a lifetime of care, according to new data giving the clearest picture yet of the severity of battlefield wounds.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-004920-503cac959267",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4920,
+      "text": "Dawgs get Gators off their back Not with players dragging off the field, their bodies drained by yet another anticlimactic loss. Not with their fired leader standing before reporters, struggling to hold back the tears once more.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-001110-e1d0fd725fca",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1110,
+      "text": "EU foreign ministers hope to break deadlock over ASEM summit The European Union said Friday it  quot;hoped to reach a conclusion quot; at a meeting of foreign ministers on the participation of military-ruled Myanmar in an upcoming summit of Asian and European nations.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000741-648cd7f55ec6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 741,
+      "text": "Modified US space shuttle ready to fly next spring NASA said Thursday it had corrected flaws that caused the destruction of the space shuttle Columbia in February 2003 and that a modified shuttle would be ready to resume flights sometime next Spring.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-003239-a7e537b388b4",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3239,
+      "text": "Pitcairn trial views police interview tape The court presiding over the Pitcairn Island sex trials has been shown a videotape of a police interview with one of the accused. Steven Christian denies rape but he does admit to having sex with underage girls.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-005178-e29817d35afb",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5178,
+      "text": "Berkman tears ACL, may be out until June HOUSTON - Houston Astros star outfielder Lance Berkman suffered a torn ACL in his right knee and will undergo arthroscopic surgery within the next 10 days, the team announced Friday.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-004773-560a13c31384",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4773,
+      "text": "AOL Files Lawsuit Against IM  #39;Spim #39; America Online Inc. said Thursday it had filed a federal lawsuit accusing numerous unnamed defendants of violating federal and state laws by sending bulk messages known as  quot;spim quot; to instant message accounts and Internet chat rooms.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-002719-8d49b76066d9",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2719,
+      "text": "High-Tech Start-Up Strives For Open-Source Compatibility SourceLabs could create some buzz because of its pedigree team of founders. The company is led by Chief Executive Byron Sebastian, a former executive at San Jose #39;s BEA Systems, who founded the company in spring.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-002603-99f83b9aa189",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2603,
+      "text": "A Graphic Film of Protest, and Cries of Blasphemy The director of a 10-minute film shown on Dutch television hopes to draw attention to what she says is widespread but hidden violence against Muslim women.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-003626-ab98fbbd5d09",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3626,
+      "text": "Ravens Get Rest With the absence of running back Jamal Lewis, the Ravens hope to get a number of injured players back during their bye week.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-000562-21c5a8373242",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 562,
+      "text": "UPDATE 2-TD, Banknorth in talks on possible deal Toronto Dominion Bank (TD.TO: Quote, Profile, Research) said on Wednesday that it is in talks with US-based Banknorth Group (BNK.N: Quote, Profile, Research) about a possible deal, in line with the Canadian bank #39;s push for ",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000709-c4470538641d",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 709,
+      "text": "Sprint, SBC Announce Wi-Fi Roaming Pact Customers of Sprint Corp. and SBC Communications Inc. will be able to use both companies' wireless Internet connections with less hassle under a reciprocal deal announced Friday.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004439-5961279c75b7",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4439,
+      "text": "KASHMIR LEADER SURVIVES ATTACK The head of Indian Kashmir #39;s main opposition party, Omar Abdullah, has survived a second assassination bid in a month. Police say seven people were injured when rebels detonated a bomb a few steps away from Mr Abdullah, two of them critically.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-002362-d657051250e7",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2362,
+      "text": "Pascual Rodriguez wins 18th stage of Vuelta race; Heras still &lt;b&gt;...&lt;/b&gt; Spaniard Javier Pascual Rodriguez inched ahead of Colombia #39;s Ivan Parra at the finish line to take the 18th stage of the Spanish Vuelta cycling tour Thursday.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-000667-ea4c87ac92b6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 667,
+      "text": "Vioxx Faces Challenges from Insurers, Lawyers Merck  amp; Co. faces a dual threat from health insurers and patients #39; lawyers, after a US study suggested its Vioxx arthritis drug carries a greater risk than rival medicines.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-003993-3c429beb0a2d",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3993,
+      "text": "Storage Networking World Highlights News and survey results from Computerworld's twice-annual storage conference.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-003958-ac7394b85278",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3958,
+      "text": "War in Iraq Did Not Make World Safer, Annan Says LONDON, Oct. 17 -- The US-led war in Iraq has not made the world any safer, UN Secretary General Kofi Annan said in a British television interview aired on Sunday.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-006628-952872780091",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6628,
+      "text": "Dubois helps Maine top Dartmouth David Dubois scored a game-high 17 points as Maine held on for a 58-52 men's basketball victory over Dartmouth last night at Hanover, N.H.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-007438-92f63c1e716b",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7438,
+      "text": "Brokerage Settles Charges Over Mutual Fund Fees  A Fort Worth brokerage that sold high-fee mutual funds to military families agreed yesterday to pay \\$12 million to settle allegations that it used misleading marketing literature and scripts.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-005091-0ad5aea2ca6e",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5091,
+      "text": "Movie Studios to Sue Illegal Film-File Traders Movie studios and the Motion Picture Association of America said on Thursday they would sue individuals suspected of illegally distributing movies over the Internet.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-000973-f7751253db58",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 973,
+      "text": "Hurricane Frances Nears NE Caribbean (AP) AP - Hurricane Frances strengthened as it churned near islands of the northeastern Caribbean with ferocious winds expected to graze Puerto Rico on Tuesday before the storm plows on toward the Bahamas and the southeastern United States.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-004970-a46e3296d8bc",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4970,
+      "text": "Report: Drugs Caused Ken Caminiti #39;s Death NEW YORK - A drug overdose killed former baseball star Ken Caminiti, who tested positive for cocaine in the weeks before he died at age 41 and had admitted using steroids during his playing days, the city medical examiner ruled Monday.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-006006-5123f5e10f39",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6006,
+      "text": "Russia #39;s Putin Defends Reforms, Worries About Clans Russian President Vladimir Putin said on Thursday he had no plans to grab more power or change the constitution when reforming Russia #39;s government structure.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-002217-02876580cabc",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2217,
+      "text": "Academics get NSF grant for Net security centers National Science Foundation grants \\$12.6 million to university scientists to study worms, viruses and the Net's ecology.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004711-4b071b582512",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4711,
+      "text": "At Least Five Dead in Russia Mine Blast (Reuters) Reuters - At least five miners were killed and 14\\injured in a blast in a coal mine in Russia's Siberia, the\\Emergencies Ministry said on Thursday.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-005949-c6f1f6de38db",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5949,
+      "text": "Canucks Announce Partial Sale  VANCOUVER, British Columbia (Sports Network) - The  Vancouver Canucks Wednesday announced the sale of 50 percent of  the team and its arena, General Motors Place.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-001420-5432f00f0959",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1420,
+      "text": "P G Backs Profit Forecast, Shares Down (Reuters) Reuters - Procter   Gamble Co.  on Thursday\\backed its quarterly profit outlook, helped by sales of new\\products and continued gains in developing markets.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-004121-f747c25b853b",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4121,
+      "text": "AMD Assaults New Performance Heights with New Chips As expected, Advanced Micro Devices, on Tuesday officially released its new microprocessors aimed at high-end desktop computers. The new chips set the new records in a variety of industrial benchmarks and ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004466-970beb3b40d7",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4466,
+      "text": "U.S. Urges China to Push for More N.Korea Talks  BEIJING (Reuters) - Secretary of State Colin Powell urged  China on Monday to exert its influence over North Korea to  resume stalled talks on scrapping its nuclear weapons programs  and pressed Beijing to accept a Taiwan offer of talks.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-006922-176b46ae808e",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6922,
+      "text": "Real eager to silence doubting supporters NO SPECTATORS will be watching in the ground, but the eyes of Europe will be trained on Romes Olympic Stadium tonight as Real Madrid seek the win they probably need to avoid a humiliating, early exit from the Champions League.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-004795-8088ebd069bc",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4795,
+      "text": "Update 1: UAL Posts \\$274M Loss, Capping Bad Quarter Record fuel costs and low air fares contributed to a \\$274 million third-quarter loss for United Airlines #39; parent company, which warned again that labor costs must be slashed again soon in order for it to emerge from bankruptcy.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-004257-22470af8232c",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4257,
+      "text": "Photo gallery: Bill Gates' home on Lake Washington Webshots users offer their photos of Bill Gates mansion in Medina, Wash.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004372-31d3bf47b580",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4372,
+      "text": "Plea for Kidnapped Aid Worker Meets with Silence Charity workers were still facing an agonising wait for news of Iraq aid worker Margaret Hassan tonight after a televised plea to her kidnappers was met with silence.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-006178-09c41683221b",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6178,
+      "text": "Florida Upsets No. 10 Florida State 20-13 Florida State #39;s Chauncey Stovall, left, comes down with a fourth-quarter-touchdown catch as Florida defender Vernell Brown, right, falls down, Saturday, Nov. 20, 2004, in Tallahassee, Fla.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-001229-6768cd934d42",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1229,
+      "text": "Toyota to open south China plant Japan carmaker Toyota enters a joint venture to produce saloon cars in southern China.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000578-bc49d74cc005",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 578,
+      "text": "Vonage Awash in Venture Capital VoIP (define) upstart Vonage has quickly amassed another \\$105 million from venture capitalists and is looking to Latin America and Asia to accelerate an already torrid growth rate.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-002524-724f9459f34c",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2524,
+      "text": "Karzai Travels North on First Domestic Trip Since Rocket Attack Afghan President Hamid Karzai Sunday made his first domestic trip outside the capital, Kabul, since a trip cut short by a rocket attack 10 days ago.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000205-182e632eb295",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 205,
+      "text": "Crowd Inspires Greek Beach Volleyballers; U.S. Duo Ousted  ATHENS (Reuters) - A roaring crowd helped inspire Greece's  top women's beach volleyball team to trounce China on Wednesday  and reach the next round.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-004181-8ab73847abcd",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4181,
+      "text": "Countrywide Results Spark Sector Selloff  NEW YORK (Reuters) - Countrywide Financial Corp. on  Wednesday posted a 47 percent drop in quarterly earnings and  cut its outlook as mortgage refinancings fell and rates  climbed, sparking a broad sell-off in mortgage-company stocks.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-002355-9403d198878f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2355,
+      "text": "Dinosaur May Have Been Stealth Hunter (AP) AP - The strike would have come out of nowhere: One second the fish was swimming placidly, no danger in sight, a moment later it was lunch.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-006221-4777b44994c9",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6221,
+      "text": "APEC Leaders Vow to Scrap Trade Barriers Pacific Rim leaders pledged Sunday to shore up global security and push ahead with the World Trade Organization's negotiations on lowering global trade barriers.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-006740-a44cf003a879",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6740,
+      "text": "Bellion strike gives Reds 1-0 victory over Gunners David Bellion scored 19 seconds after the opening kickoff as Manchester United #39;s backup team edged Arsenal #39;s youngsters 1-0 on Wednesday to reach the semifinal of the English League Cup.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-000093-dbc207f86dcf",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 93,
+      "text": "Fund pessimism grows NEW YORK (CNN/Money) - Money managers are growing more pessimistic about the economy, corporate profits and US stock market returns, according to a monthly survey by Merrill Lynch released Tuesday. ",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000632-8a958f46eaf7",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 632,
+      "text": "Understanding Search Engine Models Understanding Search Engine Models\\\\To understand search engines and search engine marketing, one must first understand the search engine model. There are two fundamentally different types of search engine back ends: site directories and spidering search engines. Site directory databases are built by a person manually inputting data about websites. Most ...",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-000464-9e9a1b53fc3e",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 464,
+      "text": "Panama Recalls Ambassador From Cuba (AP) AP - Panama recalled its ambassador from Cuba on Monday after the Cuban government threatened to break off relations in a dispute over four anti-Fidel Castro exiles imprisoned in Panama.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000701-635d7a691508",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 701,
+      "text": "Athens - a \\$12bn bill THE world sighed with relief when Greeks kept their promise to deliver some of the world #39;s finest sport venues in time for the Athens Olympics.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-000712-8cbed711f594",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 712,
+      "text": "Update 1: Thai Airways Orders 6 Airbus Superjumbos Thai Airways has agreed to buy six Airbus A380s, becoming the 13th airline to order the new  quot;superjumbo, quot; the European aircraft maker said Friday.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-002103-5f096eb2df73",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2103,
+      "text": "Verity, ClearForest add structure to data Verity this week will unwrap a software add-on to its search system, designed to make unstructured content more usable in corporate applications. The announcement follows activity from ClearForest, which last month introduced Version 6.0 of its Text Analytics platform for systematically structuring unstructured data so it can be processed with enterprise data in business intelligence systems.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-001195-9b7f48aa2caf",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1195,
+      "text": "PM and Latham target Sydney Prime Minister John Howard and Opposition Leader Mark Latham will target key marginal seats around Sydney as the election campaign hits its second week.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-003385-d7ecc37a90cb",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3385,
+      "text": "Will Tiger Woods #39;s Marriage Score A Hole in One? Will marriage help Tiger Woods #39;s golf game? It couldn #39;t hurt. Woods has had rough times on the course lately. For the first time since May 1999 he has slipped to No.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-001330-bad5a7eee7a5",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1330,
+      "text": "US Stocks Rise; Oil, Gold Fall A decline in the price of oil helped lift US stocks to their highest level in two-months on Tuesday. The dollar declined against its major rivals as investors took profits ",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-002919-cf01fa5ad07c",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2919,
+      "text": "EU Accuses Microsoft of Paternal View Microsoft Corp. said Friday that small companies and their customers would suffer most if it is forced to remove its digital media software from Windows, while the European Union accused it of being \"paternalistic\" in trying to decide what's best for everyone.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-007163-7d078ecd071a",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7163,
+      "text": "German court rules out Barbie monopoly (AFP) AFP - Germany's federal court of justice ruled against giving Barbie a monopoly in the themed doll market, saying that a German rival called Steffi Love had every right to compete with her.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-002297-b92381e12425",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2297,
+      "text": "Hagans Sizes Up Well Quarterback Marques Hagans has impressed in wins over Temple, North Carolina and Akron, completing 43 of 59 passes for 568 yards, three touchdowns and one interception.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-007598-cb3c92941272",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7598,
+      "text": "5 of arthritis patients in Singapore take Bextra or Celebrex &lt;b&gt;...&lt;/b&gt; SINGAPORE : Doctors in the United States have warned that painkillers Bextra and Celebrex may be linked to major cardiovascular problems and should not be prescribed.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-002151-2e4ec05f060d",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2151,
+      "text": "Europeans hail latest data from Mars The European Space Agency says data collected by its probe, Mars Express, has provided new evidence in the search for life on Mars.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-007226-c0f8a3ee9765",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7226,
+      "text": "Chen Under Pressure to Work with Taiwan Opposition  TAIPEI (Reuters) - Taiwan President Chen Shui-bian is under  pressure to find ways to work with an opposition-dominated  parliament after his party suffered a surprise setback in  weekend legislative elections.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-007155-8c9e19f347e2",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7155,
+      "text": "Strachan targeted by Portsmouth LONDON, England -- Portsmouth chairman Milan Mandaric has reportedly put former Southampton manager Gordon Strachan at the top of a list of possible targets for the English Premier League club #39;s vacant managerial position.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-005804-e2de8a44dec6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5804,
+      "text": "S amp;P 500 Slides; Nasdaq, Dow Rise The Standard  amp; Poor #39;s 500-stock index slipped from a three-year high, dragged lower by energy shares including Exxon Mobil as crude-oil prices dropped to their lowest in almost two months.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000012-6d88ca427ade",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 12,
+      "text": "Dutch Retailer Beats Apple to Local Download Market  AMSTERDAM (Reuters) - Free Record Shop, a Dutch music  retail chain, beat Apple Computer Inc. to market on Tuesday  with the launch of a new download service in Europe's latest  battleground for digital song services.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004246-f2f9163ea845",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4246,
+      "text": "Nigerian Military Officers Charged with Coup Plot (Reuters) Reuters - Four Nigerian military officers and a\\civilian were accused Thursday of plotting to overthrow\\President Olusegun Obasanjo by firing a rocket at his\\helicopter, court documents showed.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-007007-c6b6d66dcc51",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7007,
+      "text": "Florida Linebacker Charles Charged (AP) AP - Florida linebacker Taurean Charles was charged with aggravated battery and culpable negligence-infliction of injury Wednesday from a fight at an off-campus party in June.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-004908-76cb0c725e24",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4908,
+      "text": "Boeing trying to keep up Aircraftmaker seeks buyers for new &lt;b&gt;...&lt;/b&gt; Seattle -- The assembly line at Boeing Co. #39;s cavernous Everett plant near here is designed to keep moving continuously, if almost imperceptibly, as workers scramble over the silvery bodies of skeletal Boeing 777s, applying finishing touches.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000382-543b129c663f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 382,
+      "text": "More Evidence for Past Water on Mars Summary - (Aug 22, 2004) NASA #39;s Spirit rover has dug up plenty of evidence on slopes of  quot;Columbia Hills quot; that water once covered the area.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-000136-e909a83de4dd",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 136,
+      "text": "Schrder adopts Russian orphan Three-year-old Victoria, from St Petersburg, has been living at the Schrders #39; family home in Hanover in northern Germany for several weeks. ",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-001113-f91601a60f74",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1113,
+      "text": "9 in a row! Red Sox sweep Angels The Red Sox take control of the American League wild-card race with a 4-3 win over the Angels. It was Boston #39;s ninth straight win -- a season high.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-003711-388484bd20aa",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3711,
+      "text": "Alaskan pipeline has hurdles Energy companies planning a \\$20 billion gas pipeline to US consuming markets from Alaska welcomed new federal loan guarantees but cautioned Tuesday that other issues must be resolved before the huge project proceeds.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000454-153b7fa6486e",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 454,
+      "text": "Partnership Connects Wi-Fi Users In The Sky Wi-Fi is going sky-high thanks to a deal forged between enterprise Internet service provider iPass and Connexion by Boeing. Under the deal, iPass #39;s 528,000-plus Wi-Fi enterprise customers will ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-002055-ed1fef7934d7",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2055,
+      "text": "Suicide car bombing kills three, wounds seven in northern Iraq A suicide attacker detonated a car bomb Sunday near a joint US-Iraqi checkpoint, killing three people and wounding seven, including four US soldiers in the northern city of Samarra, the military said.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-001212-aaf9867b29fc",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1212,
+      "text": "CRICKET: Kaspa has selectors in a bind MICHAEL Kasprowicz has put national selectors into a difficult situation with a five-wicket burst that has enhanced Australia #39;s hopes of snatching a maiden Champions Trophy in London this month.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-006385-d73b8dc95f91",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6385,
+      "text": "Judge: MCI may have violated court order on certain fees NEW YORK A federal judge in Manhattan says MCI may have violated a court order by paying more than 25 (m) million dollars in professional services fees as part of its bankruptcy proceedings in excess of caps on such fees.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000257-581b0cc0332f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 257,
+      "text": "Drugstore Offers New Wave of Disposable Cameras  NEW YORK (Reuters) - Pharmacy chain CVS Corp. on Thursday  said it would offer the world's first disposable digital camera  with a bright color viewing screen that allows consumers to  instantly preview pictures.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-001173-f288ee26035f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1173,
+      "text": "Russian school death toll tops 340 The death toll in the Russian schoolhouse siege soared to more than 340 yesterday, and the horrifying human cost is likely to keep climbing.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-006121-86a1555c18bc",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6121,
+      "text": "Busch Wins Pole for Season-Ending Race Pressure? What pressure? Kurt Busch, last in the qualifying line and first in the NASCAR Nextel Cup points, waited out 54 other drivers Friday and then won the pole for the season-ending Ford 400, which will determine the 2004 champion.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-007005-9412f3a08216",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7005,
+      "text": "Dollar Extends Recovery Against Euro, Yen The dollar rebounded for a second session on Thursday as traders and investors took profits on bets against the US currency before the year draws to a close.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000558-0f5fe202f805",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 558,
+      "text": "Study: Apple, Dell lead PC customer satisfaction index The PC industry is doing a better job this year of satisfying its U.S. customers, and better technical support and easier-to-use hardware seem to have made a difference, according to the American Customer Satisfaction Index.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-001580-d10b849625c7",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1580,
+      "text": "Putin #39;s policies at fault The spate of terrorist attacks in Russia illustrates that President Vladimir V. Putin #39;s hard-line policy in Chechnya is failing to resolve that conflict or to make Russians safer.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-003200-b79f4b0d83c4",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3200,
+      "text": "Els Looks Ahead with Promise After Major Woes  LONDON (Reuters) - After being a frustrated 'nearly man' at  this year's majors, Ernie Els plans to make the most of a  near-perfect finish to the 2004 season.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-001177-c6305866c7a6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1177,
+      "text": "Checking changes Toward the end of the month if resources are a little tight, there are times when Krista Bergstrom admits she writes a check or two for more than is left in her account.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-004252-58628cd57ac2",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4252,
+      "text": "We Are Using 20 More Resources Than The Earth Can Produce The human race is plundering the planet at a pace that outstrips its capacity to support life, according to a report by WWF. The Living Planet Report 2004 shows that humans currently consume 20 per cent more ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004752-93100872e384",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4752,
+      "text": "Blast Outside Thailand Bar Injures 15 (AP) AP - A bomb exploded Thursday evening outside a bar in southern Thailand, the scene of a campaign of violence blamed on Islamic separatists, injuring at least 15 people, police said.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-002402-052171d4ec3f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2402,
+      "text": "Davis Cup: Australia takes 2-0 lead in World Group playoff :Lleyton Hewitt gave Australia a 2-0 lead in its Davis Cup World Group playoff today with a record-setting 6-0 6-2 6-2 win over Mehdi Tahiri of Morocco on grass at Royal Kings Park.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-000865-027011a0da6a",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 865,
+      "text": "Tokyo Stocks Flat, Focus on Data  TOKYO (Reuters) - Japanese stocks were flat in mid-morning  trade on Monday with confidence in the domestic economic  outlook failing to offset profit-taking that hit recent gainers  such as insurers and real estate stocks.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000053-84e6f2311d2b",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 53,
+      "text": "Vodafone hires Citi for Cesky bid (TheDeal.com) TheDeal.com - The U.K. mobile giant wants to find a way to disentagle the Czech wireless and fixed-line businesses.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-002029-3d88fd22ed4c",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2029,
+      "text": "Two million take part in all-night cultural festival in Rome (AFP) AFP - Two million people massed in the streets of Rome and in its monuments and museums overnight, celebrating the Italian capital's second annual all-night cultural extravaganza, the mayor said.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000670-82399bd81efd",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 670,
+      "text": "Let basketball As the US men #39;s basketball team limps into the Olympic medal round, the focus has been on the team #39;s lousy outside shooting.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-006243-35196a379f04",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6243,
+      "text": "Xstrata Makes a Bid for WMC Resources Swiss mining group Xstrata PLC Monday launched a hostile 7.4 billion Australian dollar (US\\$5.8 billion; euro4.4 billion) bid for uranium and copper miner WMC Resources LTD, increasing pressure on the independent Australian miner.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-006614-99939f7ffb1b",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6614,
+      "text": " #39;Breakthrough #39; on hydrogen fuel US scientists had made a breakthrough in their quest to make low-cost hydrogen, a technology key to finding new sources of energy to end US dependence on foreign oil, they said.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-006483-7ff47c6ec2ff",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6483,
+      "text": "ASEAN to push Australia, New Zealand to sign non-aggression pact (AFP) AFP - Southeast Asian foreign ministers said they would encourage Australia and New Zealand to accede to a non-aggression pact with their 10-nation ASEAN group that South Korea signed.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000343-7fa72025b311",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 343,
+      "text": "Fleisher Surges Clear Bruce Fleisher carded a seven-under-par 65 to take a three-shot lead after the second round of the Greater Hickory Classic in North Carolina.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-005474-6c904b5773cb",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5474,
+      "text": "Nikkei Seen Flat; Earnings, Data Awaited  TOKYO (Reuters) - Japanese stocks are expected to change  little from the previous day's closing levels on Thursday as  investors await key domestic economic data and earnings reports  from companies such as Tokyo Electron Ltd.  September machinery  orders data is due on Thursday afternoon, ahead of Friday's  gross domestic product (GDP) figures for the July-September  quarter.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-003429-7406b3d0ba9f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3429,
+      "text": "Fujifilm And Sprint Launch Photo Printing Service Sprint and Fuji Photo Film USA recently introduced a new service that lets Sprint #39;s Picture Mail customers send digital camera phone pictures from their online Picture Mail ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-003799-e9f29fb11590",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3799,
+      "text": "Flight From Hong Kong Diverted in UK LONDON Oct. 14, 2004 - A Virgin Atlantic plane heading from Hong Kong to London was diverted to an airport north of London on Thursday after receiving a bomb threat, police said.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000398-5c29eb2b48f7",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 398,
+      "text": "Red Sox Rally to Beat White Sox 6-5 (AP) AP - Manny Ramirez and David Ortiz homered on consecutive pitches to start the eighth inning Sunday night and the streaking Boston Red Sox beat the Chicago White Sox 6-5 for their sixth straight win.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-001441-5069a7b8496a",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1441,
+      "text": "A Taste of Yum! Wins the World Over Strong international sales growth and solid U.S. comps propel the company's stock to its highest price ever.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-001413-80225db6c908",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1413,
+      "text": "Longhorn to put squeeze on gadgets SAN FRANCISCO--Windows makes it easy to quickly download files to iPods and other portable storage devices--a little too easy in the minds of many IT managers.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-002460-efb798cc53b5",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2460,
+      "text": "Scientist Ramanna mourned BOMBAY: Raja Ramanna, the scientist who pioneered India #39;s drive to become a nuclear power, died yesterday in Bombay at age 79.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000814-c302370a95a3",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 814,
+      "text": "TOMPKINS: Young Brit who fought here has shot at gold Great Britain #39;s Amir Khan, who looked so impressive in winning the 132-pound championship at the Junior International Invitational Boxing Championships here last summer, has a chance for an Olympic gold medal in the lightweight division today.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-006226-cb64025bf27a",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6226,
+      "text": "Google targets software giant  SEATTLE -- Not too long ago, Google Inc. seemed little more than a pesky insect to Microsoft Corp.'s 800-pound gorilla.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-005931-cadc9e137957",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5931,
+      "text": "MPAA takes filesharers to court The Motion Picture Association of America has gone on the offensive in its battle against piracy and peer-to-peer sharing of movies, and has launched more than 200 civil suits against users it identifies as being the worst offenders.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004734-c7eb5f4f8beb",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4734,
+      "text": "Australia establish 300-run lead in third India Test (AFP) AFP - Australia batted cautiously in their second innings to build a lead of 300 runs over India with nine wickets in hand in the third cricket Test here.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000821-9d2005f3af97",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 821,
+      "text": "We owe Athens an apology ATHENS -- The Games of the XXVIII Olympiad -- the great disaster that wasn #39;t -- come to an emotional end this afternoon and, really, the world owes Athens an apology.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-005678-81d7eb3bfad0",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5678,
+      "text": "Stocks End Higher as Dell Boosts Techs Stocks extended their rally on Friday, led by technology shares after computer maker Dell Inc. (DELL.O: Quote, Profile, Research) shot up 8 percent on a higher quarterly profit and an optimistic forecast.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-005944-6e7f8b5cfb4d",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5944,
+      "text": "SBC Gives Microsoft \\$400 Mln Internet TV Deal  WASHINGTON (Reuters) - SBC Communications &lt;A HREF=\"http://www.reuters.co.uk/financeQuoteLookup.jhtml?ticker=SBC.N qtype=sym infotype=info qcat=news\"&gt;SBC.N&lt;/A&gt; will use  Microsoft Corp. &lt;A HREF=\"http://www.reuters.co.uk/financeQuoteLookup.jhtml?ticker=MSFT.O qtype=sym infotype=info qcat=news\"&gt;MSFT.O&lt;/A&gt; technology to launch video services  over upgraded high-speed data lines, the companies said  Wednesday.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004910-4c86c032ddee",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4910,
+      "text": "Japan confirms captive in Iraq beheaded Japan has confirmed that the headless body found in Baghdad on Saturday is of the Japanese being held captive in Iraq. An armed group in Iraq had on Tuesday threatened to behead Shosei Koda, 24, within 48-hours unless Japan pulled its troops out of Iraq.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000210-b805a41e99a9",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 210,
+      "text": "Britain #39;s Olympic medal total takes sudden turn for the better Great Britain #39;s performances in the Olympic Games made a dramatic and unexpected improvement yesterday as they won a silver and three bronze medals. They were also guaranteed at least a silver medal in badminton #39;s mixed doubles. ",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-003492-0a81283d79aa",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3492,
+      "text": "Martha Stewart reports to jail to begin sentence the time she had to report to the country #39;s oldest federal prison for women. service of her sentence, quot; a Federal Bureau of Prisons statement said.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-001863-4e1821233a4e",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1863,
+      "text": "Judge Weighs Evidence in IBM, SCO Case IBM attorneys argued that Utah-based SCO Group has failed to provide any evidence that IBM allowed proprietary Unix code to enter the freely distributed Linux operating system and its \\$5 billion suit making that claim should be dismissed.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-006098-23b435d5d4fc",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6098,
+      "text": "A conspiracy theory : In the aftermath of Arafats passing AH Jaffor Ullah. Yasser Arafat, the acknowledged leader of Palestinian people, lived amidst controversy all through his life. The cause of his death has now become a source of controversy amongst the departed leaders people all over Middle East.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-006553-219e69836bd8",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6553,
+      "text": "ITA: Juventus blows 2-goal lead againt Inter Milan Serie A leader Juventus wasted a two-goal lead in the second half and was held to a 2-2 draw by Inter Milan at San Siro on Sunday, losing ground to defending champion AC Milan.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-007507-f4a31d106d82",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7507,
+      "text": "Crude Oil Rises on Speculation Cold Weather May Increase Demand Crude oil futures are headed for their biggest weekly gain in 21 months on speculation cold weather may boost demand in the US Northeast, where 80 percent of the country #39;s heating oil is used.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-007207-c7efc6e8ca3c",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7207,
+      "text": "Sony #39;s game war advances to next level Rival Sony began its worldwide assault yesterday by launching a new handheld console, PlayStation Portable, in game-crazy Japan. Sony aims to seek and destroy GameBoy and its maker Nintendo #39;s \\$5billion hold ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-001220-2dad9adbc2af",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1220,
+      "text": "West Japan on Guard for Aftershocks After Quakes  TOKYO (Reuters) - Residents of western Japan were warned of  possible aftershocks on Monday after two strong earthquakes the  previous day but authorities said the tremors were not directly  linked to a cycle of major seismic activity that hits the  region every century or so.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000769-7df7f47683ea",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 769,
+      "text": "Short Jump, Bad Handoff End Jones #39; Games ATHENS, Greece - For Marion Jones, Sydney must seem far more than half a world away. Those Olympics were some dreamland where she ruled track and field with a golden touch and a sweet smile, winning five medals ",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-001099-03c50332dec6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1099,
+      "text": "Third Month of Slow Sales for Retailers The August start of the back-to-school shopping season was a disappointment for major retailers.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-005233-dcf43a8dd238",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5233,
+      "text": "Flat-screen TV prices are falling for holidays But trend provokes industry unrest; panel makers call for drop in retail markups to move units. By Evan Ramstad and Gary McWilliams.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-003516-ec941401d590",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3516,
+      "text": "Israelis kill five Palestinans in Gaza Strip Israeli troops killed five armed Palestinians in the Gaza Strip today as it pressed on with a massive offensive aimed at stopping militants firing rockets into Israel.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-007211-69d3488c479d",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7211,
+      "text": "Diamondbacks, Clayton Reach Agreement (AP) AP - Royce Clayton and the Arizona Diamondbacks reached a preliminary agreement Sunday on a  #36;1.3 million, one-year contract.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-005300-ef7b8ee05b49",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5300,
+      "text": "Stocks Open Lower as Wall St. Pulls Back US stocks opened slightly lower on Monday as investors pause after a three-day rally last week, with interest rates and a weakening dollar gaining focus now that the presidential election is over.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-001325-c23207cfae51",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 1325,
+      "text": "HDS aims virtual Lightning at EMC, IBM Discovers virtualisation just as everyone else is trying to forget it",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-002187-783659063776",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2187,
+      "text": "Bush Condemns Beheading of U.S. Hostage (AP) AP - President Bush on Tuesday condemned the beheading of American hostage Eugene Armstrong, telling interim Iraqi Prime Minister Ayad Allawi, \"We will not allow these thugs and terrorists to decide your fate and decide my fate.\"",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-007383-5a1039c21578",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7383,
+      "text": "City to ponder Anelka future MANCHESTER, Dec 15 (SW) - Manchester City chairman John Wardle has not ruled out a winter break move of French in-form striker Nicolas Anelka.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-003189-459a74bb3224",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3189,
+      "text": "Oil Prices Set a New Record Above \\$50  SINGAPORE (Reuters) - Oil prices set a new record above \\$50  a barrel on Tuesday as a prolonged U.S. production outage  following Hurricane Ivan attracted fresh speculative buying.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-004174-a7ce0a6a6013",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4174,
+      "text": "CERN to Probe Life, the Universe and Everything (Reuters) Reuters - It has revolutionized physics, made",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-002802-7b458b5c7655",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2802,
+      "text": "Britain extends citizenship rights to Gurkha soldiers (AFP) AFP - Britain has extended full citizenship rights to Gurkha soldiers from Nepal who serve in the British armed forces, Prime Minister Tony Blair has said.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-005352-ac120c3fb1ea",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5352,
+      "text": "NBA Today (AP) AP - Indiana at Minnesota (8 p.m. EST). Last year's Eastern and Western Conference regular-season champions meet for the first of two times this season.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-002672-b076c2f4870f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2672,
+      "text": "Pepsi Bottling Profit Rises (Reuters) Reuters - Pepsi Bottling Group Inc. , the\\largest bottler of Pepsi drinks, on Tuesday said quarterly\\profit rose on volume growth in the United States and Europe.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-002358-a4be2cb6b910",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2358,
+      "text": "VeriSign Touts Childrens' Online Identity Token  WASHINGTON (Reuters) - VeriSign Inc. &lt;A HREF=\"http://www.reuters.co.uk/financeQuoteLookup.jhtml?ticker=VRSN.O qtype=sym infotype=info qcat=news\"&gt;VRSN.O&lt;/A&gt; and a  children's safety group unveiled a new technology on Thursday  that they said would make it easier for children to avoid child  predators online.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-006202-c55deb5e5269",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6202,
+      "text": "After a decade of silence, Cambodia's cinema enjoys resurgence (AFP) AFP - After a decade of silence, Cambodia's movie industry is enjoying a boom due to a dash of Hollywood attention, burgeoning nationalism and cheaper production costs, industry insiders say.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-003693-754d83982a69",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3693,
+      "text": "Drummond back to his happy home Scott Drummond, who meets the defending champion Ernie Els tomorrow in the first round of the World Match Play Championship, arrived at Wentworth in May with career earnings on the European Tour of less than 40,000.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-005950-c5c8f280209d",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5950,
+      "text": "Treasuries Mount Rally Despite Inflation  NEW YORK (Reuters) - U.S. Treasury prices rallied on  Wednesday as inflation excluding food and energy, one of the  Federal Reserve's preferred price measures, proved less  dramatic than bond bulls had feared.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-005747-53c2fd9e21c7",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5747,
+      "text": "Sun to set Solaris free, after a fashion Operating system to come at no charge for servers with x86 processors. But the bug fixes will cost you.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004197-ec8d54dd2dc6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4197,
+      "text": "Typhoon Tokage Claims 25 Lives; 43 Missing, NHK TV Reports Twenty-five people were confirmed dead and 43 missing as of 5 am after typhoon Tokage passed through Japan, NHK television said on its Web site.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-004973-0c9d39934f17",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4973,
+      "text": "Pinkel reinstates Damien Nash Missouri tailback Damien Nash was reinstated by coach Gary Pinkel, ending a one-game suspension for the teams #39; leading rusher.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-002735-a53508254718",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2735,
+      "text": "Tokyo Stocks Turn Lower by Midday  TOKYO (Reuters) - Tokyo's Nikkei fell 0.19 percent by  midday on Wednesday, erasing initial gains and extending losses  into a ninth straight day as worries about high oil prices and  domestic economic uncertainty hit exporters and tech stocks.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-005545-3d7b34b4a9eb",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5545,
+      "text": "Microsoft launches new search engine Redmond-based Microsoft Corp. on Thursday launched a test version of its new MSN Search service, hoping to compete with Google and other major Web search services.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-000786-616a45466d77",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 786,
+      "text": "Shaukat Aziz gets vote of confidence ISLAMABAD: Newly-elected known as finance wizard Prime Minister Shaukat Aziz has secured vote of confidence form the national assembly.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-003621-2429b985004a",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3621,
+      "text": "Adams quits as Leicester boss LEICESTER: Mickey Adams has quit as manager of English Championship side Leicester City, the club announced yesterday. Adams #39; resignation was accepted at an emergency meeting of the board of directors at the ",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-003712-6471badccf8e",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3712,
+      "text": "UK's jobless level falls further Unemployment in the UK fell by 51,000 between June and August to 1.39 million - the lowest on record, according to official figures.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-006436-955eee6bccf4",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6436,
+      "text": "Behaviour control by smartphone The Massachusetts Institute of Technology is developing mobile phones designed to learn users #39; daily habits so that they can predict what users will do, reports The Register.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-003761-edf0d778f02e",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3761,
+      "text": "ERA Congratulates Nobel Peace Prize Winner The Environmental Rights Action/Friends of the Earth Nigeria (ERA/FoEN) has congratulated Kenya born Nobel Peace Prize winner, Dr.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000862-2a9add2ca3db",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 862,
+      "text": "Angels' Glaus Activated From DL (AP) AP - Troy Glaus was activated from the 60-day disabled list Sunday by the Anaheim Angels and was back in the lineup against the Minnesota Twins.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-002666-db578c4479c7",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2666,
+      "text": "Citigroup #39;s Krawcheck Named Finance, Strategy Chief (Update2) Citigroup Inc., the world #39;s biggest bank, named Sallie Krawcheck chief financial officer and head of strategy, making her the highest-ranking woman on Wall Street and giving her responsibilities outside the brokerage industry.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-005531-353ce0b7f46d",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 5531,
+      "text": "Testimony Ends In Evolution Sticker Trial ATLANTA -- Testimony concluded Wednesday in the lawsuit against Cobb County Georgia schools for placing disclaimer stickers about evolution in high school biology texts.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-004574-56449390139c",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 4574,
+      "text": "Protesters Harry Israel Parliament Before Gaza Vote  JERUSALEM (Reuters) - Thousands of rightist Israelis  accused Prime Minister Ariel Sharon of treason Tuesday as  parliament looked set to approve the first pullout of settlers  from occupied land Palestinians want as part of a future state.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-003149-958ed86b42a6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3149,
+      "text": "Spielman Defends Decisions With Dolphins (AP) AP - Miami Dolphins general manager Rick Spielman watches home games from the owner's box, which would be the best seat in the house if the team was better.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-002234-c009fee6c9fb",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2234,
+      "text": "Spread of GM grass raises fears of crossbreeding Pollen from a genetically modified grass was found 21 kilometres from where it was planted, scientists reported in a study published Tuesday, raising fears of transgenic crossbreeding.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000375-2c83e2f9dbd6",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 375,
+      "text": "Agency reports climate change major problem Rising sea levels, disappearing glaciers in the Alps and more deadly heat waves are coming for Europeans because of global warming, Europes environmental agency warned Wednesday.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-007371-ec3b602ecc0d",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 7371,
+      "text": "Dead Iraqi #39;s Family Wins Demand for UK Abuse Probe In a test case over British troops #39; alleged abuse of Iraqi civilians, a London court on Tuesday backed demands for an independent inquiry into claims a Basra hotel worker was beaten to death by UK soldiers.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-000940-99f5683f97a5",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 940,
+      "text": "Bryant Jury Selection Behind Closed Doors (AP) AP - Prospective jurors in the Kobe Bryant rape case were asked their feelings on racial prejudice, interracial relationships, marital infidelity and justice for the rich and famous in an 82-item questionnaire released Monday.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-002909-03766aa3d07f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2909,
+      "text": "Nikkei Closes Higher After Strong Tankan  TOKYO (Reuters) - The Nikkei average closed up 1.49 percent  on Friday, the first day of the fiscal second half, as a strong  reading in the Bank of Japan's \"tankan\" business survey  prompted investors at home and abroad to jump into the market.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000645-317d42bccd9c",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 645,
+      "text": "Intel Gives Centrino Chip Line a Wireless Upgrade (Reuters) Reuters - Intel Corp. (INTC.O) on Thursday\\said it has upgraded the wireless networking capabilities of\\its Centrino line of notebook computer chips to allow broader\\network access with improved security.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-006512-770e7996b3b3",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 6512,
+      "text": "SAY NEIGHBORS #39; WEAPONS LEAVE THEM VULNERABLE Electrical engineering student Roozbeh Rahimi reflects a common sentiment among Iranians when he expresses hope that this famous tourist city will gain fame soon for its nuclear technology.",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-003387-aa7bf87f9cfe",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3387,
+      "text": "Swimming: Phelps eases into world short course 200 free final INDIANAPOLIS, United States : Athens Olympic star Michael Phelps made a relatively relaxed start on the first day of the seventh World Short Course Swim Championship, qualifying second for the 200m freestyle final.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-003616-b58f03529165",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3616,
+      "text": "Cocoa farmers issue strike threat Unions are threatening a general strike in the Ivory Coast in a protest against the prices farmers are paid for their cocoa supplies.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-000512-b4eb153fcbb2",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 512,
+      "text": "Intel slashes Itanium prices as Madison looms Intel has slashed prices across the board as it prepares to get behind new processor lines due this autumn. The Itanium server line has seen cuts of over 30 per cent, while prices for Intel #39;s fastest business ",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    },
+    {
+      "sample_id": "test-003345-1dbbbe5f4239",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3345,
+      "text": "U.S. Report: Iraq Didn't Have WMDs WASHINGTON - Saddam Hussein's weapons of mass destruction programs had deteriorated into only hopes and dreams by the time of the U.S.-led invasion last year, a decline wrought by the first Gulf War and years of international sanctions, the chief U.S. weapons hunter found...",
+      "label_id": 0,
+      "label_name": "World"
+    },
+    {
+      "sample_id": "test-003024-62db7d055f6f",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3024,
+      "text": "No. 20 Wisconsin 24, Illinois 7 Tailback Anthony Davis #39; return from an eye injury sparked No. 20 Wisconsin #39;s stagnant offense and the Badgers #39; defense was as stout as ever in a 24-7 victory over Illinois on Saturday.",
+      "label_id": 1,
+      "label_name": "Sports"
+    },
+    {
+      "sample_id": "test-002658-c9f85aedb20e",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 2658,
+      "text": "Japan Shares Fall to Low on Oil Worry  TOKYO (Reuters) - Japan's Nikkei share average fell 0.4  percent to a six-week closing low on Tuesday, marking an  eight-day losing streak, after oil prices topped \\$50 a barrel,  fanning concern over the business outlook for Japanese  companies.",
+      "label_id": 2,
+      "label_name": "Business"
+    },
+    {
+      "sample_id": "test-003145-5d151479781b",
+      "split": "test",
+      "source_split": "test",
+      "source_index": 3145,
+      "text": "Xamlon looks to beat Microsoft to the punch This fourth priority #39;s main focus has been improving or obtaining CRM and ERP software for the past year and a half. Software engineer and entrepreneur Paul Colton thinks he can beat Microsoft by taking a page from its play book--literally.",
+      "label_id": 3,
+      "label_name": "Sci/Tech"
+    }
+  ],
+  "n_search": 160,
+  "n_test": 200,
+  "search_ids": [
+    "train-089674-d690aed59403",
+    "train-081641-f22ec9fb3160",
+    "train-019949-4fa62b44e28c",
+    "train-104227-15ee0ea1fd23",
+    "train-107991-463a57fa32a9",
+    "train-102480-9245d6c02351",
+    "train-009787-bdc604a68c95",
+    "train-103981-b6d2c31fe482",
+    "train-015898-623c2c80af58",
+    "train-075915-208df37e413a",
+    "train-043627-3997815bc6ed",
+    "train-016011-5e54a86c3bdc",
+    "train-092203-df3fd4744d65",
+    "train-098119-505614b6b808",
+    "train-048781-cdfb6710b1db",
+    "train-026483-7b7c561288f7",
+    "train-043096-3249abb7894d",
+    "train-005410-26f25e3cbb4c",
+    "train-060956-4c2c83c289c1",
+    "train-099873-293a1ad9076f",
+    "train-074895-ade012b853b7",
+    "train-070197-d53a944ac789",
+    "train-085675-e64f920825b6",
+    "train-081198-3ce26fd1afa2",
+    "train-014032-4ea0efca167a",
+    "train-095252-2a7a5af34d4b",
+    "train-052527-5a95a4e6fa09",
+    "train-063445-a173ea68655d",
+    "train-070543-5fc32f29441e",
+    "train-006400-f1e75be61f10",
+    "train-105444-7871d44c7974",
+    "train-012107-d8a04feb7ca6",
+    "train-022537-2590627fea87",
+    "train-106082-5757a0588876",
+    "train-018572-50beaa0e698a",
+    "train-017902-e696e9a5dd4b",
+    "train-069817-a3181c47bf04",
+    "train-070394-764625c1dd8c",
+    "train-054719-e30aabd6d34f",
+    "train-001459-56bb6cea4712",
+    "train-036976-915b8c942443",
+    "train-086177-fb12d05f2844",
+    "train-119479-daa67605ba2d",
+    "train-049133-da6b52e82c35",
+    "train-082921-c12b397bcbcc",
+    "train-107881-1cef82588e89",
+    "train-015066-aa19aa268299",
+    "train-015234-9d1f13f8fca8",
+    "train-065477-97cb404f6b59",
+    "train-061112-31bd5eb584e1",
+    "train-052693-d6e171a5a873",
+    "train-012639-69dd1b5da86b",
+    "train-074581-40a2fff20e0c",
+    "train-025472-a0ee29a26d1a",
+    "train-005064-58ff546a7607",
+    "train-119760-4540662dd10f",
+    "train-039498-1f6f8bf0a92a",
+    "train-014997-0986c486f55d",
+    "train-029619-1a71c7b87b4f",
+    "train-060790-f8824191d17e",
+    "train-037342-adffed9862b6",
+    "train-034261-5e4ba0b89498",
+    "train-058781-a3c76896b624",
+    "train-079939-a6e8640f656a",
+    "train-110631-5c31a9691b5b",
+    "train-031313-9d3113abf4de",
+    "train-007669-21e5502ce239",
+    "train-092511-6c7722685685",
+    "train-079802-1f0d600ee061",
+    "train-082723-28055740e1eb",
+    "train-112725-7221c2773982",
+    "train-061937-a29c148647a6",
+    "train-007003-60bbeee3c953",
+    "train-006970-d3bc045601c3",
+    "train-111085-653591c16c84",
+    "train-033071-162eb19764ea",
+    "train-081548-1ca01b039e24",
+    "train-013158-246a622a2c9f",
+    "train-043698-939e613ada7a",
+    "train-069104-6e72a25eadde",
+    "train-090588-587bfba9b95b",
+    "train-055702-96a80bd3b23e",
+    "train-069848-3b978c996cb5",
+    "train-001066-2b03dbd85aab",
+    "train-011046-293e241d5942",
+    "train-078257-f7590eff59dc",
+    "train-045191-ff1eb4967974",
+    "train-022427-464523828035",
+    "train-047365-cb6bce30dd81",
+    "train-015555-803868bdf983",
+    "train-078366-1ad0e25e1710",
+    "train-044944-c631135938ba",
+    "train-007805-83a9dc53d64f",
+    "train-039272-e643d740f4ad",
+    "train-101866-93c7d783fdba",
+    "train-015951-8d44be77d714",
+    "train-078960-61636efcad6d",
+    "train-056134-1e544f51ebfa",
+    "train-082550-f576f71b3724",
+    "train-011926-b62c84ab708a",
+    "train-047280-37c8c2f4c861",
+    "train-065247-133e3c4bf7b9",
+    "train-067607-7940f0ff3f47",
+    "train-092050-395c776d6405",
+    "train-104839-528eaf6669e1",
+    "train-033746-d3448948402a",
+    "train-042557-05737357b09a",
+    "train-029543-0c558ef12841",
+    "train-103369-c4b01c075229",
+    "train-045665-39427bc3532c",
+    "train-014237-542ae93fe81a",
+    "train-073743-950e2d8fb0da",
+    "train-024265-492615dea957",
+    "train-027092-95ce9d53bb1d",
+    "train-048623-9e7b8fdea0e5",
+    "train-061383-5155ee86ab4a",
+    "train-058850-48a284999bd6",
+    "train-000559-e6d826a2163b",
+    "train-097019-a52723cfc972",
+    "train-105623-d29a34de00bc",
+    "train-017138-e182557bee3a",
+    "train-071173-0648982ba8b1",
+    "train-040534-b4848e9289fd",
+    "train-086483-47a5a6118712",
+    "train-107959-371ed570fef5",
+    "train-010467-6c089eeeedff",
+    "train-104523-eb07433f0f53",
+    "train-104879-7663d1f7690e",
+    "train-038188-c910d42bd331",
+    "train-112711-cd4c6d194cf4",
+    "train-006982-a3c71025362d",
+    "train-010018-43afa0b8dc70",
+    "train-109168-f4a98552ded4",
+    "train-005187-7138e41566eb",
+    "train-021801-9f59b1c00b04",
+    "train-101306-1ccc74de564c",
+    "train-027916-26e0b685c2b1",
+    "train-118485-ec18396e6ad1",
+    "train-053397-5198089c3b60",
+    "train-110380-0388ca1193d3",
+    "train-077557-303a5e34d778",
+    "train-097225-c0621940707c",
+    "train-088550-aa039c445e12",
+    "train-099006-dc4324272aa2",
+    "train-079739-e7119f903d24",
+    "train-023833-b6ea3417a703",
+    "train-048913-6190a34b1efd",
+    "train-092012-66f8201f20bb",
+    "train-052728-2c2398c97687",
+    "train-102185-4828e4004094",
+    "train-057258-7111c51b7c3e",
+    "train-044222-a0a1da702cab",
+    "train-116374-a3e011082a4b",
+    "train-098659-2ef1be496482",
+    "train-048113-f91ba45ce0ea",
+    "train-100503-fbf4908cf4eb",
+    "train-109527-32838093032d",
+    "train-109524-c3afa482cec8",
+    "train-100361-bc9f7f9f5f49",
+    "train-085503-3a7006f66a8b"
+  ],
+  "test_ids": [
+    "test-001768-77a489a20b70",
+    "test-006825-2f76617c6e8a",
+    "test-000384-439763017d93",
+    "test-002779-afcfa3d6ea7f",
+    "test-001636-c41870d8946c",
+    "test-003525-7f91c4f10917",
+    "test-005472-4347614ec872",
+    "test-003012-336bb01021e2",
+    "test-002076-6121a3b7e0d7",
+    "test-001553-213a9bc1f1f2",
+    "test-001853-c1c9d4ac9948",
+    "test-003780-edf89192a429",
+    "test-006588-e59ae8ac3a1e",
+    "test-007379-c72ecce6acfc",
+    "test-003458-27113e27b528",
+    "test-006450-719d7646ce45",
+    "test-004162-6dfef522adf6",
+    "test-002235-0d95c120bac8",
+    "test-005542-ee8f6f59879a",
+    "test-005779-b5698803da20",
+    "test-003474-25c2b97ed39f",
+    "test-000855-0c735934cac6",
+    "test-006860-3deb424e5360",
+    "test-000706-64e847aebdba",
+    "test-000742-dd5d856b1ff2",
+    "test-002933-75dac9e6c7b5",
+    "test-006797-53df9bbf1ac6",
+    "test-006975-dcc868c2f991",
+    "test-004334-e9ae5abc5187",
+    "test-005437-f7b72279041f",
+    "test-003440-896b55a81c99",
+    "test-006599-209b3fa01696",
+    "test-003085-47a23dff7769",
+    "test-006172-696a1ecefc2f",
+    "test-004297-47ca47569f7e",
+    "test-007410-44aa9e815b88",
+    "test-006578-eaeca61a127c",
+    "test-004050-73a5ce5cd0bf",
+    "test-007115-f97499facf24",
+    "test-003835-321eb11221dc",
+    "test-007018-3e7523c6133d",
+    "test-004920-503cac959267",
+    "test-001110-e1d0fd725fca",
+    "test-000741-648cd7f55ec6",
+    "test-003239-a7e537b388b4",
+    "test-005178-e29817d35afb",
+    "test-004773-560a13c31384",
+    "test-002719-8d49b76066d9",
+    "test-002603-99f83b9aa189",
+    "test-003626-ab98fbbd5d09",
+    "test-000562-21c5a8373242",
+    "test-000709-c4470538641d",
+    "test-004439-5961279c75b7",
+    "test-002362-d657051250e7",
+    "test-000667-ea4c87ac92b6",
+    "test-003993-3c429beb0a2d",
+    "test-003958-ac7394b85278",
+    "test-006628-952872780091",
+    "test-007438-92f63c1e716b",
+    "test-005091-0ad5aea2ca6e",
+    "test-000973-f7751253db58",
+    "test-004970-a46e3296d8bc",
+    "test-006006-5123f5e10f39",
+    "test-002217-02876580cabc",
+    "test-004711-4b071b582512",
+    "test-005949-c6f1f6de38db",
+    "test-001420-5432f00f0959",
+    "test-004121-f747c25b853b",
+    "test-004466-970beb3b40d7",
+    "test-006922-176b46ae808e",
+    "test-004795-8088ebd069bc",
+    "test-004257-22470af8232c",
+    "test-004372-31d3bf47b580",
+    "test-006178-09c41683221b",
+    "test-001229-6768cd934d42",
+    "test-000578-bc49d74cc005",
+    "test-002524-724f9459f34c",
+    "test-000205-182e632eb295",
+    "test-004181-8ab73847abcd",
+    "test-002355-9403d198878f",
+    "test-006221-4777b44994c9",
+    "test-006740-a44cf003a879",
+    "test-000093-dbc207f86dcf",
+    "test-000632-8a958f46eaf7",
+    "test-000464-9e9a1b53fc3e",
+    "test-000701-635d7a691508",
+    "test-000712-8cbed711f594",
+    "test-002103-5f096eb2df73",
+    "test-001195-9b7f48aa2caf",
+    "test-003385-d7ecc37a90cb",
+    "test-001330-bad5a7eee7a5",
+    "test-002919-cf01fa5ad07c",
+    "test-007163-7d078ecd071a",
+    "test-002297-b92381e12425",
+    "test-007598-cb3c92941272",
+    "test-002151-2e4ec05f060d",
+    "test-007226-c0f8a3ee9765",
+    "test-007155-8c9e19f347e2",
+    "test-005804-e2de8a44dec6",
+    "test-000012-6d88ca427ade",
+    "test-004246-f2f9163ea845",
+    "test-007007-c6b6d66dcc51",
+    "test-004908-76cb0c725e24",
+    "test-000382-543b129c663f",
+    "test-000136-e909a83de4dd",
+    "test-001113-f91601a60f74",
+    "test-003711-388484bd20aa",
+    "test-000454-153b7fa6486e",
+    "test-002055-ed1fef7934d7",
+    "test-001212-aaf9867b29fc",
+    "test-006385-d73b8dc95f91",
+    "test-000257-581b0cc0332f",
+    "test-001173-f288ee26035f",
+    "test-006121-86a1555c18bc",
+    "test-007005-9412f3a08216",
+    "test-000558-0f5fe202f805",
+    "test-001580-d10b849625c7",
+    "test-003200-b79f4b0d83c4",
+    "test-001177-c6305866c7a6",
+    "test-004252-58628cd57ac2",
+    "test-004752-93100872e384",
+    "test-002402-052171d4ec3f",
+    "test-000865-027011a0da6a",
+    "test-000053-84e6f2311d2b",
+    "test-002029-3d88fd22ed4c",
+    "test-000670-82399bd81efd",
+    "test-006243-35196a379f04",
+    "test-006614-99939f7ffb1b",
+    "test-006483-7ff47c6ec2ff",
+    "test-000343-7fa72025b311",
+    "test-005474-6c904b5773cb",
+    "test-003429-7406b3d0ba9f",
+    "test-003799-e9f29fb11590",
+    "test-000398-5c29eb2b48f7",
+    "test-001441-5069a7b8496a",
+    "test-001413-80225db6c908",
+    "test-002460-efb798cc53b5",
+    "test-000814-c302370a95a3",
+    "test-006226-cb64025bf27a",
+    "test-005931-cadc9e137957",
+    "test-004734-c7eb5f4f8beb",
+    "test-000821-9d2005f3af97",
+    "test-005678-81d7eb3bfad0",
+    "test-005944-6e7f8b5cfb4d",
+    "test-004910-4c86c032ddee",
+    "test-000210-b805a41e99a9",
+    "test-003492-0a81283d79aa",
+    "test-001863-4e1821233a4e",
+    "test-006098-23b435d5d4fc",
+    "test-006553-219e69836bd8",
+    "test-007507-f4a31d106d82",
+    "test-007207-c7efc6e8ca3c",
+    "test-001220-2dad9adbc2af",
+    "test-000769-7df7f47683ea",
+    "test-001099-03c50332dec6",
+    "test-005233-dcf43a8dd238",
+    "test-003516-ec941401d590",
+    "test-007211-69d3488c479d",
+    "test-005300-ef7b8ee05b49",
+    "test-001325-c23207cfae51",
+    "test-002187-783659063776",
+    "test-007383-5a1039c21578",
+    "test-003189-459a74bb3224",
+    "test-004174-a7ce0a6a6013",
+    "test-002802-7b458b5c7655",
+    "test-005352-ac120c3fb1ea",
+    "test-002672-b076c2f4870f",
+    "test-002358-a4be2cb6b910",
+    "test-006202-c55deb5e5269",
+    "test-003693-754d83982a69",
+    "test-005950-c5c8f280209d",
+    "test-005747-53c2fd9e21c7",
+    "test-004197-ec8d54dd2dc6",
+    "test-004973-0c9d39934f17",
+    "test-002735-a53508254718",
+    "test-005545-3d7b34b4a9eb",
+    "test-000786-616a45466d77",
+    "test-003621-2429b985004a",
+    "test-003712-6471badccf8e",
+    "test-006436-955eee6bccf4",
+    "test-003761-edf0d778f02e",
+    "test-000862-2a9add2ca3db",
+    "test-002666-db578c4479c7",
+    "test-005531-353ce0b7f46d",
+    "test-004574-56449390139c",
+    "test-003149-958ed86b42a6",
+    "test-002234-c009fee6c9fb",
+    "test-000375-2c83e2f9dbd6",
+    "test-007371-ec3b602ecc0d",
+    "test-000940-99f5683f97a5",
+    "test-002909-03766aa3d07f",
+    "test-000645-317d42bccd9c",
+    "test-006512-770e7996b3b3",
+    "test-003387-aa7bf87f9cfe",
+    "test-003616-b58f03529165",
+    "test-000512-b4eb153fcbb2",
+    "test-003345-1dbbbe5f4239",
+    "test-003024-62db7d055f6f",
+    "test-002658-c9f85aedb20e",
+    "test-003145-5d151479781b"
+  ],
+  "seed": 6707
+}
