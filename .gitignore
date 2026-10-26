@@ -1,10 +1,20 @@
+# Envs & caches (do not push)
 .conda/
 .venv/
 __pycache__/
 *.pyc
 .pytest_cache/
-outputs/
-*.parquet
-*.pt
 .hf_cache/
 .ipynb_checkpoints/
+
+# Heavy / regenerable artifacts
+*.parquet
+*.pt
+outputs/**/replay_logs/
+outputs/**/*.log
+
+# Secrets
+.env
+.env.*
+*.pem
+credentials.json

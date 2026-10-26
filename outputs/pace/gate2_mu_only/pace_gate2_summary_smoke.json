@@ -1,0 +1,83 @@
+{
+  "track": "PACE Gate 2",
+  "experiment": "gate2_mu_only",
+  "smoke": true,
+  "config": "/home3/river/DSAI6707/DICE_PO/configs/pace_gate2.yaml",
+  "eval_policy": "racing",
+  "methods": [
+    "b0_point_nsga",
+    "pace"
+  ],
+  "treatment": "\u03bc-only retained cap (K=0); capacity confound control B0 vs PACE",
+  "elapsed_sec": 19.9,
+  "n_cache": 850,
+  "gate1_warm_cells": 640,
+  "no_gate1_warm": false,
+  "batch_size": 32,
+  "calls_cap": 256,
+  "n_generations": 2,
+  "population_size": 4,
+  "epsilon": 0.0,
+  "n_min_common": 8,
+  "n_bootstrap": 40,
+  "mu": 4,
+  "archive_k": 0,
+  "method_summary": {
+    "b0_point_nsga": {
+      "n": 1,
+      "mean_test_acc": 0.825,
+      "mean_test_cost": 108.875,
+      "mean_search_acc": 0.7857142857142857,
+      "mean_calls": 256.0,
+      "mean_conf_elim": 0.0,
+      "mean_forced": 0.0,
+      "seeds": [
+        42
+      ]
+    },
+    "pace": {
+      "n": 1,
+      "mean_test_acc": 0.9,
+      "mean_test_cost": 121.35,
+      "mean_search_acc": 0.9,
+      "mean_calls": 256.0,
+      "mean_conf_elim": 0.0,
+      "mean_forced": 4.0,
+      "seeds": [
+        42
+      ]
+    }
+  },
+  "runs": [
+    {
+      "method": "b0_point_nsga",
+      "seed": 42,
+      "calls_used": 256,
+      "test_acc": 0.825,
+      "test_cost": 108.875,
+      "search_acc": 0.7857142857142857,
+      "winner": "b0_point_nsga_s42_g1_c02",
+      "n_conf_elim_total": 0,
+      "n_forced_total": 0
+    },
+    {
+      "method": "pace",
+      "seed": 42,
+      "calls_used": 256,
+      "test_acc": 0.9,
+      "test_cost": 121.35,
+      "search_acc": 0.9,
+      "winner": "pace_s42_g1_c01",
+      "n_conf_elim_total": 0,
+      "n_forced_total": 4
+    }
+  ],
+  "baseline_summary": "/home3/river/DSAI6707/DICE_PO/outputs/pace/gate2/pace_gate2_summary.json",
+  "frozen_untouched": [
+    "outputs/gate1",
+    "outputs/gate2",
+    "reports",
+    "outputs/pace/gate2"
+  ],
+  "note": "Conditional online proof after PACE Gate1 GO. DICE NO-GO and EC Gate2 artifacts are historical; not relabeled as PACE wins. Capacity confound (\u03bc+K) must be stated explicitly."
+}

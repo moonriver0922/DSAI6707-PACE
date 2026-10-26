@@ -1,0 +1,63 @@
+# PACE Gate 2 — final primary online experiment (capacity-aligned)
+# Protocol identical to exploratory gate2_cap_align (μ=8, K=8, gen=4, 1280 calls).
+# Seeds expanded to fixed 15; first 3 (42,123,456) reuse exploratory runs.
+# Do not retune hyperparameters from interim results.
+
+seed_split: 6707
+model_id: Qwen/Qwen2.5-7B-Instruct
+dtype: bfloat16
+max_new_tokens: 8
+do_sample: false
+batch_size: 8
+
+n_search: 160
+n_test: 200
+init_common: 8
+
+population_size: 8
+n_generations: 4
+calls_cap: 1280
+
+# Fixed 15-seed final set (exploratory 3 + extension 12)
+online_seeds:
+  - 42
+  - 123
+  - 456
+  - 6707
+  - 2026
+  - 31415
+  - 27182
+  - 16180
+  - 90210
+  - 13579
+  - 86753
+  - 24680
+  - 97531
+  - 11235
+  - 42424
+
+n_contenders: 6
+max_pairs: 8
+pair_batch_samples: 8
+racing_stop_r: 0.05
+
+epsilon: 0.0
+n_min_common: 8
+n_bootstrap: 200
+mu: 8
+archive_k: 8
+
+lambdas: [0.25, 0.5, 0.75]
+primary_lambda: 0.5
+cost_norm_min: 0.0
+cost_norm_max: 256.0
+hv_ref_accuracy: 0.0
+hv_ref_cost_norm: 1.05
+w_in: 1.0
+w_out: 1.0
+
+# Primary fair contrast: same μ+K capacity; only survivor rule differs
+methods: [b0_archive, pace]
+eval_policy: racing
+
+initial_prompt_ids: [p00, p01, p02, p03, p04, p05, p07, p15]

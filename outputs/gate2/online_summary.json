@@ -1,0 +1,81 @@
+{
+  "note": "EC validation only; Gate-1 DICE NO-GO unchanged; batched+winner-only test+gate1 warmup",
+  "elapsed_sec": 166.9,
+  "n_cache": 9689,
+  "gate1_warm_cells": 1280,
+  "batch_size": 32,
+  "runs": [
+    {
+      "method": "nsga2_uniform",
+      "seed": 42,
+      "calls_used": 1280,
+      "test_acc": 0.765,
+      "test_cost": 112.285,
+      "winner": "uniform_s42_g3_c03"
+    },
+    {
+      "method": "nsga2_racing",
+      "seed": 42,
+      "calls_used": 1280,
+      "test_acc": 0.78,
+      "test_cost": 112.525,
+      "winner": "racing_s42_g3_c02"
+    },
+    {
+      "method": "random_search",
+      "seed": 42,
+      "calls_used": 1280,
+      "test_acc": 0.8,
+      "test_cost": 116.645,
+      "winner": "p15"
+    },
+    {
+      "method": "nsga2_uniform",
+      "seed": 123,
+      "calls_used": 1280,
+      "test_acc": 0.775,
+      "test_cost": 107.485,
+      "winner": "uniform_s123_g3_c06"
+    },
+    {
+      "method": "nsga2_racing",
+      "seed": 123,
+      "calls_used": 1280,
+      "test_acc": 0.82,
+      "test_cost": 122.635,
+      "winner": "racing_s123_g3_c07"
+    },
+    {
+      "method": "random_search",
+      "seed": 123,
+      "calls_used": 1256,
+      "test_acc": 0.795,
+      "test_cost": 119.625,
+      "winner": "rand_s123_c25"
+    },
+    {
+      "method": "nsga2_uniform",
+      "seed": 456,
+      "calls_used": 1272,
+      "test_acc": 0.775,
+      "test_cost": 103.815,
+      "winner": "uniform_s456_g3_c00"
+    },
+    {
+      "method": "nsga2_racing",
+      "seed": 456,
+      "calls_used": 1262,
+      "test_acc": 0.775,
+      "test_cost": 103.815,
+      "winner": "racing_s456_g3_c06"
+    },
+    {
+      "method": "random_search",
+      "seed": 456,
+      "calls_used": 1256,
+      "test_acc": 0.88,
+      "test_cost": 115.415,
+      "winner": "rand_s456_c25"
+    }
+  ]
+}

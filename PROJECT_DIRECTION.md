@@ -1,28 +1,26 @@
-# 项目方向（对齐 PACE 计划）
+# 项目方向（交付收尾）
 
-**生效**：2026-10-23  
-**规范文件**：`PACE_Research_Implementation_Plan.md`（v1.0）  
-**旧规范**：DICE-PO Final Plan v3.0 → 结果保留为**历史负结果**，不再作为主攻方向。
+**生效**：2026-10-26  
+**主交付叙事**：`reports/PACE_Course_Report.md` + `reports/PACE_Presentation_6slides.md`  
+**规范（实现）**：`PACE_METHOD_SPEC.md` / `PACE_Research_Implementation_Plan.md`
 
-## 新主线：PACE
+## 一句话故事
 
-**Working title:** *PACE: Paired-Assessment with Confidence-Preserving Evolution*
+低预算进化 Prompt 搜索容易因噪声过早淘汰好候选；**PACE** 用配对置信证据做生存选择；离线错误淘汰明显下降；在线 15-seed 准确率有正向趋势但未锁定显著优势。
 
-**核心机制：** Evidence-Gated Survivor Selection — 不确定性决定**是否有足够证据淘汰候选**，而不是给 pair 打 DICE 式 decision-impact 分。
+## 冻结（不再改）
 
-**原则：**
+- Gate 1 / Gate 2 协议与超参  
+- 15-seed 主结果与消融  
+- 不新开 GPU、不上 SPaCE、不扩模型/数据  
 
-1. 先用已有 `oracle_matrices.npz` 做 Gate 1a/1b（**0 新 LLM**），再决定是否上 Gate 2 在线进化。  
-2. DICE 的负结果与事后公平消融**如实保留**，不得改贴成 PACE 胜利。  
-3. 对照必须匹配：同一候选池、同一 Racing 评估、同一预算/种子/容量；**唯一处理**是是否证据门控淘汰。  
-4. Gate 1 负结果同样可交付；禁止阈值扫描与偷看 test/oracle。
+## 历史材料（不进主叙事）
 
-## 停止做什么
+- DICE-PO 负结果：`reports/DICE_PO_Technical_Report.md`、`outputs/gate1/`  
+- 机制审计 / SPaCE 讨论：`outputs/pace/gate2_cap_align_15seed/analysis/`  
 
-- 继续改 DICE 权重找胜利  
-- 不公平的 NSGA vs Random 再解读为选择机制结论  
-- 未过 Gate 1 就跑大规模 Gate 2
+## 剩余交付动作
 
-## 交付顺序
-
-Gate 0 单测 → Gate 1a 错误淘汰是否存在 → Gate 1b PACE vs 匹配点估计基线 → GO/NO-GO →（仅 GO）Gate 2。
+1. 将 `PACE_Course_Report.md` 导出为课程 PDF（可本地 pandoc/Word）  
+2. 按 6-slide 提纲做 Presentation  
+3. 打包代码 + `outputs/pace/` 关键结果一并提交  

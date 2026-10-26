@@ -31,6 +31,7 @@ class ForcedEviction:
 @dataclass
 class SurviveResult:
     retained: list[str]
+    active: list[str] = field(default_factory=list)
     confidence_elims: list[ConfidenceElimination] = field(default_factory=list)
     forced_evictions: list[ForcedEviction] = field(default_factory=list)
 
@@ -52,10 +53,11 @@ def _estimates(state: SearchState, ids: list[str]) -> tuple[dict[str, float], di
 def point_estimate_truncate(state: SearchState, candidates: list[str], mu: int) -> SurviveResult:
     """B0: NSGA-II rank/crowding on point estimates → keep mu."""
     if len(candidates) <= mu:
-        return SurviveResult(retained=sorted(candidates))
+        keep = sorted(candidates)
+        return SurviveResult(retained=keep, active=keep)
     acc, cost = _estimates(state, candidates)
     keep = nsga2_select(candidates, acc, cost, mu)
-    return SurviveResult(retained=keep)
+    return SurviveResult(retained=keep, active=keep)
 
 
 def pace_bounded_survive(
@@ -68,22 +70,31 @@ def pace_bounded_survive(
     n_min_common: int,
     n_bootstrap: int,
     rng: np.random.Generator,
+    disable_confidence_gate: bool = False,
 ) -> SurviveResult:
-    """Confidence eliminate, then capacity-truncate with logged forced evictions."""
-    raw = confidence_eliminate(
-        state,
-        candidates,
-        epsilon=epsilon,
-        n_min_common=n_min_common,
-        n_bootstrap=n_bootstrap,
-        rng=rng,
-    )
-    conf = [
-        ConfidenceElimination(q, p, ci.L, ci.U, ci.delta_hat, ci.n_common)
-        for q, p, ci in raw
-    ]
-    elim_ids = {e.eliminated for e in conf}
-    remaining = [c for c in candidates if c not in elim_ids]
+    """Confidence eliminate, then capacity-truncate with logged forced evictions.
+
+    A1 ablation: disable_confidence_gate=True skips evidence elimination (conf_elim=0).
+    With archive_k=0 this collapses to NSGA truncate at μ (should match B0).
+    """
+    if disable_confidence_gate:
+        conf: list[ConfidenceElimination] = []
+        remaining = list(candidates)
+    else:
+        raw = confidence_eliminate(
+            state,
+            candidates,
+            epsilon=epsilon,
+            n_min_common=n_min_common,
+            n_bootstrap=n_bootstrap,
+            rng=rng,
+        )
+        conf = [
+            ConfidenceElimination(q, p, ci.L, ci.U, ci.delta_hat, ci.n_common)
+            for q, p, ci in raw
+        ]
+        elim_ids = {e.eliminated for e in conf}
+        remaining = [c for c in candidates if c not in elim_ids]
     cap = mu + archive_k
     forced: list[ForcedEviction] = []
     if len(remaining) > cap:
@@ -94,13 +105,17 @@ def pace_bounded_survive(
             if pid not in keep_set:
                 forced.append(ForcedEviction(pid))
         remaining = keep
-    # Active set reported as top-mu by same NSGA rule (archive = rest retained)
+    # Active = top-mu; retained = active ∪ archive (≤ μ+K)
     if len(remaining) > mu:
         acc, cost = _estimates(state, remaining)
         active = nsga2_select(remaining, acc, cost, mu)
-        # Retained for metrics = active ∪ archive (all remaining after capacity)
         retained = remaining
-        _ = active  # active logged by caller if needed
     else:
+        active = list(remaining)
         retained = remaining
-    return SurviveResult(retained=retained, confidence_elims=conf, forced_evictions=forced)
+    return SurviveResult(
+        retained=retained,
+        active=active,
+        confidence_elims=conf,
+        forced_evictions=forced,
+    )

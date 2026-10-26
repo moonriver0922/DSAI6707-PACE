@@ -1,0 +1,52 @@
+{
+  "method": "random_search",
+  "seed": 456,
+  "calls_used": 1256,
+  "winner": "rand_s456_c25",
+  "winner_text": "Use Sci/Tech only for science or technology. Classify. Category (World / Sports / Business / Sci/Tech):\n{text}\nAnswer:",
+  "test_acc": 0.88,
+  "test_cost": 115.415,
+  "test_eval_mode": "winner_only",
+  "final_pop_search": [
+    {
+      "id": "p00",
+      "search_acc": 0.8108108108108109,
+      "search_cost": 109.27027027027027
+    },
+    {
+      "id": "p05",
+      "search_acc": 0.8378378378378378,
+      "search_cost": 118.10810810810811
+    },
+    {
+      "id": "rand_s456_c04",
+      "search_acc": 0.8666666666666667,
+      "search_cost": 133.16666666666666
+    },
+    {
+      "id": "rand_s456_c18",
+      "search_acc": 0.7666666666666667,
+      "search_cost": 106.43333333333334
+    },
+    {
+      "id": "rand_s456_c20",
+      "search_acc": 0.8333333333333334,
+      "search_cost": 109.96666666666667
+    },
+    {
+      "id": "rand_s456_c21",
+      "search_acc": 0.8666666666666667,
+      "search_cost": 133.03333333333333
+    },
+    {
+      "id": "rand_s456_c25",
+      "search_acc": 0.8666666666666667,
+      "search_cost": 115.7
+    },
+    {
+      "id": "rand_s456_c29",
+      "search_acc": 0.8666666666666667,
+      "search_cost": 118.43333333333334
+    }
+  ]
+}

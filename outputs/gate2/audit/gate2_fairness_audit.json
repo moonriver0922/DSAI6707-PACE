@@ -1,0 +1,860 @@
+{
+  "code_fairness_spec": {
+    "population_size": 8,
+    "n_generations": 4,
+    "nsga2": {
+      "init_candidates": 8,
+      "offspring_batches": 3,
+      "designed_new_candidates": 24,
+      "designed_total_ids": 32,
+      "operator": "generate_offspring = crossover(50%) then mutate_prompt, or mutate path via crossover branch",
+      "selection": "NSGA-II nondominated + crowding each generation; final winner by U_λ on search estimates within final pop of size μ",
+      "budget": "sliced per generation across current pop/(pop+children); survivors re-evaluated repeatedly",
+      "eval_policy": "Uniform or Racing on active population only"
+    },
+    "random_search": {
+      "init_candidates": 8,
+      "designed_new_candidates": 32,
+      "designed_total_ids": 40,
+      "operator": "mutate_prompt only (no crossover)",
+      "selection": "no generational truncation; after all mutants created, Uniform spends remaining budget on FULL pool; final μ by U_λ rank then winner",
+      "budget": "almost all post-anchor budget spent once on the large pool (Uniform columns)",
+      "eval_policy": "Uniform only"
+    },
+    "unfairness_flags": [
+      "Random Search generates 32 new candidates vs NSGA-II 24 (8 more).",
+      "Random Search screens the entire pool of init+new under one Uniform allocation; NSGA truncates to μ each generation so many children get little budget.",
+      "Operators differ: Random=mutate only; NSGA=crossover+mutate.",
+      "Random finalist set is top-μ by utility among ALL generated; NSGA winner is from evolutionarily truncated pop of μ."
+    ]
+  },
+  "test_protocol_audit": {
+    "winner_only_calls": 2,
+    "full_pop_test_calls": 0,
+    "preference_winner_uses_search_estimates": true,
+    "gate1_preload_split": true,
+    "conclusion": "Test set is only used in evaluate_on_test([winner]); selection uses search estimates. No full-pop test in current code."
+  },
+  "per_run": [
+    {
+      "file": "nsga2_racing_s123.json",
+      "method": "nsga2_racing",
+      "seed": 123,
+      "calls_used": 1280,
+      "winner": "racing_s123_g3_c07",
+      "test_acc": 0.82,
+      "test_cost": 122.635,
+      "test_eval_mode": "winner_only",
+      "winner_text": "Valid labels: World, Sports, Business, Sci/Tech. Reply with exactly one label from this set: World | Sports | Business | Sci/Tech.\nNo extra words.\nArticle: {text}\nLabel:",
+      "n_unique_seen": 23,
+      "n_init_seen": 8,
+      "n_child_seen": 15,
+      "survival": [
+        {
+          "generation": 0,
+          "pop_size": 8,
+          "n_init_in_pop": 8,
+          "n_child_in_pop": 0,
+          "ids": [
+            "p01",
+            "p02",
+            "p05",
+            "p15",
+            "p00",
+            "p04",
+            "p07",
+            "p03"
+          ]
+        },
+        {
+          "generation": 1,
+          "pop_size": 8,
+          "n_init_in_pop": 5,
+          "n_child_in_pop": 3,
+          "ids": [
+            "p01",
+            "p00",
+            "p05",
+            "racing_s123_g1_c04",
+            "p07",
+            "racing_s123_g1_c07",
+            "p03",
+            "racing_s123_g1_c03"
+          ]
+        },
+        {
+          "generation": 2,
+          "pop_size": 8,
+          "n_init_in_pop": 3,
+          "n_child_in_pop": 5,
+          "ids": [
+            "p01",
+            "p05",
+            "racing_s123_g2_c01",
+            "racing_s123_g2_c07",
+            "p00",
+            "racing_s123_g2_c02",
+            "racing_s123_g2_c04",
+            "racing_s123_g2_c06"
+          ]
+        },
+        {
+          "generation": 3,
+          "pop_size": 8,
+          "n_init_in_pop": 0,
+          "n_child_in_pop": 8,
+          "ids": [
+            "racing_s123_g3_c03",
+            "racing_s123_g3_c06",
+            "racing_s123_g3_c07",
+            "racing_s123_g3_c02",
+            "racing_s123_g3_c05",
+            "racing_s123_g2_c01",
+            "racing_s123_g3_c00",
+            "racing_s123_g3_c04"
+          ]
+        }
+      ],
+      "child_ids": [
+        "racing_s123_g1_c03",
+        "racing_s123_g1_c04",
+        "racing_s123_g1_c07",
+        "racing_s123_g2_c01",
+        "racing_s123_g2_c02",
+        "racing_s123_g2_c04",
+        "racing_s123_g2_c06",
+        "racing_s123_g2_c07",
+        "racing_s123_g3_c00",
+        "racing_s123_g3_c02",
+        "racing_s123_g3_c03",
+        "racing_s123_g3_c04",
+        "racing_s123_g3_c05",
+        "racing_s123_g3_c06",
+        "racing_s123_g3_c07"
+      ]
+    },
+    {
+      "file": "nsga2_racing_s42.json",
+      "method": "nsga2_racing",
+      "seed": 42,
+      "calls_used": 1280,
+      "winner": "racing_s42_g3_c02",
+      "test_acc": 0.78,
+      "test_cost": 112.525,
+      "test_eval_mode": "winner_only",
+      "winner_text": "You are an expert annotator for AG News. Category (World / Sports / Business / Sci/Tech):\n{text}\nLabel:",
+      "n_unique_seen": 16,
+      "n_init_seen": 8,
+      "n_child_seen": 8,
+      "survival": [
+        {
+          "generation": 0,
+          "pop_size": 8,
+          "n_init_in_pop": 8,
+          "n_child_in_pop": 0,
+          "ids": [
+            "p00",
+            "p01",
+            "p02",
+            "p03",
+            "p15",
+            "p04",
+            "p05",
+            "p07"
+          ]
+        },
+        {
+          "generation": 1,
+          "pop_size": 8,
+          "n_init_in_pop": 6,
+          "n_child_in_pop": 2,
+          "ids": [
+            "p00",
+            "p15",
+            "racing_s42_g1_c04",
+            "p03",
+            "p05",
+            "racing_s42_g1_c01",
+            "p02",
+            "p01"
+          ]
+        },
+        {
+          "generation": 2,
+          "pop_size": 8,
+          "n_init_in_pop": 3,
+          "n_child_in_pop": 5,
+          "ids": [
+            "racing_s42_g1_c04",
+            "racing_s42_g2_c03",
+            "racing_s42_g2_c07",
+            "racing_s42_g1_c01",
+            "racing_s42_g2_c04",
+            "p01",
+            "p15",
+            "p00"
+          ]
+        },
+        {
+          "generation": 3,
+          "pop_size": 8,
+          "n_init_in_pop": 1,
+          "n_child_in_pop": 7,
+          "ids": [
+            "racing_s42_g1_c04",
+            "racing_s42_g3_c02",
+            "racing_s42_g3_c04",
+            "racing_s42_g2_c04",
+            "p01",
+            "racing_s42_g3_c00",
+            "racing_s42_g2_c07",
+            "racing_s42_g1_c01"
+          ]
+        }
+      ],
+      "child_ids": [
+        "racing_s42_g1_c01",
+        "racing_s42_g1_c04",
+        "racing_s42_g2_c03",
+        "racing_s42_g2_c04",
+        "racing_s42_g2_c07",
+        "racing_s42_g3_c00",
+        "racing_s42_g3_c02",
+        "racing_s42_g3_c04"
+      ]
+    },
+    {
+      "file": "nsga2_racing_s456.json",
+      "method": "nsga2_racing",
+      "seed": 456,
+      "calls_used": 1262,
+      "winner": "racing_s456_g3_c06",
+      "test_acc": 0.775,
+      "test_cost": 103.815,
+      "test_eval_mode": "winner_only",
+      "winner_text": "Reply with exactly one label from this set: World | Sports | Business | Sci/Tech.\n{text}\nLabel:",
+      "n_unique_seen": 16,
+      "n_init_seen": 8,
+      "n_child_seen": 8,
+      "survival": [
+        {
+          "generation": 0,
+          "pop_size": 8,
+          "n_init_in_pop": 8,
+          "n_child_in_pop": 0,
+          "ids": [
+            "p00",
+            "p01",
+            "p02",
+            "p07",
+            "p03",
+            "p05",
+            "p04",
+            "p15"
+          ]
+        },
+        {
+          "generation": 1,
+          "pop_size": 8,
+          "n_init_in_pop": 3,
+          "n_child_in_pop": 5,
+          "ids": [
+            "p02",
+            "p03",
+            "racing_s456_g1_c00",
+            "racing_s456_g1_c02",
+            "racing_s456_g1_c04",
+            "racing_s456_g1_c05",
+            "racing_s456_g1_c07",
+            "p00"
+          ]
+        },
+        {
+          "generation": 2,
+          "pop_size": 8,
+          "n_init_in_pop": 2,
+          "n_child_in_pop": 6,
+          "ids": [
+            "racing_s456_g1_c00",
+            "racing_s456_g1_c04",
+            "racing_s456_g1_c07",
+            "p00",
+            "p03",
+            "racing_s456_g2_c01",
+            "racing_s456_g1_c02",
+            "racing_s456_g1_c05"
+          ]
+        },
+        {
+          "generation": 3,
+          "pop_size": 8,
+          "n_init_in_pop": 2,
+          "n_child_in_pop": 6,
+          "ids": [
+            "racing_s456_g1_c04",
+            "racing_s456_g3_c06",
+            "racing_s456_g1_c00",
+            "racing_s456_g1_c07",
+            "p00",
+            "racing_s456_g2_c01",
+            "racing_s456_g3_c04",
+            "p03"
+          ]
+        }
+      ],
+      "child_ids": [
+        "racing_s456_g1_c00",
+        "racing_s456_g1_c02",
+        "racing_s456_g1_c04",
+        "racing_s456_g1_c05",
+        "racing_s456_g1_c07",
+        "racing_s456_g2_c01",
+        "racing_s456_g3_c04",
+        "racing_s456_g3_c06"
+      ]
+    },
+    {
+      "file": "nsga2_uniform_s123.json",
+      "method": "nsga2_uniform",
+      "seed": 123,
+      "calls_used": 1280,
+      "winner": "uniform_s123_g3_c06",
+      "test_acc": 0.775,
+      "test_cost": 107.485,
+      "test_eval_mode": "winner_only",
+      "winner_text": "Classify the news article into one of: World, Sports, Business, Sci/Tech.\nNews: {text}\nLabel:",
+      "n_unique_seen": 19,
+      "n_init_seen": 8,
+      "n_child_seen": 11,
+      "survival": [
+        {
+          "generation": 0,
+          "pop_size": 8,
+          "n_init_in_pop": 8,
+          "n_child_in_pop": 0,
+          "ids": [
+            "p00",
+            "p01",
+            "p02",
+            "p03",
+            "p05",
+            "p07",
+            "p15",
+            "p04"
+          ]
+        },
+        {
+          "generation": 1,
+          "pop_size": 8,
+          "n_init_in_pop": 3,
+          "n_child_in_pop": 5,
+          "ids": [
+            "p00",
+            "p01",
+            "p03",
+            "uniform_s123_g1_c00",
+            "uniform_s123_g1_c02",
+            "uniform_s123_g1_c05",
+            "uniform_s123_g1_c01",
+            "uniform_s123_g1_c04"
+          ]
+        },
+        {
+          "generation": 2,
+          "pop_size": 8,
+          "n_init_in_pop": 3,
+          "n_child_in_pop": 5,
+          "ids": [
+            "p00",
+            "p01",
+            "p03",
+            "uniform_s123_g2_c02",
+            "uniform_s123_g2_c04",
+            "uniform_s123_g2_c07",
+            "uniform_s123_g1_c02",
+            "uniform_s123_g1_c05"
+          ]
+        },
+        {
+          "generation": 3,
+          "pop_size": 8,
+          "n_init_in_pop": 3,
+          "n_child_in_pop": 5,
+          "ids": [
+            "p01",
+            "uniform_s123_g3_c06",
+            "uniform_s123_g3_c02",
+            "p00",
+            "p03",
+            "uniform_s123_g1_c05",
+            "uniform_s123_g3_c00",
+            "uniform_s123_g2_c02"
+          ]
+        }
+      ],
+      "child_ids": [
+        "uniform_s123_g1_c00",
+        "uniform_s123_g1_c01",
+        "uniform_s123_g1_c02",
+        "uniform_s123_g1_c04",
+        "uniform_s123_g1_c05",
+        "uniform_s123_g2_c02",
+        "uniform_s123_g2_c04",
+        "uniform_s123_g2_c07",
+        "uniform_s123_g3_c00",
+        "uniform_s123_g3_c02",
+        "uniform_s123_g3_c06"
+      ]
+    },
+    {
+      "file": "nsga2_uniform_s42.json",
+      "method": "nsga2_uniform",
+      "seed": 42,
+      "calls_used": 1280,
+      "winner": "uniform_s42_g3_c03",
+      "test_acc": 0.765,
+      "test_cost": 112.285,
+      "test_eval_mode": "winner_only",
+      "winner_text": "You are a professional newspaper editor. Assign this article to exactly one desk: World, Sports, Business, or Sci/Tech.\n{text}\nDesk:",
+      "n_unique_seen": 19,
+      "n_init_seen": 8,
+      "n_child_seen": 11,
+      "survival": [
+        {
+          "generation": 0,
+          "pop_size": 8,
+          "n_init_in_pop": 8,
+          "n_child_in_pop": 0,
+          "ids": [
+            "p00",
+            "p01",
+            "p03",
+            "p15",
+            "p02",
+            "p07",
+            "p05",
+            "p04"
+          ]
+        },
+        {
+          "generation": 1,
+          "pop_size": 8,
+          "n_init_in_pop": 4,
+          "n_child_in_pop": 4,
+          "ids": [
+            "uniform_s42_g1_c02",
+            "uniform_s42_g1_c04",
+            "p01",
+            "p15",
+            "uniform_s42_g1_c03",
+            "uniform_s42_g1_c05",
+            "p00",
+            "p02"
+          ]
+        },
+        {
+          "generation": 2,
+          "pop_size": 8,
+          "n_init_in_pop": 1,
+          "n_child_in_pop": 7,
+          "ids": [
+            "uniform_s42_g2_c05",
+            "uniform_s42_g2_c07",
+            "uniform_s42_g2_c00",
+            "uniform_s42_g1_c02",
+            "uniform_s42_g1_c04",
+            "uniform_s42_g2_c02",
+            "p01",
+            "uniform_s42_g2_c04"
+          ]
+        },
+        {
+          "generation": 3,
+          "pop_size": 8,
+          "n_init_in_pop": 0,
+          "n_child_in_pop": 8,
+          "ids": [
+            "uniform_s42_g2_c05",
+            "uniform_s42_g2_c07",
+            "uniform_s42_g2_c00",
+            "uniform_s42_g1_c04",
+            "uniform_s42_g3_c03",
+            "uniform_s42_g1_c02",
+            "uniform_s42_g3_c05",
+            "uniform_s42_g2_c04"
+          ]
+        }
+      ],
+      "child_ids": [
+        "uniform_s42_g1_c02",
+        "uniform_s42_g1_c03",
+        "uniform_s42_g1_c04",
+        "uniform_s42_g1_c05",
+        "uniform_s42_g2_c00",
+        "uniform_s42_g2_c02",
+        "uniform_s42_g2_c04",
+        "uniform_s42_g2_c05",
+        "uniform_s42_g2_c07",
+        "uniform_s42_g3_c03",
+        "uniform_s42_g3_c05"
+      ]
+    },
+    {
+      "file": "nsga2_uniform_s456.json",
+      "method": "nsga2_uniform",
+      "seed": 456,
+      "calls_used": 1272,
+      "winner": "uniform_s456_g3_c00",
+      "test_acc": 0.775,
+      "test_cost": 103.815,
+      "test_eval_mode": "winner_only",
+      "winner_text": "Reply with exactly one label from this set: World | Sports | Business | Sci/Tech.\n{text}\nLabel:",
+      "n_unique_seen": 18,
+      "n_init_seen": 8,
+      "n_child_seen": 10,
+      "survival": [
+        {
+          "generation": 0,
+          "pop_size": 8,
+          "n_init_in_pop": 8,
+          "n_child_in_pop": 0,
+          "ids": [
+            "p00",
+            "p01",
+            "p02",
+            "p03",
+            "p05",
+            "p07",
+            "p15",
+            "p04"
+          ]
+        },
+        {
+          "generation": 1,
+          "pop_size": 8,
+          "n_init_in_pop": 3,
+          "n_child_in_pop": 5,
+          "ids": [
+            "p00",
+            "uniform_s456_g1_c03",
+            "uniform_s456_g1_c04",
+            "uniform_s456_g1_c05",
+            "p01",
+            "uniform_s456_g1_c00",
+            "uniform_s456_g1_c01",
+            "p02"
+          ]
+        },
+        {
+          "generation": 2,
+          "pop_size": 8,
+          "n_init_in_pop": 3,
+          "n_child_in_pop": 5,
+          "ids": [
+            "p00",
+            "uniform_s456_g1_c04",
+            "uniform_s456_g2_c02",
+            "uniform_s456_g1_c00",
+            "uniform_s456_g2_c01",
+            "p01",
+            "p02",
+            "uniform_s456_g1_c03"
+          ]
+        },
+        {
+          "generation": 3,
+          "pop_size": 8,
+          "n_init_in_pop": 3,
+          "n_child_in_pop": 5,
+          "ids": [
+            "uniform_s456_g1_c04",
+            "uniform_s456_g3_c00",
+            "uniform_s456_g3_c04",
+            "p00",
+            "uniform_s456_g1_c00",
+            "uniform_s456_g3_c06",
+            "p01",
+            "p02"
+          ]
+        }
+      ],
+      "child_ids": [
+        "uniform_s456_g1_c00",
+        "uniform_s456_g1_c01",
+        "uniform_s456_g1_c03",
+        "uniform_s456_g1_c04",
+        "uniform_s456_g1_c05",
+        "uniform_s456_g2_c01",
+        "uniform_s456_g2_c02",
+        "uniform_s456_g3_c00",
+        "uniform_s456_g3_c04",
+        "uniform_s456_g3_c06"
+      ]
+    },
+    {
+      "file": "random_search_s123.json",
+      "method": "random_search",
+      "seed": 123,
+      "calls_used": 1256,
+      "winner": "rand_s123_c25",
+      "test_acc": 0.795,
+      "test_cost": 119.625,
+      "test_eval_mode": "winner_only",
+      "winner_text": "You are an expert annotator for AG News. Read the article and output only the topic label.\nValid labels: World, Sports, Business, Sci/Tech.\nArticle: {text}\nTopic:",
+      "designed_pool": 40,
+      "final_pop_ids": [
+        "p03",
+        "p05",
+        "p15",
+        "rand_s123_c03",
+        "rand_s123_c07",
+        "rand_s123_c15",
+        "rand_s123_c24",
+        "rand_s123_c25"
+      ]
+    },
+    {
+      "file": "random_search_s42.json",
+      "method": "random_search",
+      "seed": 42,
+      "calls_used": 1280,
+      "winner": "p15",
+      "test_acc": 0.8,
+      "test_cost": 116.645,
+      "test_eval_mode": "winner_only",
+      "winner_text": "You are an expert annotator for AG News. Return one canonical label: World, Sports, Business, Sci/Tech. Keep the answer short.\nInput: {text}\nLabel:",
+      "designed_pool": 40,
+      "final_pop_ids": [
+        "p03",
+        "p05",
+        "p15",
+        "rand_s42_c04",
+        "rand_s42_c20",
+        "rand_s42_c21",
+        "rand_s42_c23",
+        "rand_s42_c31"
+      ]
+    },
+    {
+      "file": "random_search_s456.json",
+      "method": "random_search",
+      "seed": 456,
+      "calls_used": 1256,
+      "winner": "rand_s456_c25",
+      "test_acc": 0.88,
+      "test_cost": 115.415,
+      "test_eval_mode": "winner_only",
+      "winner_text": "Use Sci/Tech only for science or technology. Classify. Category (World / Sports / Business / Sci/Tech):\n{text}\nAnswer:",
+      "designed_pool": 40,
+      "final_pop_ids": [
+        "p00",
+        "p05",
+        "rand_s456_c04",
+        "rand_s456_c18",
+        "rand_s456_c20",
+        "rand_s456_c21",
+        "rand_s456_c25",
+        "rand_s456_c29"
+      ]
+    }
+  ],
+  "random_search_text_simulation": [
+    {
+      "seed": 42,
+      "n_texts": 40,
+      "n_unique_texts": 34,
+      "dedup_rate": 0.15000000000000002,
+      "ids": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15",
+        "rand_s42_c00",
+        "rand_s42_c01",
+        "rand_s42_c02",
+        "rand_s42_c03",
+        "rand_s42_c04",
+        "rand_s42_c05",
+        "rand_s42_c06",
+        "rand_s42_c07",
+        "rand_s42_c08",
+        "rand_s42_c09",
+        "rand_s42_c10",
+        "rand_s42_c11",
+        "rand_s42_c12",
+        "rand_s42_c13",
+        "rand_s42_c14",
+        "rand_s42_c15",
+        "rand_s42_c16",
+        "rand_s42_c17",
+        "rand_s42_c18",
+        "rand_s42_c19",
+        "rand_s42_c20",
+        "rand_s42_c21",
+        "rand_s42_c22",
+        "rand_s42_c23",
+        "rand_s42_c24",
+        "rand_s42_c25",
+        "rand_s42_c26",
+        "rand_s42_c27",
+        "rand_s42_c28",
+        "rand_s42_c29",
+        "rand_s42_c30",
+        "rand_s42_c31"
+      ]
+    },
+    {
+      "seed": 123,
+      "n_texts": 40,
+      "n_unique_texts": 32,
+      "dedup_rate": 0.19999999999999996,
+      "ids": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15",
+        "rand_s123_c00",
+        "rand_s123_c01",
+        "rand_s123_c02",
+        "rand_s123_c03",
+        "rand_s123_c04",
+        "rand_s123_c05",
+        "rand_s123_c06",
+        "rand_s123_c07",
+        "rand_s123_c08",
+        "rand_s123_c09",
+        "rand_s123_c10",
+        "rand_s123_c11",
+        "rand_s123_c12",
+        "rand_s123_c13",
+        "rand_s123_c14",
+        "rand_s123_c15",
+        "rand_s123_c16",
+        "rand_s123_c17",
+        "rand_s123_c18",
+        "rand_s123_c19",
+        "rand_s123_c20",
+        "rand_s123_c21",
+        "rand_s123_c22",
+        "rand_s123_c23",
+        "rand_s123_c24",
+        "rand_s123_c25",
+        "rand_s123_c26",
+        "rand_s123_c27",
+        "rand_s123_c28",
+        "rand_s123_c29",
+        "rand_s123_c30",
+        "rand_s123_c31"
+      ]
+    },
+    {
+      "seed": 456,
+      "n_texts": 40,
+      "n_unique_texts": 36,
+      "dedup_rate": 0.09999999999999998,
+      "ids": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15",
+        "rand_s456_c00",
+        "rand_s456_c01",
+        "rand_s456_c02",
+        "rand_s456_c03",
+        "rand_s456_c04",
+        "rand_s456_c05",
+        "rand_s456_c06",
+        "rand_s456_c07",
+        "rand_s456_c08",
+        "rand_s456_c09",
+        "rand_s456_c10",
+        "rand_s456_c11",
+        "rand_s456_c12",
+        "rand_s456_c13",
+        "rand_s456_c14",
+        "rand_s456_c15",
+        "rand_s456_c16",
+        "rand_s456_c17",
+        "rand_s456_c18",
+        "rand_s456_c19",
+        "rand_s456_c20",
+        "rand_s456_c21",
+        "rand_s456_c22",
+        "rand_s456_c23",
+        "rand_s456_c24",
+        "rand_s456_c25",
+        "rand_s456_c26",
+        "rand_s456_c27",
+        "rand_s456_c28",
+        "rand_s456_c29",
+        "rand_s456_c30",
+        "rand_s456_c31"
+      ]
+    }
+  ],
+  "search_test_gap": [
+    {
+      "method": "nsga2_racing",
+      "seed": 123,
+      "search_acc": 1.0,
+      "test_acc": 0.82,
+      "gap": 0.18000000000000005
+    },
+    {
+      "method": "nsga2_racing",
+      "seed": 42,
+      "search_acc": 1.0,
+      "test_acc": 0.78,
+      "gap": 0.21999999999999997
+    },
+    {
+      "method": "nsga2_racing",
+      "seed": 456,
+      "search_acc": 1.0,
+      "test_acc": 0.775,
+      "gap": 0.22499999999999998
+    },
+    {
+      "method": "nsga2_uniform",
+      "seed": 123,
+      "search_acc": 1.0,
+      "test_acc": 0.775,
+      "gap": 0.22499999999999998
+    },
+    {
+      "method": "nsga2_uniform",
+      "seed": 42,
+      "search_acc": 0.8888888888888888,
+      "test_acc": 0.765,
+      "gap": 0.12388888888888883
+    },
+    {
+      "method": "nsga2_uniform",
+      "seed": 456,
+      "search_acc": 1.0,
+      "test_acc": 0.775,
+      "gap": 0.22499999999999998
+    }
+  ],
+  "discussion_bullets": [
+    "UNFAIR COMPARISON: Random Search evaluates a designed pool of 40 IDs (8+32); NSGA-II only creates 24 offspring (8×3) and truncates to 8 each generation.",
+    "Random Search therefore has strictly more distinct candidates and a single late Uniform pass over the full pool — closer to 'screen many, pick best' than generational EA.",
+    "Operator mismatch: Random uses mutate_prompt only; NSGA uses crossover+mutate.",
+    "Test protocol OK: winner_only; selection on search estimates; Gate1 preload is search split only.",
+    "NSGA winners are often late-generation children, so evolution did produce used candidates — failure is not 'mutation never runs'.",
+    "Large search_acc−test_acc gaps on some NSGA winners (e.g. search_acc=1.0) suggest noisy/overfit search estimates under concentrated eval — aligns with exploitation-under-noise hypothesis.",
+    "Do NOT claim NSGA inferior to Random on equal footing until candidate-count and operator are equalized (future controlled re-run, optional)."
+  ]
+}

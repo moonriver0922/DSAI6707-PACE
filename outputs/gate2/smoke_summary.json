@@ -1,0 +1,31 @@
+{
+  "note": "EC validation only; Gate-1 DICE NO-GO unchanged",
+  "elapsed_sec": 168.9,
+  "n_cache": 976,
+  "runs": [
+    {
+      "method": "nsga2_uniform",
+      "seed": 42,
+      "calls_used": 256,
+      "test_acc": 0.85,
+      "test_cost": 123.25,
+      "test_regret_within_final_pop": 0.015380859375
+    },
+    {
+      "method": "nsga2_racing",
+      "seed": 42,
+      "calls_used": 256,
+      "test_acc": 0.85,
+      "test_cost": 110.7,
+      "test_regret_within_final_pop": 0.004199218750000039
+    },
+    {
+      "method": "random_search",
+      "seed": 42,
+      "calls_used": 256,
+      "test_acc": 0.825,
+      "test_cost": 116.85,
+      "test_regret_within_final_pop": 0.024511718749999994
+    }
+  ]
+}

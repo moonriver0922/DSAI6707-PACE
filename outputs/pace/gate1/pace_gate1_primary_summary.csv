@@ -1,0 +1,5 @@
+,false_elim_rate,false_elim_rate,ref_pareto_recall,ref_pareto_recall,retained_regret,retained_regret,n_retained,n_retained,n_conf_elim,n_conf_elim,n_forced,n_forced
+,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
+method,,,,,,,,,,,,
+b0_point_nsga,0.1833,0.1197,0.8167,0.1197,0.0007,0.0018,8.0,0.0,0.0,0.0,0.0,0.0
+pace,0.025,0.0611,0.975,0.0611,0.0,0.0,11.7,2.08,4.3,2.08,0.0,0.0

@@ -1,0 +1,189 @@
+{
+  "method": "nsga2_racing",
+  "seed": 123,
+  "calls_used": 1280,
+  "winner": "racing_s123_g3_c07",
+  "winner_text": "Valid labels: World, Sports, Business, Sci/Tech. Reply with exactly one label from this set: World | Sports | Business | Sci/Tech.\nNo extra words.\nArticle: {text}\nLabel:",
+  "search_acc": 1.0,
+  "search_cost": 115.6,
+  "test_acc": 0.82,
+  "test_cost": 122.635,
+  "search_oracle_in_final_pop": "racing_s123_g3_c07",
+  "test_eval_mode": "winner_only",
+  "history": [
+    {
+      "generation": 0,
+      "ids": [
+        "p01",
+        "p02",
+        "p05",
+        "p15",
+        "p00",
+        "p04",
+        "p07",
+        "p03"
+      ],
+      "acc": {
+        "p00": 0.75,
+        "p01": 0.75,
+        "p02": 0.8529411764705882,
+        "p03": 0.625,
+        "p04": 0.75,
+        "p05": 0.8333333333333334,
+        "p07": 0.625,
+        "p15": 0.85625
+      },
+      "cost": {
+        "p00": 104.5,
+        "p01": 100.375,
+        "p02": 115.11764705882354,
+        "p03": 112.75,
+        "p04": 132.375,
+        "p05": 112.875,
+        "p07": 110.25,
+        "p15": 117.73125
+      }
+    },
+    {
+      "generation": 1,
+      "ids": [
+        "p01",
+        "p00",
+        "p05",
+        "racing_s123_g1_c04",
+        "p07",
+        "racing_s123_g1_c07",
+        "p03",
+        "racing_s123_g1_c03"
+      ],
+      "acc": {
+        "p01": 0.68,
+        "p00": 0.7938144329896907,
+        "racing_s123_g1_c04": 0.7857142857142857,
+        "p05": 0.8472222222222222,
+        "p07": 0.6111111111111112,
+        "racing_s123_g1_c03": 0.7142857142857143,
+        "racing_s123_g1_c07": 0.8,
+        "p03": 0.6153846153846154
+      },
+      "cost": {
+        "p01": 99.6,
+        "p00": 108.4639175257732,
+        "racing_s123_g1_c04": 113.57142857142857,
+        "p05": 115.34722222222223,
+        "p07": 110.55555555555556,
+        "racing_s123_g1_c03": 141.5,
+        "racing_s123_g1_c07": 116.6,
+        "p03": 110.92307692307692
+      }
+    },
+    {
+      "generation": 2,
+      "ids": [
+        "p01",
+        "p05",
+        "racing_s123_g2_c01",
+        "racing_s123_g2_c07",
+        "p00",
+        "racing_s123_g2_c02",
+        "racing_s123_g2_c04",
+        "racing_s123_g2_c06"
+      ],
+      "acc": {
+        "p01": 0.6428571428571429,
+        "p00": 0.8125,
+        "p05": 0.8470588235294118,
+        "racing_s123_g2_c01": 0.8666666666666667,
+        "racing_s123_g2_c04": 0.7391304347826086,
+        "racing_s123_g2_c07": 0.8148148148148148,
+        "racing_s123_g2_c02": 0.8666666666666667,
+        "racing_s123_g2_c06": 0.6
+      },
+      "cost": {
+        "p01": 102.5,
+        "p00": 108.33035714285714,
+        "p05": 116.63529411764706,
+        "racing_s123_g2_c01": 119.66666666666667,
+        "racing_s123_g2_c04": 111.78260869565217,
+        "racing_s123_g2_c07": 105.70370370370371,
+        "racing_s123_g2_c02": 121.8,
+        "racing_s123_g2_c06": 111.66666666666667
+      }
+    },
+    {
+      "generation": 3,
+      "ids": [
+        "racing_s123_g3_c03",
+        "racing_s123_g3_c06",
+        "racing_s123_g3_c07",
+        "racing_s123_g3_c02",
+        "racing_s123_g3_c05",
+        "racing_s123_g2_c01",
+        "racing_s123_g3_c00",
+        "racing_s123_g3_c04"
+      ],
+      "acc": {
+        "racing_s123_g3_c00": 0.7692307692307693,
+        "racing_s123_g3_c03": 0.9047619047619048,
+        "racing_s123_g3_c06": 0.8,
+        "racing_s123_g3_c02": 0.9230769230769231,
+        "racing_s123_g3_c04": 0.6923076923076923,
+        "racing_s123_g3_c05": 0.8620689655172413,
+        "racing_s123_g3_c07": 1.0,
+        "racing_s123_g2_c01": 0.875
+      },
+      "cost": {
+        "racing_s123_g3_c00": 124.61538461538461,
+        "racing_s123_g3_c03": 100.04761904761905,
+        "racing_s123_g3_c06": 98.8,
+        "racing_s123_g3_c02": 119.46153846153847,
+        "racing_s123_g3_c04": 112.07692307692308,
+        "racing_s123_g3_c05": 101.51724137931035,
+        "racing_s123_g3_c07": 115.6,
+        "racing_s123_g2_c01": 117.9375
+      }
+    }
+  ],
+  "final_pop_search": [
+    {
+      "id": "racing_s123_g3_c03",
+      "search_acc": 0.9047619047619048,
+      "search_cost": 100.04761904761905
+    },
+    {
+      "id": "racing_s123_g3_c06",
+      "search_acc": 0.8,
+      "search_cost": 98.8
+    },
+    {
+      "id": "racing_s123_g3_c07",
+      "search_acc": 1.0,
+      "search_cost": 115.6
+    },
+    {
+      "id": "racing_s123_g3_c02",
+      "search_acc": 0.9230769230769231,
+      "search_cost": 119.46153846153847
+    },
+    {
+      "id": "racing_s123_g3_c05",
+      "search_acc": 0.8620689655172413,
+      "search_cost": 101.51724137931035
+    },
+    {
+      "id": "racing_s123_g2_c01",
+      "search_acc": 0.875,
+      "search_cost": 117.9375
+    },
+    {
+      "id": "racing_s123_g3_c00",
+      "search_acc": 0.7692307692307693,
+      "search_cost": 124.61538461538461
+    },
+    {
+      "id": "racing_s123_g3_c04",
+      "search_acc": 0.6923076923076923,
+      "search_cost": 112.07692307692308
+    }
+  ]
+}

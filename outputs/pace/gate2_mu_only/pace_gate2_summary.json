@@ -1,0 +1,131 @@
+{
+  "track": "PACE Gate 2",
+  "experiment": "gate2_mu_only",
+  "smoke": false,
+  "config": "/home3/river/DSAI6707/DICE_PO/configs/pace_gate2.yaml",
+  "eval_policy": "racing",
+  "methods": [
+    "b0_point_nsga",
+    "pace"
+  ],
+  "treatment": "\u03bc-only retained cap (K=0); capacity confound control B0 vs PACE",
+  "elapsed_sec": 100.2,
+  "n_cache": 5787,
+  "gate1_warm_cells": 1280,
+  "no_gate1_warm": false,
+  "batch_size": 32,
+  "calls_cap": 1280,
+  "n_generations": 4,
+  "population_size": 8,
+  "epsilon": 0.0,
+  "n_min_common": 8,
+  "n_bootstrap": 200,
+  "mu": 8,
+  "archive_k": 0,
+  "method_summary": {
+    "b0_point_nsga": {
+      "n": 3,
+      "mean_test_acc": 0.7833333333333333,
+      "mean_test_cost": 114.65500000000002,
+      "mean_search_acc": 1.0,
+      "mean_calls": 1269.3333333333333,
+      "mean_conf_elim": 0.0,
+      "mean_forced": 0.0,
+      "seeds": [
+        42,
+        123,
+        456
+      ]
+    },
+    "pace": {
+      "n": 3,
+      "mean_test_acc": 0.7816666666666667,
+      "mean_test_cost": 117.59166666666665,
+      "mean_search_acc": 1.0,
+      "mean_calls": 1277.3333333333333,
+      "mean_conf_elim": 1.0,
+      "mean_forced": 23.0,
+      "seeds": [
+        42,
+        123,
+        456
+      ]
+    }
+  },
+  "runs": [
+    {
+      "method": "b0_point_nsga",
+      "seed": 42,
+      "calls_used": 1270,
+      "test_acc": 0.78,
+      "test_cost": 112.565,
+      "search_acc": 1.0,
+      "winner": "b0_point_nsga_s42_g2_c06",
+      "n_conf_elim_total": 0,
+      "n_forced_total": 0
+    },
+    {
+      "method": "pace",
+      "seed": 42,
+      "calls_used": 1280,
+      "test_acc": 0.78,
+      "test_cost": 110.845,
+      "search_acc": 1.0,
+      "winner": "pace_s42_g3_c04",
+      "n_conf_elim_total": 1,
+      "n_forced_total": 23
+    },
+    {
+      "method": "b0_point_nsga",
+      "seed": 123,
+      "calls_used": 1270,
+      "test_acc": 0.8,
+      "test_cost": 114.875,
+      "search_acc": 1.0,
+      "winner": "b0_point_nsga_s123_g3_c00",
+      "n_conf_elim_total": 0,
+      "n_forced_total": 0
+    },
+    {
+      "method": "pace",
+      "seed": 123,
+      "calls_used": 1272,
+      "test_acc": 0.8,
+      "test_cost": 129.645,
+      "search_acc": 1.0,
+      "winner": "pace_s123_g3_c00",
+      "n_conf_elim_total": 0,
+      "n_forced_total": 24
+    },
+    {
+      "method": "b0_point_nsga",
+      "seed": 456,
+      "calls_used": 1268,
+      "test_acc": 0.77,
+      "test_cost": 116.525,
+      "search_acc": 1.0,
+      "winner": "b0_point_nsga_s456_g3_c07",
+      "n_conf_elim_total": 0,
+      "n_forced_total": 0
+    },
+    {
+      "method": "pace",
+      "seed": 456,
+      "calls_used": 1280,
+      "test_acc": 0.765,
+      "test_cost": 112.285,
+      "search_acc": 1.0,
+      "winner": "pace_s456_g3_c06",
+      "n_conf_elim_total": 2,
+      "n_forced_total": 22
+    }
+  ],
+  "baseline_summary": "/home3/river/DSAI6707/DICE_PO/outputs/pace/gate2/pace_gate2_summary.json",
+  "frozen_untouched": [
+    "outputs/gate1",
+    "outputs/gate2",
+    "reports",
+    "outputs/pace/gate2"
+  ],
+  "note": "Conditional online proof after PACE Gate1 GO. DICE NO-GO and EC Gate2 artifacts are historical; not relabeled as PACE wins. Capacity confound (\u03bc+K) must be stated explicitly."
+}

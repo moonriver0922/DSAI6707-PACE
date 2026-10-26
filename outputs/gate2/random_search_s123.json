@@ -1,0 +1,52 @@
+{
+  "method": "random_search",
+  "seed": 123,
+  "calls_used": 1256,
+  "winner": "rand_s123_c25",
+  "winner_text": "You are an expert annotator for AG News. Read the article and output only the topic label.\nValid labels: World, Sports, Business, Sci/Tech.\nArticle: {text}\nTopic:",
+  "test_acc": 0.795,
+  "test_cost": 119.625,
+  "test_eval_mode": "winner_only",
+  "final_pop_search": [
+    {
+      "id": "p03",
+      "search_acc": 0.8108108108108109,
+      "search_cost": 109.29729729729729
+    },
+    {
+      "id": "p05",
+      "search_acc": 0.8378378378378378,
+      "search_cost": 116.1891891891892
+    },
+    {
+      "id": "p15",
+      "search_acc": 0.8648648648648649,
+      "search_cost": 116.29729729729729
+    },
+    {
+      "id": "rand_s123_c03",
+      "search_acc": 0.8333333333333334,
+      "search_cost": 114.16666666666667
+    },
+    {
+      "id": "rand_s123_c07",
+      "search_acc": 0.8333333333333334,
+      "search_cost": 114.16666666666667
+    },
+    {
+      "id": "rand_s123_c15",
+      "search_acc": 0.9,
+      "search_cost": 136.03333333333333
+    },
+    {
+      "id": "rand_s123_c24",
+      "search_acc": 0.8666666666666667,
+      "search_cost": 117.3
+    },
+    {
+      "id": "rand_s123_c25",
+      "search_acc": 0.9,
+      "search_cost": 120.03333333333333
+    }
+  ]
+}

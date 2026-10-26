@@ -1,0 +1,19 @@
+{
+  "primary_budget": 640,
+  "reference_pareto": [
+    "p00",
+    "p01",
+    "p02",
+    "p03",
+    "p05",
+    "p15"
+  ],
+  "H0_b0_mean_false_elim_rate": 0.1833333333333333,
+  "H0_premise_nontrivial": true,
+  "delta_false_elim_pace_minus_b0": -0.1583333333333333,
+  "delta_recall_pace_minus_b0": 0.15833333333333321,
+  "delta_regret_pace_minus_b0": -0.0007397460937499975,
+  "GO": true,
+  "rule": "GO iff H0_rate>=0.05 and PACE false_elim < B0 and retained_regret not worse by >0.002",
+  "note": "Post-matched Racing trajectory; exploratory GO for Gate 2 only. Negative findings retained."
+}

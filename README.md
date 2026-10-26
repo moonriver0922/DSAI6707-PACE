@@ -1,16 +1,17 @@
-# DICE-PO / PACE
+# PACE (DSAI6707 course delivery)
 
-DSAI6707 — **current direction: PACE** (`PACE_Research_Implementation_Plan.md`).  
-DICE-PO results are **historical negatives**, frozen under `outputs/gate1/` and `reports/`.
+**Primary write-up:** [`reports/PACE_Course_Report.md`](reports/PACE_Course_Report.md) · **6-min talk:** [`reports/PACE_Presentation_6slides.md`](reports/PACE_Presentation_6slides.md)  
+
+Experiments are **frozen** (no new algorithms / GPU runs for delivery).  
+DICE-PO negatives stay historical under `outputs/gate1/` and `reports/DICE_PO_Technical_Report.md`.
 
 ## Status
 
 | Track | Gate | Status |
 |------|------|--------|
-| DICE (legacy) | Gate 1 + fair ablation | **NO-GO** (negative result retained) |
-| **PACE** | Gate 0 | **pass** (`pytest tests/pace`) |
-| **PACE** | Gate 1a/1b (0 LLM) | **GO** — see `outputs/pace/gate1/PACE_GO_NOGO.md` |
-| **PACE** | Gate 2 online | Conditional; not started |
+| DICE (legacy) | Gate 1 | NO-GO (retained, not in main story) |
+| **PACE** | Gate 0 / 1 | pass / GO |
+| **PACE** | Gate 2 **15-seed primary** | `outputs/pace/gate2_cap_align_15seed/` |
 
 See `PROJECT_DIRECTION.md`.
 
@@ -65,13 +66,25 @@ PYTHONPATH=src /home3/river/comfyui-minimax-h3/.venv/bin/python \
 
 Primary metric: **test preference selection regret** at budget **640**.
 
-## Gate 2
+## Gate 2 (PACE online)
 
-Do **not** run real online search until Gate 1 go/no-go. The stub requires `--go`:
+Requires **PACE Gate 1 GO** (`outputs/pace/gate1/PACE_GO_NOGO.md`). Survivor-only contrast under shared Paired Racing: **B0** `point_estimate_truncate` vs **PACE** `pace_bounded_survive`. Winner from search observations only, then sealed test. Writes only under `outputs/pace/gate2/` (does not touch `outputs/gate1`, legacy `outputs/gate2`, or `reports/`).
 
 ```bash
-.conda/bin/python scripts/run_online.py --go
+export HF_HOME=/home3/river/DSAI6707/DICE_PO/.hf_cache
+export HUGGINGFACE_HUB_CACHE=$HF_HOME/hub
+PY=/home3/river/comfyui-minimax-h3/.venv/bin/python
+
+# Smoke (small gen/budget)
+PYTHONPATH=src $PY scripts/run_pace_gate2.py --smoke --device cuda:0
+
+# Full (pop=8, gen=4, seeds=42/123/456, calls_cap=1280)
+PYTHONPATH=src $PY scripts/run_pace_gate2.py --device cuda:0
 ```
+
+Config: `configs/pace_gate2.yaml` (ε=0, n_min=8, B=200, μ=8, K=8).
+
+Legacy EC stub (historical, not PACE): `scripts/run_online.py --go` → `outputs/gate2/`.
 
 ## Layout
 

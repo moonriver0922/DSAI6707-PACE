@@ -1,0 +1,398 @@
+{
+  "method": "b0_point_nsga",
+  "eval_policy": "racing",
+  "seed": 42,
+  "calls_used": 1280,
+  "calls_cap": 1280,
+  "winner": "b0_point_nsga_s42_g3_c05",
+  "winner_text": "Classify. Category (World / Sports / Business / Sci/Tech):\n{text}\nAnswer:",
+  "search_acc": 0.9565217391304348,
+  "search_cost": 109.17391304347827,
+  "test_acc": 0.77,
+  "test_cost": 105.295,
+  "test_eval_mode": "winner_only_sealed",
+  "n_generated_approx": 24,
+  "final_active": [
+    "b0_point_nsga_s42_g1_c00",
+    "b0_point_nsga_s42_g1_c02",
+    "b0_point_nsga_s42_g1_c04",
+    "b0_point_nsga_s42_g2_c03",
+    "b0_point_nsga_s42_g2_c07",
+    "b0_point_nsga_s42_g3_c05",
+    "p00",
+    "p01"
+  ],
+  "final_retained": [
+    "b0_point_nsga_s42_g1_c00",
+    "b0_point_nsga_s42_g1_c02",
+    "b0_point_nsga_s42_g1_c04",
+    "b0_point_nsga_s42_g2_c03",
+    "b0_point_nsga_s42_g2_c07",
+    "b0_point_nsga_s42_g3_c05",
+    "p00",
+    "p01"
+  ],
+  "final_pop_search": [
+    {
+      "id": "b0_point_nsga_s42_g1_c00",
+      "search_acc": 0.0,
+      "search_cost": 95.0
+    },
+    {
+      "id": "b0_point_nsga_s42_g1_c02",
+      "search_acc": 0.6821705426356589,
+      "search_cost": 101.93798449612403
+    },
+    {
+      "id": "b0_point_nsga_s42_g1_c04",
+      "search_acc": 0.5454545454545454,
+      "search_cost": 103.27272727272727
+    },
+    {
+      "id": "b0_point_nsga_s42_g2_c03",
+      "search_acc": 0.9459459459459459,
+      "search_cost": 112.94594594594595
+    },
+    {
+      "id": "b0_point_nsga_s42_g2_c07",
+      "search_acc": 0.0,
+      "search_cost": 99.38095238095238
+    },
+    {
+      "id": "b0_point_nsga_s42_g3_c05",
+      "search_acc": 0.9565217391304348,
+      "search_cost": 109.17391304347827
+    },
+    {
+      "id": "p00",
+      "search_acc": 0.7876712328767124,
+      "search_cost": 109.02739726027397
+    },
+    {
+      "id": "p01",
+      "search_acc": 0.7,
+      "search_cost": 103.2090909090909
+    }
+  ],
+  "history": [
+    {
+      "generation": 0,
+      "phase": "racing_then_survive",
+      "racing_calls": 304,
+      "warm_calls": 0,
+      "calls_used": 368,
+      "n_candidates": 8,
+      "candidate_ids": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15"
+      ],
+      "active": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15"
+      ],
+      "retained": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 0,
+      "phase": "offspring_racing_then_survive",
+      "racing_calls": 220,
+      "warm_calls": 32,
+      "calls_used": 620,
+      "n_candidates": 16,
+      "candidate_ids": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15",
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c01",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c03",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g1_c05",
+        "b0_point_nsga_s42_g1_c06",
+        "b0_point_nsga_s42_g1_c07"
+      ],
+      "active": [
+        "p00",
+        "p01",
+        "p03",
+        "p05",
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g1_c06"
+      ],
+      "retained": [
+        "p00",
+        "p01",
+        "p03",
+        "p05",
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g1_c06"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 1,
+      "phase": "racing_then_survive",
+      "racing_calls": 214,
+      "warm_calls": 0,
+      "calls_used": 834,
+      "n_candidates": 8,
+      "candidate_ids": [
+        "p00",
+        "p01",
+        "p03",
+        "p05",
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g1_c06"
+      ],
+      "active": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g1_c06",
+        "p00",
+        "p01",
+        "p03",
+        "p05"
+      ],
+      "retained": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g1_c06",
+        "p00",
+        "p01",
+        "p03",
+        "p05"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 1,
+      "phase": "offspring_racing_then_survive",
+      "racing_calls": 138,
+      "warm_calls": 32,
+      "calls_used": 1004,
+      "n_candidates": 16,
+      "candidate_ids": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g1_c06",
+        "p00",
+        "p01",
+        "p03",
+        "p05",
+        "b0_point_nsga_s42_g2_c00",
+        "b0_point_nsga_s42_g2_c01",
+        "b0_point_nsga_s42_g2_c02",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c04",
+        "b0_point_nsga_s42_g2_c05",
+        "b0_point_nsga_s42_g2_c06",
+        "b0_point_nsga_s42_g2_c07"
+      ],
+      "active": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "p00",
+        "p01",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c06",
+        "b0_point_nsga_s42_g2_c07",
+        "b0_point_nsga_s42_g1_c04"
+      ],
+      "retained": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "p00",
+        "p01",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c06",
+        "b0_point_nsga_s42_g2_c07",
+        "b0_point_nsga_s42_g1_c04"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 2,
+      "phase": "racing_then_survive",
+      "racing_calls": 138,
+      "warm_calls": 0,
+      "calls_used": 1142,
+      "n_candidates": 8,
+      "candidate_ids": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "p00",
+        "p01",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c06",
+        "b0_point_nsga_s42_g2_c07",
+        "b0_point_nsga_s42_g1_c04"
+      ],
+      "active": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c06",
+        "b0_point_nsga_s42_g2_c07",
+        "p00",
+        "p01"
+      ],
+      "retained": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c06",
+        "b0_point_nsga_s42_g2_c07",
+        "p00",
+        "p01"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 2,
+      "phase": "offspring_racing_then_survive",
+      "racing_calls": 52,
+      "warm_calls": 32,
+      "calls_used": 1226,
+      "n_candidates": 16,
+      "candidate_ids": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c06",
+        "b0_point_nsga_s42_g2_c07",
+        "p00",
+        "p01",
+        "b0_point_nsga_s42_g3_c00",
+        "b0_point_nsga_s42_g3_c01",
+        "b0_point_nsga_s42_g3_c02",
+        "b0_point_nsga_s42_g3_c03",
+        "b0_point_nsga_s42_g3_c04",
+        "b0_point_nsga_s42_g3_c05",
+        "b0_point_nsga_s42_g3_c06",
+        "b0_point_nsga_s42_g3_c07"
+      ],
+      "active": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "p01",
+        "b0_point_nsga_s42_g3_c05",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c07",
+        "p00",
+        "b0_point_nsga_s42_g1_c04"
+      ],
+      "retained": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "p01",
+        "b0_point_nsga_s42_g3_c05",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c07",
+        "p00",
+        "b0_point_nsga_s42_g1_c04"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 3,
+      "phase": "racing_then_survive",
+      "racing_calls": 54,
+      "warm_calls": 0,
+      "calls_used": 1280,
+      "n_candidates": 8,
+      "candidate_ids": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "p01",
+        "b0_point_nsga_s42_g3_c05",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c07",
+        "p00",
+        "b0_point_nsga_s42_g1_c04"
+      ],
+      "active": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c07",
+        "b0_point_nsga_s42_g3_c05",
+        "p00",
+        "p01"
+      ],
+      "retained": [
+        "b0_point_nsga_s42_g1_c00",
+        "b0_point_nsga_s42_g1_c02",
+        "b0_point_nsga_s42_g1_c04",
+        "b0_point_nsga_s42_g2_c03",
+        "b0_point_nsga_s42_g2_c07",
+        "b0_point_nsga_s42_g3_c05",
+        "p00",
+        "p01"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    }
+  ],
+  "note": "DICE historical negatives unchanged; survivor-only contrast vs B0."
+}

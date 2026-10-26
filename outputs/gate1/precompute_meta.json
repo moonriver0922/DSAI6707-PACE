@@ -1,0 +1,9 @@
+{
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "n_prompts": 16,
+  "n_search": 160,
+  "n_test": 200,
+  "total_evals": 5760,
+  "smoke": 0,
+  "note": "queries.parquet write failed (no pandas in GPU env); oracle_matrices.npz is complete"
+}

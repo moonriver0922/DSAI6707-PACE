@@ -1,0 +1,611 @@
+{
+  "method": "pace",
+  "eval_policy": "racing",
+  "seed": 42,
+  "calls_used": 1260,
+  "calls_cap": 1280,
+  "winner": "pace_s42_g2_c01",
+  "winner_text": "You are an expert annotator for AG News. Classify the news article into one of: World, Sports, Business, Sci/Tech.\nArticle: {text}\nLabel:",
+  "search_acc": 0.8947368421052632,
+  "search_cost": 116.63157894736842,
+  "test_acc": 0.83,
+  "test_cost": 118.675,
+  "test_eval_mode": "winner_only_sealed",
+  "n_generated_approx": 24,
+  "final_active": [
+    "pace_s42_g1_c00",
+    "pace_s42_g2_c01",
+    "pace_s42_g1_c02",
+    "p00",
+    "pace_s42_g1_c06",
+    "p03",
+    "pace_s42_g1_c07",
+    "p01"
+  ],
+  "final_retained": [
+    "pace_s42_g1_c00",
+    "pace_s42_g2_c07",
+    "p00",
+    "pace_s42_g1_c02",
+    "pace_s42_g1_c06",
+    "pace_s42_g1_c07",
+    "pace_s42_g2_c01",
+    "p02",
+    "p03",
+    "pace_s42_g3_c03",
+    "pace_s42_g2_c05",
+    "pace_s42_g2_c03",
+    "p01",
+    "p05",
+    "pace_s42_g2_c06",
+    "pace_s42_g3_c05"
+  ],
+  "final_pop_search": [
+    {
+      "id": "pace_s42_g1_c00",
+      "search_acc": 0.0,
+      "search_cost": 90.04347826086956
+    },
+    {
+      "id": "pace_s42_g2_c07",
+      "search_acc": 0.7407407407407407,
+      "search_cost": 104.70370370370371
+    },
+    {
+      "id": "p00",
+      "search_acc": 0.8,
+      "search_cost": 108.64375
+    },
+    {
+      "id": "pace_s42_g1_c02",
+      "search_acc": 0.7032967032967034,
+      "search_cost": 100.23076923076923
+    },
+    {
+      "id": "pace_s42_g1_c06",
+      "search_acc": 0.7586206896551724,
+      "search_cost": 102.96551724137932
+    },
+    {
+      "id": "pace_s42_g1_c07",
+      "search_acc": 0.8545454545454545,
+      "search_cost": 114.94545454545455
+    },
+    {
+      "id": "pace_s42_g2_c01",
+      "search_acc": 0.8947368421052632,
+      "search_cost": 116.63157894736842
+    },
+    {
+      "id": "p02",
+      "search_acc": 0.8352941176470589,
+      "search_cost": 115.01176470588236
+    },
+    {
+      "id": "p03",
+      "search_acc": 0.8217054263565892,
+      "search_cost": 111.34108527131782
+    },
+    {
+      "id": "pace_s42_g3_c03",
+      "search_acc": 0.75,
+      "search_cost": 109.75
+    },
+    {
+      "id": "pace_s42_g2_c05",
+      "search_acc": 0.7272727272727273,
+      "search_cost": 104.36363636363636
+    },
+    {
+      "id": "pace_s42_g2_c03",
+      "search_acc": 0.0,
+      "search_cost": 92.78947368421052
+    },
+    {
+      "id": "p01",
+      "search_acc": 0.7037037037037037,
+      "search_cost": 102.72222222222223
+    },
+    {
+      "id": "p05",
+      "search_acc": 0.8571428571428571,
+      "search_cost": 116.07142857142857
+    },
+    {
+      "id": "pace_s42_g2_c06",
+      "search_acc": 0.8947368421052632,
+      "search_cost": 118.21052631578948
+    },
+    {
+      "id": "pace_s42_g3_c05",
+      "search_acc": 0.75,
+      "search_cost": 112.5
+    }
+  ],
+  "history": [
+    {
+      "generation": 0,
+      "phase": "racing_then_survive",
+      "racing_calls": 304,
+      "warm_calls": 0,
+      "calls_used": 368,
+      "n_candidates": 8,
+      "candidate_ids": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15"
+      ],
+      "active": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15"
+      ],
+      "retained": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 0,
+      "phase": "offspring_racing_then_survive",
+      "racing_calls": 220,
+      "warm_calls": 32,
+      "calls_used": 620,
+      "n_candidates": 16,
+      "candidate_ids": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15",
+        "pace_s42_g1_c00",
+        "pace_s42_g1_c01",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c03",
+        "pace_s42_g1_c04",
+        "pace_s42_g1_c05",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07"
+      ],
+      "active": [
+        "p00",
+        "p01",
+        "p03",
+        "p05",
+        "pace_s42_g1_c00",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c04",
+        "p15"
+      ],
+      "retained": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15",
+        "pace_s42_g1_c00",
+        "pace_s42_g1_c01",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c03",
+        "pace_s42_g1_c04",
+        "pace_s42_g1_c05",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 1,
+      "phase": "racing_then_survive",
+      "racing_calls": 210,
+      "warm_calls": 0,
+      "calls_used": 830,
+      "n_candidates": 16,
+      "candidate_ids": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15",
+        "pace_s42_g1_c00",
+        "pace_s42_g1_c01",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c03",
+        "pace_s42_g1_c04",
+        "pace_s42_g1_c05",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07"
+      ],
+      "active": [
+        "p00",
+        "p01",
+        "p03",
+        "pace_s42_g1_c00",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07",
+        "pace_s42_g1_c03"
+      ],
+      "retained": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15",
+        "pace_s42_g1_c00",
+        "pace_s42_g1_c01",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c03",
+        "pace_s42_g1_c04",
+        "pace_s42_g1_c05",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 1,
+      "phase": "offspring_racing_then_survive",
+      "racing_calls": 132,
+      "warm_calls": 32,
+      "calls_used": 994,
+      "n_candidates": 24,
+      "candidate_ids": [
+        "p00",
+        "p01",
+        "p02",
+        "p03",
+        "p04",
+        "p05",
+        "p07",
+        "p15",
+        "pace_s42_g1_c00",
+        "pace_s42_g1_c01",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c03",
+        "pace_s42_g1_c04",
+        "pace_s42_g1_c05",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07",
+        "pace_s42_g2_c00",
+        "pace_s42_g2_c01",
+        "pace_s42_g2_c02",
+        "pace_s42_g2_c03",
+        "pace_s42_g2_c04",
+        "pace_s42_g2_c05",
+        "pace_s42_g2_c06",
+        "pace_s42_g2_c07"
+      ],
+      "active": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c05",
+        "pace_s42_g2_c07",
+        "pace_s42_g2_c01",
+        "pace_s42_g2_c03",
+        "pace_s42_g1_c02",
+        "p00",
+        "pace_s42_g1_c06"
+      ],
+      "retained": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c05",
+        "pace_s42_g2_c07",
+        "p00",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c03",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07",
+        "pace_s42_g2_c01",
+        "pace_s42_g2_c03",
+        "p01",
+        "p02",
+        "p03",
+        "p05",
+        "pace_s42_g2_c02",
+        "pace_s42_g2_c06"
+      ],
+      "confidence_elims": [
+        {
+          "eliminated": "pace_s42_g1_c05",
+          "by": "p02",
+          "L": 0.05,
+          "U": 0.4512500000000003,
+          "delta": 0.25,
+          "n": 20
+        }
+      ],
+      "forced_evictions": [
+        {
+          "prompt_id": "p04",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "p07",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "p15",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g1_c01",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g1_c04",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g2_c00",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g2_c04",
+          "reason": "capacity"
+        }
+      ],
+      "n_conf_elim": 1,
+      "n_forced": 7
+    },
+    {
+      "generation": 2,
+      "phase": "racing_then_survive",
+      "racing_calls": 128,
+      "warm_calls": 0,
+      "calls_used": 1122,
+      "n_candidates": 16,
+      "candidate_ids": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c05",
+        "pace_s42_g2_c07",
+        "p00",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c03",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07",
+        "pace_s42_g2_c01",
+        "pace_s42_g2_c03",
+        "p01",
+        "p02",
+        "p03",
+        "p05",
+        "pace_s42_g2_c02",
+        "pace_s42_g2_c06"
+      ],
+      "active": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c01",
+        "pace_s42_g1_c02",
+        "p03",
+        "p00",
+        "pace_s42_g2_c07",
+        "pace_s42_g1_c06",
+        "p02"
+      ],
+      "retained": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c05",
+        "pace_s42_g2_c07",
+        "p00",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c03",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07",
+        "pace_s42_g2_c01",
+        "pace_s42_g2_c03",
+        "p01",
+        "p02",
+        "p03",
+        "p05",
+        "pace_s42_g2_c02",
+        "pace_s42_g2_c06"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 2,
+      "phase": "offspring_racing_then_survive",
+      "racing_calls": 54,
+      "warm_calls": 32,
+      "calls_used": 1208,
+      "n_candidates": 24,
+      "candidate_ids": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c05",
+        "pace_s42_g2_c07",
+        "p00",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c03",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07",
+        "pace_s42_g2_c01",
+        "pace_s42_g2_c03",
+        "p01",
+        "p02",
+        "p03",
+        "p05",
+        "pace_s42_g2_c02",
+        "pace_s42_g2_c06",
+        "pace_s42_g3_c00",
+        "pace_s42_g3_c01",
+        "pace_s42_g3_c02",
+        "pace_s42_g3_c03",
+        "pace_s42_g3_c04",
+        "pace_s42_g3_c05",
+        "pace_s42_g3_c06",
+        "pace_s42_g3_c07"
+      ],
+      "active": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c01",
+        "pace_s42_g1_c02",
+        "p00",
+        "pace_s42_g2_c07",
+        "pace_s42_g1_c06",
+        "p02",
+        "pace_s42_g1_c07"
+      ],
+      "retained": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c07",
+        "p00",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07",
+        "pace_s42_g2_c01",
+        "p02",
+        "p03",
+        "pace_s42_g3_c03",
+        "pace_s42_g2_c05",
+        "pace_s42_g2_c03",
+        "p01",
+        "p05",
+        "pace_s42_g2_c06",
+        "pace_s42_g3_c05"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [
+        {
+          "prompt_id": "pace_s42_g1_c03",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g2_c02",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g3_c00",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g3_c01",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g3_c02",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g3_c04",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g3_c06",
+          "reason": "capacity"
+        },
+        {
+          "prompt_id": "pace_s42_g3_c07",
+          "reason": "capacity"
+        }
+      ],
+      "n_conf_elim": 0,
+      "n_forced": 8
+    },
+    {
+      "generation": 3,
+      "phase": "racing_then_survive",
+      "racing_calls": 52,
+      "warm_calls": 0,
+      "calls_used": 1260,
+      "n_candidates": 16,
+      "candidate_ids": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c07",
+        "p00",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07",
+        "pace_s42_g2_c01",
+        "p02",
+        "p03",
+        "pace_s42_g3_c03",
+        "pace_s42_g2_c05",
+        "pace_s42_g2_c03",
+        "p01",
+        "p05",
+        "pace_s42_g2_c06",
+        "pace_s42_g3_c05"
+      ],
+      "active": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c01",
+        "pace_s42_g1_c02",
+        "p00",
+        "pace_s42_g1_c06",
+        "p03",
+        "pace_s42_g1_c07",
+        "p01"
+      ],
+      "retained": [
+        "pace_s42_g1_c00",
+        "pace_s42_g2_c07",
+        "p00",
+        "pace_s42_g1_c02",
+        "pace_s42_g1_c06",
+        "pace_s42_g1_c07",
+        "pace_s42_g2_c01",
+        "p02",
+        "p03",
+        "pace_s42_g3_c03",
+        "pace_s42_g2_c05",
+        "pace_s42_g2_c03",
+        "p01",
+        "p05",
+        "pace_s42_g2_c06",
+        "pace_s42_g3_c05"
+      ],
+      "confidence_elims": [],
+      "forced_evictions": [],
+      "n_conf_elim": 0,
+      "n_forced": 0
+    },
+    {
+      "generation": 4,
+      "phase": "leftover_racing",
+      "racing_calls": 0,
+      "calls_used": 1260
+    }
+  ],
+  "note": "DICE historical negatives unchanged; survivor-only contrast vs B0."
+}
