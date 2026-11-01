@@ -8,8 +8,6 @@ PACE studies survivor selection in evolutionary prompt optimization. It uses
 paired observations to decide when a prompt can be removed, and a bounded archive
 to keep unresolved candidates. The experiments use AG News and Qwen2.5-7B-Instruct.
 
-[Read the paper](paper/main.pdf) · [LaTeX source](paper/main.tex) ·
-[Paper build instructions](paper/README.md) ·
 [Primary results](outputs/pace/gate2_cap_align_15seed/PACE_GATE2_15SEED.md)
 
 ## Results
@@ -41,7 +39,6 @@ selection heuristic; it has no simultaneous or anytime-valid coverage guarantee.
 
 | Path | Contents |
 | --- | --- |
-| `paper/` | Current manuscript, compiled PDF, seven figures and plotting script |
 | `src/pace/` | Paired bootstrap, survivor rule and audit metrics |
 | `src/policies/` | Evaluation-allocation policies, including Paired Racing |
 | `configs/pace_gate2_cap_align_15seed.yaml` | Frozen primary online configuration |
@@ -50,10 +47,8 @@ selection heuristic; it has no simultaneous or anytime-valid coverage guarantee.
 | `outputs/pace/gate2_cap_align_15seed/` | 30 primary run records and paired summaries |
 | `outputs/pace/gate2_cap_align_15seed/analysis/` | Descriptive archive audit |
 | `tests/` | Budget, pairing, metrics and information-access checks |
-| `reports/` | Earlier course report and presentation outline |
 
-The current paper reviews 20 core studies in five categories. Each section has
-at most five subsections. Earlier DICE experiments are retained under
+Earlier DICE experiments are retained under
 `outputs/gate1/`, `outputs/gate2/` and `reports/DICE_PO_Technical_Report.md`;
 they are not included in the PACE primary estimate.
 
@@ -92,22 +87,6 @@ PYTHONPATH=src python scripts/aggregate_pace_gate2_15seed.py \
   --out-dir outputs/reproduced/primary
 ```
 
-## Build the paper
-
-The paper uses the official NeurIPS 2026 style in preprint mode. Compile with
-Tectonic or a LaTeX installation that includes `latexmk`:
-
-```bash
-cd paper
-tectonic main.tex
-# Alternative: latexmk -pdf main.tex
-```
-
-For Overleaf, upload `main.tex`, `neurips_2026.sty`, `sections/` and `figures/`,
-then select `main.tex` as the main document. References are embedded in the TeX;
-a separate BibTeX step is unnecessary. See [paper/README.md](paper/README.md)
-for the figure list and source-verification notes.
-
 ## Run new model evaluations
 
 The original runs used one NVIDIA A100 80GB, BF16 and greedy decoding with at
@@ -126,16 +105,16 @@ PYTHONPATH=src python scripts/run_pace_gate2.py \
   --device cuda:0
 ```
 
-This is the entry point for rerunning the protocol, not a claim that a new GPU
-run has been performed. Existing JSON records remain the evidence for the paper.
+This command runs new model evaluations. The archived JSON records remain
+unchanged when a separate output directory is used.
 
 ## Accounting and limitations
 
 - The 1,280-observation budget counts newly acquired prompt–sample pairs within
   each search state. An inference-cache hit can still count as a new observation
   for that run; the counter is not a physical GPU-call total.
-- The evaluator retains historical prompt IDs after survivor removal. The paper
-  documents this behavior; changing it would require new experiments.
+- The evaluator retains historical prompt IDs after survivor removal. Changing
+  this behavior would require new experiments.
 - Parent IDs are incomplete in the saved logs. Archive-to-active transitions
   indicate breeding opportunities, not verified descendant contributions.
 - One dataset, one target model and a shared 200-example test set limit how far
