@@ -1,0 +1,25 @@
+\paragraph{Bootstrap construction and boundary cases.}
+For a pair with $n$ common observations, each bootstrap replicate draws indices
+$I_1^{(b)},\ldots,I_n^{(b)}$ independently and uniformly from $\{1,\ldots,n\}$.
+The replicate statistic and interval endpoints are
+\begin{equation}
+ \Delta^{*(b)}_{pq}=\frac{1}{n}\sum_{j=1}^{n}d_{I_j^{(b)}},\qquad
+ (L_{pq},U_{pq})=(Q_{0.025},Q_{0.975})
+       \bigl(\{\Delta^{*(b)}_{pq}\}_{b=1}^{200}\bigr).
+ \label{eq:bootstrap}
+\end{equation}
+The code uses seeded pseudorandom generators and NumPy quantiles. There is no
+normal approximation inside this gate. A pair with no common observations has
+no interval; a pair with fewer than eight common observations cannot trigger
+removal even if an interval can be calculated. With one observation or a constant
+difference vector, the implementation returns equal endpoints at the observed
+mean. This shortcut agrees with resampling a constant empirical distribution,
+but says nothing about the adequacy of that empirical distribution.
+
+For example, consider the hypothetical paired vector $(1,1,1,1,1,1,1,1)$.
+Every bootstrap mean is one, so the nominal lower bound is one and the accuracy
+condition is satisfied. Eight observed successes for $p$ against $q$ are evidence
+in a practical sense, but a degenerate percentile interval should not be read as
+certainty about future examples. Conversely, $(0,0,0,0,0,0,0,0)$ yields a zero
+interval and cannot trigger the strict $L_{pq}>0$ rule. These are worked examples
+of the implementation, not additional empirical experiments.

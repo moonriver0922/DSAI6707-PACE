@@ -1,0 +1,90 @@
+\paragraph{Survivor procedure.}
+Table~\ref{tab:algorithm} gives the implemented selection procedure. The gate is
+sequential: an already removed candidate is skipped as a potential dominator.
+This ordering prevents a deleted prompt from supplying a later elimination
+certificate, but it also means the procedure is not an order-invariant batch
+solution to all possible pairwise inequalities. Stable prompt IDs make the
+chosen order reproducible. They do not provide an optimality guarantee.
+
+\begin{table}[tbp]\centering\small
+\caption{PACE survivor procedure. This is pseudocode for one invocation, not the
+complete evaluation scheduler. $\operatorname{NSGA}(R,k)$ denotes rank/crowding
+selection of at most $k$ prompt IDs from $R$.}
+\label{tab:algorithm}
+\begin{tabularx}{\linewidth}{@{}r>{\raggedright\arraybackslash}X@{}}\toprule
+Step & Operation\\\midrule
+1 & Input candidate IDs $C$, observed state, active capacity $\mu$, archive allowance
+$K$, threshold $\varepsilon$, and seeded bootstrap generator. Set $E=\varnothing$.\\
+2 & Visit $q$ in sorted $C$. Visit $p$ in sorted $C$, skipping $p=q$ and IDs in $E$.\\
+3 & Skip the pair if $\widehat c(p)>\widehat c(q)$, if no common samples exist,
+or if fewer than eight common samples are available.\\
+4 & If $L_{pq}>\varepsilon$, append $(q,p,L_{pq},U_{pq},n)$ to the confidence log,
+set $E\leftarrow E\cup\{q\}$, and stop scanning dominators for $q$.\\
+5 & Set $R=C\setminus E$. If $|R|>\mu+K$, keep $\operatorname{NSGA}(R,\mu+K)$
+and log all other IDs as forced evictions.\\
+6 & If $|R|>\mu$, set $A=\operatorname{NSGA}(R,\mu)$; otherwise set $A=R$.
+Return retained set $R$, active set $A$, and the two removal logs.\\\bottomrule
+\end{tabularx}
+\end{table}
+
+The control B0+Archive executes the same capacity and active-set steps with
+$E=\varnothing$. In contrast, archive-free B0 directly truncates to $\mu$.
+Consequently, disabling the gate while retaining $K=8$ is the relevant primary
+control, whereas comparing PACE against archive-free B0 changes two components.
+Setting $K=0$ removes headroom but does not logically disable evidence-based
+elimination; the gate can still change which candidates reach NSGA-II truncation.
+Any similarity under that ablation is an observation, not an identity of the rules.
+
+An invocation can return fewer than $\mu$ active prompts if confidence elimination
+leaves too few candidates. The implementation does not repopulate the set with
+eliminated IDs to fill empty slots. This detail matters when interpreting
+population size as an upper bound rather than an invariant count at every phase.
+Likewise, a candidate retained in the archive is not automatically selected as a
+parent: only the active set enters the variation operator.
+
+\subsection{Variation operators and representation constraints}
+Each instruction contains a literal \texttt{\{text\}} placeholder, which is
+replaced with the article at evaluation time. The online initial population is
+\texttt{p00}, \texttt{p01}, \texttt{p02}, \texttt{p03}, \texttt{p04},
+\texttt{p05}, \texttt{p07}, and \texttt{p15}. This eight-prompt population is a
+subset of the 16-prompt pool used in offline replay; the two pools should not be
+conflated when assessing what candidates were available.
+
+For each child, two parent IDs are sampled with replacement from the active
+population. With probability one half, crossover combines an instruction head
+from one parent with a response-format tail from the other, splitting at the
+placeholder. Otherwise, the first parent's text is copied. Every child then
+receives one of five uniformly chosen mutation types: replace or add a role
+prefix; alter the response-format suffix; add a label-definition sentence;
+make a small wording substitution; or shorten the instruction using line-based
+chunks. Placeholder repair appends an article field when needed.
+
+These operations generate readable strings without extra LLM calls. They are
+intended to preserve the task and label vocabulary, but they do not prove semantic
+equivalence or grammatical quality. Repeated prefixes, incomplete definitions,
+and conflicting response instructions can occur. Distinct child IDs can also
+contain identical strings because there is no text-level deduplication. This
+restricted operator family keeps the search easy to inspect, while
+limiting conclusions about stronger LLM-generated mutations or general prompt
+optimization systems.
+
+\subsection{Evaluation scope and computational complexity}
+A survivor invocation considers at most $m(m-1)$ directed candidate comparisons.
+If $n$ is the typical common-sample count and $B=200$, a straightforward upper
+bound for bootstrap arithmetic is $O(m^2Bn)$, in addition to maintaining
+observations and sorting fronts. Cost checks, previously eliminated IDs and
+minimum-sample checks reduce the comparisons that proceed to a usable decision.
+The implementation is intended for small pools; no wall-clock overhead benchmark
+is available, so a call-neutral gate should not be described as computationally
+free.
+
+There is also an implementation distinction between the survivor pool and the
+evaluation registry. The search state accumulates IDs of generated prompts;
+adding children does not remove historical IDs from that registry. The Racing
+policy constructs contenders from this state, while survivor selection receives
+the current retained prompts and new offspring. Thus, a removed prompt can
+remain visible to subsequent evaluation allocation without being eligible to
+breed or become the final winner. The present results describe that exact
+implementation. Pruning evaluation eligibility to the current survivor pool
+would change budget allocation and requires a new experiment, not a retrospective
+reinterpretation of these logs.

@@ -18,3 +18,9 @@ outputs/**/*.log
 .env.*
 *.pem
 credentials.json
+
+# Local paper-build and replay scratch outputs
+outputs/reproduced/
+
+# Local editing plans
+docs/superpowers/

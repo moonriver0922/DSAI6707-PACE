@@ -1,0 +1,88 @@
+\section{Complete paired online results}
+\label{app:paired}
+Table~\ref{tab:all-seeds} reports every paired endpoint in protocol order.
+Accuracy is expressed as a percentage and the difference in percentage points.
+Token costs are per held-out example. The first three runs are retained
+exploratory observations, not repeated measurements created for the extension.
+The table is generated from the same stored paired CSV used in the figures.
+
+\begin{table}[htbp]\centering\small
+\caption{All 15 paired seeds. An asterisk marks the exploratory cohort.
+$\Delta a$ is PACE minus B0+Archive; $c$ denotes mean deployment tokens.}
+\label{tab:all-seeds}
+\begin{tabular}{@{}rrrrrrr@{}}\toprule
+Seed & B0 acc. & PACE acc. & $\Delta a$ (pp) & B0 $c$ & PACE $c$ & Outcome\\\midrule
+42* & 85.5 & 85.5 & +0.0 & 116.1 & 116.1 & Tie\\
+123* & 77.5 & 80.0 & +2.5 & 107.5 & 119.7 & Win\\
+456* & 65.5 & 77.5 & +12.0 & 115.3 & 110.8 & Win\\
+6707 & 82.0 & 82.0 & +0.0 & 117.1 & 117.1 & Tie\\
+2026 & 80.5 & 80.5 & +0.0 & 109.6 & 109.6 & Tie\\
+31415 & 76.0 & 81.0 & +5.0 & 105.6 & 124.7 & Win\\
+27182 & 80.0 & 83.5 & +3.5 & 119.7 & 123.7 & Win\\
+16180 & 77.5 & 78.5 & +1.0 & 103.8 & 116.9 & Win\\
+90210 & 78.0 & 82.0 & +4.0 & 109.7 & 111.6 & Win\\
+13579 & 82.0 & 76.5 & -5.5 & 122.6 & 103.4 & Loss\\
+86753 & 75.5 & 77.5 & +2.0 & 112.6 & 103.8 & Win\\
+24680 & 79.5 & 79.0 & -0.5 & 109.6 & 126.9 & Loss\\
+97531 & 79.0 & 79.0 & +0.0 & 109.6 & 113.6 & Tie\\
+11235 & 77.5 & 83.5 & +6.0 & 113.9 & 121.6 & Win\\
+42424 & 80.0 & 75.5 & -4.5 & 116.6 & 112.6 & Loss\\
+\bottomrule\end{tabular}\end{table}
+
+\section{Prompt examples and search-space audit}
+\label{app:prompts}
+The following strings are copied verbatim from the winner records. The literal
+\texttt{\{text\}} placeholder is replaced by an article during evaluation.
+Line wrapping is typographic only. These examples are endpoint case studies;
+without complete parent logs they do not establish which earlier archive event
+caused the final wording.
+
+\paragraph{Seed 456, B0+Archive; held-out accuracy 65.5\%.}
+
+\begin{quote}\small\ttfamily\raggedright
+World=geopolitics; Sports=athletics; Business=markets; Sci/Tech=science/tech. Label definitions:\\
+\{text\}\\
+Label:
+\end{quote}
+
+\paragraph{Seed 456, PACE; held-out accuracy 77.5\%.}
+
+\begin{quote}\small\ttfamily\raggedright
+You are a careful news librarian. Reply with exactly one label from this set: World | Sports | Business | Sci/Tech.\\
+\{text\}\\
+Answer:
+\end{quote}
+
+\paragraph{Seed 13579, B0+Archive; held-out accuracy 82.0\%.}
+
+\begin{quote}\small\ttfamily\raggedright
+Valid labels: World, Sports, Business, Sci/Tech. Reply with exactly one label from this set: World | Sports | Business | Sci/Tech.\\
+No extra words.\\
+Article: \{text\}\\
+Label:
+\end{quote}
+
+\paragraph{Seed 13579, PACE; held-out accuracy 76.5\%.}
+
+\begin{quote}\small\ttfamily\raggedright
+Classify. Category (World / Sports / Business / Sci/Tech):\\
+\{text\}\\
+Label:
+\end{quote}
+
+\paragraph{Initial-pool coverage.}
+The offline pool has four short-direct prompts (p00, p01, p08, p12), four role
+prompts (p02, p05, p10, p15), five format prompts (p03, p06, p07, p09, p14), and
+three definition prompts (p04, p11, p13). The online initial subset includes two
+short-direct, three role, two format and one definition prompt. These are
+hand-authored categories in the frozen pool, not clusters discovered from the
+reported outcomes. Evolved children may combine several categories.
+
+\paragraph{Identity and caching.}
+A prompt ID, an instruction string and a lineage are different objects.
+Method-specific IDs can represent identical text, as in seed 42, while distinct
+IDs are not deduplicated during mutation. Predictor-level caching uses the configured
+model, prompt ID, sample ID and decoding signature. Reusing a string with a new
+ID need not reuse the same cache entry. These details matter for accounting and
+reproduction, but do not supply an unobserved held-out evaluation of other
+candidates.

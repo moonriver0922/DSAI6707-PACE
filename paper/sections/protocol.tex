@@ -1,0 +1,68 @@
+\subsection{Racing policy and generation schedule}
+The evaluation policy first constructs up to six contenders using the estimated
+non-dominated front and nearby candidates. It considers up to eight neighboring
+pairs after ordering by estimated cost. Paired uncertainty is summarized by a
+bootstrap utility-ranking reversal rate. Among eligible pairs, the policy scores
+reversal rate per expected additional observation, with an observation-count
+fallback when all scores are zero. The stop threshold is 0.05. Selected pairs
+receive up to eight randomly chosen shared examples that neither member has yet
+observed. When no eligible pair query is returned, the policy attempts to buy a
+common sample column for the registered prompt IDs.
+
+Racing and survival use different evidence questions. Racing asks where another
+observation might alter a utility ranking. The PACE gate asks whether a prompt
+has enough paired accuracy evidence to justify removal at no greater estimated
+cost. They share observations and bootstrap machinery, but neither statistic is
+a substitute for the other. Holding Racing fixed makes survival the experimental
+entry point; it does not imply that all future contender sets remain identical.
+
+The online loop has four generations and three offspring rounds. It initializes
+the eight prompts on eight shared examples, allocates part of the remaining
+budget to Racing, and selects survivors. Before the next generation it generates
+eight children, warms them on up to four shared examples, evaluates again, and
+selects from retained prompts plus children. At the end, any usable residual
+budget is offered to Racing before the final utility-based winner is selected.
+This produces seven ordinary survivor checkpoints per run: four after the
+generation-level Racing phase and three after offspring evaluation. Residual
+allocation, if logged, is not an additional offspring round.
+
+\subsection{Three resource accounts}
+\label{sec:accounting}
+The reported search counter increments when a previously unobserved
+prompt--sample pair is entered into the run's search state. Requesting the same
+observed pair again costs zero in this counter. A separate predictor-level inference
+cache may already contain that result, including entries imported from the
+Gate-1 matrix for initial prompts. Revealing such a result to a fresh search
+state still advances the search counter even though no new GPU generation is
+needed. The 1,280 limit is a cap on newly acquired \emph{search
+observations}, not a measured number of physical cache misses across the machine.
+
+Deployment cost is the mean recorded input-plus-output token count of the selected
+winner on the 200 held-out examples. Input counts use the attention mask to exclude
+left-padding tokens; generated padding is excluded when possible, with at least
+one output token recorded. These values describe the inference format used here,
+including chat-template overhead. They are not a monetary price or a hardware
+latency estimate. Held-out winner evaluation is separate from the search budget;
+bootstrap calculations, cache lookups and mutation operations are also outside
+that observation counter.
+
+\subsection{Inference across seeds}
+Let $\delta_s$ be PACE accuracy minus control accuracy for paired seed $s$.
+The primary estimator and reported Student-$t$ interval are
+\begin{equation}
+ \bar\delta=\frac{1}{15}\sum_{s=1}^{15}\delta_s,\qquad
+ \bar\delta\pm t_{0.975,14}\frac{s_\delta}{\sqrt{15}}.
+ \label{eq:seed-interval}
+\end{equation}
+The stored report uses the rounded critical value 2.145. The paired sign-flip
+analysis samples 100,000 independent sign vectors with a fixed random seed and
+compares absolute null means with $|\bar\delta|$. This is a Monte Carlo
+randomization-style check on paired differences, relying on a suitable sign
+symmetry/exchangeability interpretation under the null. It is not a randomized
+assignment of prompts to independent test populations.
+
+The nominal interval does not incorporate uncertainty from the decision to extend
+the study after the original three seeds. Nor does pairing turn the shared 200
+test articles into 3,000 independent held-out examples. Every winner is judged
+on that same article set. We retain the original seeds, identify them explicitly,
+and distinguish descriptive sensitivity checks from the primary estimate.

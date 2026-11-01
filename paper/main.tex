@@ -1,0 +1,330 @@
+\documentclass{article}
+% Official, unmodified NeurIPS 2026 author-kit style; course-report preprint.
+\usepackage[preprint,nonatbib]{neurips_2026}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype,amsmath,amssymb,booktabs,tabularx,array,graphicx,xcolor}
+\usepackage{xurl,longtable}
+\usepackage{hyperref}
+\definecolor{paceTeal}{HTML}{4C72B0}
+\definecolor{paceBlue}{HTML}{4C72B0}
+\hypersetup{colorlinks=true,urlcolor=paceBlue,linkcolor=paceBlue,citecolor=paceTeal,
+  pdftitle={PACE: Confidence-Preserving Survivor Selection in Budgeted Evolutionary Prompt Optimization}}
+\graphicspath{{figures/}}
+\raggedbottom
+\newcommand{\method}{\textsc{PACE}}
+\title{PACE: Confidence-Preserving Survivor Selection\\in Budgeted Evolutionary Prompt Optimization}
+\author{Guosheng Wang \\
+24144419R}
+\begin{document}
+\maketitle
+\begin{abstract}
+Evolutionary prompt optimization ranks candidates using limited, noisy evaluations.
+A competitive prompt can be removed before enough examples have been observed.
+We study \method{} (Paired-Assessment with Confidence-Preserving Evolution),
+which uses shared-sample paired bootstrap evidence to gate elimination and retains
+unresolved candidates in a bounded archive. On a frozen offline prompt pool,
+the combined gate-and-archive configuration reduced false elimination from
+18.3\% to 2.5\%, although its larger retention capacity prevents attributing this
+reduction to the gate alone. In a capacity-matched online comparison on AG News
+with Qwen2.5-7B-Instruct, 15 paired search seeds yielded 80.1\% held-out accuracy
+for \method{} and 78.4\% for the control. The paired gain was 1.70 percentage
+points (95\% CI $[-0.65,4.05]$; sign-flip $p=0.150$), with mean deployment
+cost increasing from 112.6 to 115.5 tokens per example. These results support
+improved offline retention under the combined intervention, but do not establish
+an online accuracy advantage. Ablations and removal logs clarify the roles of
+archive capacity and evidence gating, as well as the limits of the heuristic.
+\end{abstract}
+
+\section{Introduction}
+Small changes to an instruction can change a language model's predictions.
+Evolutionary prompt search explores such changes by generating instructions,
+evaluating them on examples, and selecting parents for the next round.
+EvoPrompt and Promptbreeder use LLMs to generate variations; CAPO, GEPA and
+MO-CAPO also study racing, reflection or performance--cost trade-offs
+\cite{evoprompt,promptbreeder,capo,gepa,mocapo}. In a small-budget search, however,
+a candidate may be ranked on only a few examples. An error in that ranking can
+remove it from the population before its performance is well measured.
+
+For classification, a prompt's estimated accuracy depends on which articles it
+has seen. NSGA-II uses that estimate together with token cost to select survivors.
+Evaluating every candidate more thoroughly would improve the comparison but
+leave less budget for exploring new instructions. PACE takes a different step:
+it uses paired observations to decide whether removal is justified, and keeps
+unresolved candidates in a bounded archive when space permits.
+
+\paragraph{Research question.}
+Does this survivor rule reduce premature elimination under a fixed evaluation
+budget, and does that change improve the final prompt? We first measure retention
+on a frozen prompt pool, then compare online search outcomes at matched retention
+capacity. The study specifies the gate, records evidence-based removals separately
+from capacity evictions, and relates those decisions to held-out accuracy and
+deployment tokens. The central empirical question is whether better retention
+leads to a useful change in the search outcome.
+
+\input{sections/literature}
+
+\input{sections/background}
+
+\section{Proposed Method}
+\subsection{Objectives and budget}
+Let $p$ denote a natural-language instruction, $x_i$ an input, $y_i$ its label, and $M$ a frozen LLM. Define correctness $z_{pi}=\mathbf{1}\{M(p,x_i)=y_i\}$ and objectives
+\begin{equation}
+\max_p a(p)=\mathbb{E}_i[z_{pi}],\qquad \min_p c(p)=\mathbb{E}_i[\operatorname{tokens}(p,x_i,M(p,x_i))].
+\end{equation}
+Search has a maximum of 1,280 newly acquired prompt--sample observations per run. Reusing an observation already present in the run costs zero additional search budget; predictor-cache reuse and physical model calls are distinguished in Section~\ref{sec:accounting}. Deployment token cost is recorded separately from search calls, and a held-out test split is not used for survivor selection or hyperparameter tuning.
+
+\subsection{Paired evidence, bootstrap construction and elimination}
+\label{sec:bootstrap-details}
+For two prompts $p,q$ evaluated on common sample IDs $S_{pq}$, define $d_i=z_{pi}-z_{qi}\in\{-1,0,1\}$ and
+\begin{equation}
+\widehat\Delta_{pq}=\frac{1}{|S_{pq}|}\sum_{i\in S_{pq}}d_i.
+\end{equation}
+A seeded percentile bootstrap with 200 resamples estimates $[L_{pq},U_{pq}]$ for the paired accuracy difference. A candidate $q$ is \emph{confidence-eliminated} only when there exists another candidate $p$ for which
+\begin{equation}
+\widehat c(p)\le \widehat c(q),\quad |S_{pq}|\ge 8,\quad L_{pq}>\varepsilon,\qquad \varepsilon=0.
+\label{eq:gate}
+\end{equation}
+The cost comparison uses the population/anchor point estimate; uncertainty in token cost is not modeled. Percentile bootstrap intervals are heuristic and are \emph{not} simultaneous or anytime-valid sequential inference guarantees. In particular, repeated candidate-pair testing and homogeneous bootstrap samples can make nominal uncertainty misleading. We use the interval as a selection heuristic, with its limitations discussed in Section~\ref{sec:limitations}.
+
+\input{sections/paired_evidence_details}
+
+\subsection{Bounded survival and final prompt selection}
+\label{sec:algorithm}
+The breeding population has size $\mu=8$; an auxiliary archive permits up to $K=8$ additional retained candidates. PACE first eliminates candidates satisfying Eq.~\eqref{eq:gate}. If more than $\mu+K$ remain, standard NSGA-II rank/crowding imposes forced evictions, logged separately from evidence-based eliminations. The active breeding population is chosen from retained prompts; new offspring arise from crossover and rule-based mutation. Both PACE and the capacity-matched comparator use the same Paired Racing evaluation policy and the same $\mu+K$ capacity. The treatment differs in the evidence-gated survivor rule. Matching the evaluation
+policy does not imply identical purchased prompt--sample pairs once the search
+trajectories diverge (Figure~\ref{fig:method}).
+
+\paragraph{Implementation details.}
+Candidate IDs are scanned in deterministic sorted order. Once a candidate has
+been eliminated, it cannot eliminate another candidate later in that scan.
+For ranking and token-cost comparisons, the implementation uses population
+observations (anchor, uniform, and randomly paired samples) and falls back to all observed evaluations when the corresponding
+estimate is unavailable. Thus, paired accuracy evidence and the cost estimate
+need not use identical sample sets. The gate does not purchase additional
+model evaluations.
+
+\paragraph{Selecting the final prompt.}
+After search, a single winner is chosen from the retained set using search
+observations only. The implementation maximizes
+\begin{equation}
+ u_\lambda(p)=\lambda\widehat a(p)-(1-\lambda)\widetilde c(p),\qquad
+ \widetilde c(p)=\operatorname{clip}\!\left(\frac{\widehat c(p)}{256},0,1\right),
+ \quad \lambda=0.5.
+ \label{eq:winner}
+\end{equation}
+Ties are broken by prompt ID. Only this winner is evaluated on the held-out test
+set. The reported accuracy belongs to the prompt selected under this fixed
+accuracy--cost preference. Held-out accuracy is never used to choose the winner.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=\linewidth]{method_overview.pdf}
+\caption{Survival within the evolutionary loop. The online control uses the same
+Paired Racing policy and total retention capacity, with the evidence gate disabled.
+Actual purchased evaluations may diverge as the two searches retain different prompts.
+The evaluator also keeps historical IDs, as detailed in Section~\ref{sec:algorithm}.}
+\label{fig:method}
+\end{figure}
+
+\input{sections/algorithm}
+
+\section{Experimental Design}
+\subsection{Configuration, data and output interpretation}
+\label{sec:data-protocol}
+Experiments use a single NVIDIA A100 80GB with Qwen2.5-7B-Instruct (BF16, greedy decoding, eight maximum new tokens) on four-class AG News. A fixed manifest defines 160 search instances and 200 held-out test instances. The initial prompt pool and split are frozen; the search cap is 1,280 calls, four generations, $\mu=8$, $K=8$, minimum shared observations 8, and 200 bootstrap replicates. The online primary comparison contains 15 paired seeds: 42, 123, 456, 6707, 2026, 31415, 27182, 16180, 90210, 13579, 86753, 24680, 97531, 11235, 42424. The first three were exploratory; the remaining 12 form the subsequently planned extension. The extension was planned after the exploratory results were available. Its interval describes the combined 15-seed sample; it does not account for that decision to extend the study.
+
+\input{sections/dataset_details}
+
+\subsection{Baselines and experimental questions}
+\textbf{Offline (Gate 1):} Point-estimate NSGA-II truncation versus PACE under the same frozen 16-prompt matrix and shared evaluation purchases. The full matrix is accessible only to an offline auditor for reference-Pareto labels. Let $P^\star$ be the non-dominated prompt IDs under accuracy and token cost
+computed from the complete frozen \emph{search} matrix, and let $R$ be the retained
+set. The false-elimination rate is
+$|P^\star\setminus R|/|P^\star|$ and reference-Pareto recall is
+$|P^\star\cap R|/|P^\star|$. These are complementary measures on this finite
+reference, not labels of population-level optimality.
+
+\textbf{Online (Gate 2):} The primary comparison is \emph{PACE versus B0+Archive} with matched total capacity $\mu+K=16$, seeds, search cap, evaluation policy, and test procedure. The older B0 point-estimate variant has no auxiliary archive and is illustrative, not the primary fair contrast. Ablations disable the gate (A1), remove archive headroom ($K=0$), or remove the Gate-1 warm cache. We do not treat these ablations as confirmatory multiple-hypothesis tests.
+
+\input{sections/protocol}
+
+\section{Results}
+\subsection{Offline elimination reliability}
+\begin{table}[tbp]\centering\small\caption{Gate 1 at evaluation budget 640 (20 replay seeds, same frozen model-response matrix). Lower false-elimination rate is better.}\begin{tabular}{lrrr}\toprule
+Method & False elimination & Reference-Pareto recall & Retained-set regret\\\midrule
+Point-estimate NSGA-II ($\mu=8$) & 0.183 & 0.817 & 0.0007\\
+PACE ($\mu=8,K=8$) & \textbf{0.025} & \textbf{0.975} & \textbf{0.0000}\\\bottomrule\end{tabular}\end{table}
+\begin{figure}[tbp]\centering
+\includegraphics[width=\linewidth]{offline_replay.pdf}
+\caption{Offline replay at budget 640. Bars show means across 20 replay seeds:
+(a) false elimination of reference-Pareto prompts and (b) actual retained-set size.
+Capacity limits are 8 for B0 and 16 for PACE. All seeds use the same frozen
+prediction matrix. Descriptive variability at both budgets is shown in
+Figure~\ref{fig:budgets}.}
+\label{fig:gate1}
+\end{figure}
+PACE retains more reference-Pareto prompts in the offline replay (Fig.~\ref{fig:gate1}). It also has twice the retention capacity, so this comparison measures the combined gate-and-archive effect. The 20 replay seeds vary the observation trajectory on one frozen matrix; they do not represent 20 independent datasets or model evaluations.
+
+\subsection{Capacity-matched online comparison}
+\begin{table}[tbp]\centering\caption{Gate 2 primary result: 15 paired online seeds, 200 held-out test examples per winner.}\begin{tabular}{lrrrr}\toprule
+Method & Test accuracy & Tokens/example & Search calls & Budget use\\\midrule
+B0 + Archive & 78.4\% & \textbf{112.6} & 1275 & 99.6\%\\
+PACE & \textbf{80.1\%} & 115.5 & 1276 & 99.7\%\\\bottomrule\end{tabular}\end{table}
+\begin{figure}[tbp]\centering
+\includegraphics[width=\linewidth]{online_paired.pdf}
+\caption{Capacity-matched online accuracy differences (PACE minus B0+Archive).
+(a) Bars show all 15 paired differences in protocol order, including ties.
+Asterisks and the horizontal divider identify the first three exploratory seeds. (b) Mean paired difference and Student-$t$ 95\% interval across
+search seeds. The interval crosses zero; the experiment does not establish
+an online accuracy advantage.}
+\label{fig:paired}
+\end{figure}
+The paired average is $\Delta\mathrm{accuracy}=+0.0170$ (+1.70 percentage points). A Student-$t$ interval for the 15 paired seed differences is $[-0.0065,0.0405]$, i.e., $[-0.65,4.05]$ percentage points; the two-sided paired sign-flip permutation test gives $p\approx0.150$. Win/tie/loss counts are 8/4/3. The estimated difference is positive, but the interval includes zero. The mean deployment-token increase is approximately 2.6\%. The outcomes also vary markedly by seed, including both substantial PACE gains and losses (Fig.~\ref{fig:paired}). Figure~\ref{fig:paired}(b) shows uncertainty in the mean effect.
+Figure~\ref{fig:cost} displays the accompanying accuracy--cost trade-off.
+
+\subsection{Focused ablations}
+\begin{table}[tbp]\centering\small\caption{Exploratory three-seed ablation means; these are not replacements for the 15-seed primary contrast.}\begin{tabularx}{\linewidth}{@{}lrrX@{}}\toprule
+Comparison & Baseline acc. & Treatment acc. & Interpretation\\\midrule
+Original PACE vs point B0 & 0.783 & 0.810 & Confounded by archive capacity\\
+PACE with $K=0$ vs B0 & 0.783 & 0.782 & No gain without archive headroom\\
+Gate disabled (A1) vs B0 & 0.783 & 0.787 & Near point-estimate behavior\\
+Cold-start PACE vs cold B0 & 0.787 & 0.802 & Small positive exploratory difference\\\bottomrule\end{tabularx}\end{table}
+The primary comparison holds archive capacity fixed, so its point estimate
+reflects the complete trajectory change induced by enabling the gate. Its
+uncertainty prevents concluding that gating improves online accuracy.
+Forced capacity evictions remain frequent. Logs indicate that a substantial fraction of archive-only prompts later enter the active breeding set, while many archive slots are occupied by candidates that do not subsequently breed. In the archive-only transition audit, 52\% later appeared in the active set before an offspring step (a proxy for breeding opportunity), while never-breeding candidates accounted for approximately 46.5\% of archive-slot steps. These descriptive counts do not prove beneficial descendant production. Missing parent IDs preclude precise lineage-based causal claims.
+
+\begin{figure}[tbp]\centering
+\includegraphics[width=\linewidth]{accuracy_cost.pdf}
+\caption{Held-out accuracy and deployment-token cost of selected winners.
+Gray circles show B0+Archive and blue squares show PACE. Small symbols are
+individual runs; outlined symbols mark method means. Higher accuracy and lower
+cost are preferred.}
+\label{fig:cost}
+\end{figure}
+
+\input{sections/extended_results}
+
+\section{Discussion and limitations}
+\label{sec:limitations}
+\paragraph{Retention is an intermediate outcome.}
+The detailed audit separates evidence-based removal, capacity pressure and
+archive reuse. Better retention on a finite reference pool need not produce a
+better final instruction: the retained prompts must still receive useful
+evaluations or contribute to productive variation. The matched online comparison
+addresses the complete trajectory effect, while incomplete parent logging leaves
+the value of individual archive events unresolved.
+
+\paragraph{What the online interval measures.}
+The inferential unit is a paired \emph{search seed}. The 95\% interval allows both
+a small disadvantage and a meaningful advantage on the fixed task and test set.
+The two-sided sign-flip test is also inconclusive. All runs share the same 200
+test examples, so adding seeds primarily measures search stochasticity rather
+than uncertainty over new test populations. The first three seeds had an
+exploratory mean gain of 4.83 percentage points. The 15-seed extension retains
+those observations and yields the smaller 1.70-point estimate; it is not an
+independent, blinded confirmation. The ablations use only three seeds and
+support descriptive comparisons rather than confirmatory hypothesis tests.
+
+\paragraph{The confidence gate is a heuristic.}
+With as few as eight common observations, percentile bootstrap intervals can
+be unstable. When all observed paired differences coincide, the implemented
+interval collapses to a point. Repeated adaptive pair comparisons with 200
+resamples have no simultaneous or anytime-valid coverage guarantee. Token
+costs enter as point estimates, without uncertainty adjustment. Here, ``confidence-preserving'' names the removal rule. Sampling errors and
+forced evictions can still remove competitive prompts.
+
+\paragraph{Scope and computational accounting.}
+The study uses one dataset, one target model, a small population, and rule-based
+variation. It does not establish generalization to other tasks or LLMs. The
+1,280-observation cap measures new acquisitions into the run state, not physical GPU cache misses or wall-clock time,
+bootstrap computation, or the separate winner-only test evaluation. The reported
+deployment tokens also measure a different resource from acquired search observations.
+Earlier DICE allocation experiments are archived separately and excluded from
+the PACE estimate. The analysis uses the recorded runs throughout.
+
+\section{Conclusion}
+PACE combines paired-evidence elimination with a bounded archive in budgeted
+multi-objective prompt search. On the frozen offline pool, the combined
+intervention reduced false elimination, with retention capacity contributing
+to the contrast. At matched online capacity, the mean accuracy improvement was
+1.70 percentage points and deployment-token cost increased by approximately
+2.6\%; the confidence interval includes zero. These results justify further
+study of survivor decisions, while leaving the downstream accuracy advantage
+unresolved. The next tests should retain matched capacities, use independent
+tasks and test samples, and add calibrated sequential evidence and complete
+parent-lineage logs.
+
+\section*{Code and data}
+Code, configurations, split manifests and recorded results are available at
+\url{https://github.com/moonriver0922/DSAI6707-PACE}. The repository README gives
+installation, figure-generation and replay instructions. The survivor rule is
+implemented in \path{src/pace/}; the online configuration is
+\path{configs/pace_gate2_cap_align_15seed.yaml}. The 30 primary run records and
+paired summaries are under \path{outputs/pace/gate2_cap_align_15seed/}.
+Figures are generated directly from these files. The held-out data are listed
+in \path{data/split_manifest.json}; full inference requires the specified model
+and a compatible CUDA environment. The analysis here reuses stored results.
+The repository also preserves earlier DICE experiments under separate paths.
+
+\begin{thebibliography}{99}\small
+\bibitem{evoprompt} Guo et al. (2024). Connecting Large Language Models with Evolutionary Algorithms Yields Powerful Prompt Optimizers. \emph{ICLR}. \url{https://proceedings.iclr.cc/paper_files/paper/2024/hash/9156b0f6dfa9bbd18c79cc459ef5d61c-Abstract-Conference.html}.
+\bibitem{promptbreeder} Fernando, C., Banarse, D. S., Michalewski, H., Osindero, S., and Rockt"{a}schel, T. (2024). Promptbreeder: Self-Referential Self-Improvement via Prompt Evolution. \emph{ICML}. \url{https://proceedings.mlr.press/v235/fernando24a.html}.
+\bibitem{capo} Zehle, T., Schlager, M., Hei\ss, T., and Feurer, M. (2025). CAPO: Cost-Aware Prompt Optimization. \emph{AutoML}. \url{https://proceedings.mlr.press/v293/zehle25a.html}.
+\bibitem{mocapo} B\"ussing, J., Schlager, M., Hei\ss, T., Zehle, T., and Feurer, M. (2026). MO-CAPO: Multi-Objective Cost-Aware Prompt Optimization. \emph{arXiv:2605.18869}. \url{https://arxiv.org/abs/2605.18869}.
+\bibitem{gepa} Agrawal, L. A., et al. (2026). GEPA: Reflective Prompt Evolution Can Outperform Reinforcement Learning. \emph{ICLR}. \url{https://proceedings.iclr.cc/paper_files/paper/2026/hash/0e9e708b6f48e14fd0ac29e167413f76-Abstract-Conference.html}.
+\bibitem{opro} Yang et al. (2024). Large Language Models as Optimizers. \emph{ICLR}. \url{https://arxiv.org/abs/2309.03409}.
+\bibitem{opro_revisit} Zhang, Yuan, and Avestimehr (2024). Revisiting OPRO: The Limitations of Small-Scale LLMs as Optimizers. \emph{Findings of ACL}. \url{https://aclanthology.org/2024.findings-acl.100/}.
+\bibitem{instructzero} Chen, L., Chen, J., Goldstein, T., Huang, H., and Zhou, T. (2024). InstructZero: Efficient Instruction Optimization for Black-Box Large Language Models. \emph{ICML, PMLR 235:6503--6518}. \url{https://proceedings.mlr.press/v235/chen24e.html}.
+\bibitem{promptwizard} Agarwal, E., Magazine, R., Singh, J., Dani, V., Ganu, T., and Nambi, A. (2025). PromptWizard: Optimizing Prompts via Task-Aware, Feedback-Driven Self-Evolution. \emph{Findings of ACL}. \url{https://aclanthology.org/2025.findings-acl.1025/}.
+\bibitem{riot} Zhou et al. (2025). RiOT: Efficient Prompt Refinement with Residual Optimization Tree. \emph{ACL}. \url{https://aclanthology.org/2025.acl-long.1086/}.
+\bibitem{survey_li} Li, W., Wang, X., Li, W., and Jin, B. (2025). A Survey of Automatic Prompt Engineering: An Optimization Perspective. \emph{arXiv:2502.11560}. \url{https://arxiv.org/abs/2502.11560}.
+\bibitem{survey_cui} Cui, W., Li, Z., Sun, H., Lopez, D., Das, K., Malin, B. A., Kumar, S., and Zhang, J. (2025). A Survey of Automatic Prompt Optimization with Instruction-focused Heuristic-based Search Algorithm. \emph{arXiv:2502.18746}. \url{https://arxiv.org/abs/2502.18746}.
+\bibitem{survey_ramnath} Ramnath, K., et al. (2025). A Systematic Survey of Automatic Prompt Optimization Techniques. \emph{EMNLP}. \url{https://aclanthology.org/2025.emnlp-main.1681/}.
+\bibitem{budgetapo} Liu, H., Wang, Z., Yan, H., and Tang, X. (2026). How Should a Prompt Optimizer Spend a Tight Budget? BudgetAPO with Noise-Adaptive Evaluation. \emph{arXiv:2610.05671}. \url{https://arxiv.org/abs/2610.05671}.
+\bibitem{ipomp} Dong, X., Wang, S., Lin, D., and Hassan, A. (2025). Model Performance-Guided Evaluation Data Selection for Effective Prompt Optimization. \emph{Findings of ACL}, pp. 2844--2859. \url{https://aclanthology.org/2025.findings-acl.147/}.
+\bibitem{probsel} Yang, S., Kim, J., Jang, J., Ye, S., Lee, H., and Seo, M. (2024). Improving Probability-based Prompt Selection Through Unified Evaluation and Analysis. \emph{TACL}. \url{https://aclanthology.org/2024.tacl-1.37/}.
+\bibitem{iapo} Mahmud, S., Nakamura, M., Wray, K. H., and Zilberstein, S. (2026). Inference-Aware Prompt Optimization for Aligning Black-Box Large Language Models. \emph{AAAI 40(38):32455--32464}. \url{https://ojs.aaai.org/index.php/AAAI/article/view/40521}.
+\bibitem{autopdl} Spiess, C., Vaziri, M., Mandel, L., and Hirzel, M. (2025). AutoPDL: Automatic Prompt Optimization for LLM Agents. \emph{arXiv:2504.04365}. \url{https://arxiv.org/abs/2504.04365}.
+\bibitem{toolbox} Grie{\ss}haber, D., Kimmich, M., Maucher, J., and Vu, T. (2025). A Toolbox for Improving Evolutionary Prompt Search. \emph{Proceedings of the 2nd LUHME Workshop}, pp. 58--66. \url{https://aclanthology.org/2025.luhme-1.6/}.
+\bibitem{depth} Wang, S., and Lu, Z. (2026). Depth over Fidelity in Fixed-Budget Noisy Evolution Strategies. \emph{ICML, PMLR 306:128714--128741}. \url{https://proceedings.mlr.press/v306/wang26ff.html}.
+\bibitem{selectionnoise} Gulayeva, N. M., Borrego-Diaz, J., and Sancho-Caparrini, F. (2025). Analysis of Selection Noise in Genetic Algorithms. \emph{Soft Computing 29:3757--3773}. \url{https://link.springer.com/article/10.1007/s00500-025-10652-6}.
+\bibitem{robotnoise} Martin and Collins (2026). Improving CMA-ES Convergence Speed, Efficiency, and Reliability in Noisy Robot Optimization Problems. \emph{Evolutionary Computation}. \url{https://pubmed.ncbi.nlm.nih.gov/41604289/}.
+\bibitem{evalbefore} Sadjoli et al. (2025). Optimization before Evaluation: Evaluation with Unoptimized Prompts Can Be Misleading. \emph{ACL Industry}. \url{https://aclanthology.org/2025.acl-industry.44/}.
+\bibitem{nsga2} Deb et al. (2002). A Fast and Elitist Multiobjective Genetic Algorithm: NSGA-II. \emph{IEEE Transactions on Evolutionary Computation}.
+\end{thebibliography}
+
+\clearpage
+\appendix
+\section{Implementation and reporting details}
+\label{app:details}
+\begin{table}[htbp]\centering\small
+\caption{Frozen online configuration. Search and held-out evaluation use disjoint
+manifest IDs. Costs in the final winner utility use the fixed normalization
+in Equation~\ref{eq:winner}.}
+\begin{tabularx}{\linewidth}{@{}lX@{}}\toprule
+Setting & Value\\\midrule
+Task and target model & AG News; Qwen2.5-7B-Instruct\\
+Search / held-out examples & 160 / 200\\
+Decoding & BF16; greedy; maximum 8 new tokens\\
+Active / archive capacity & $\mu=8$, $K=8$ for both primary methods\\
+Initial / generated prompts & 8 initial; 24 offspring across 3 variation rounds\\
+Search schedule & 4 generations, Paired Racing, at most 1,280 search observations\\
+Shared anchor / offspring warm-up & 8 / up to 4 common examples\\
+Evidence gate & $n_{\min}=8$; $\varepsilon=0$; 200 bootstrap resamples\\
+Paired interval & Percentile 2.5\% and 97.5\% quantiles\\
+Final preference & $\lambda=0.5$; token normalization $[0,256]$\\
+Test protocol & One search-selected winner per method and seed\\\bottomrule
+\end{tabularx}
+\end{table}
+
+\paragraph{Reproduction of the paper figures.}
+The accompanying \path{paper/make_figures.py} reads frozen CSV/JSON outputs,
+validates online accuracy values against the 30 per-run JSON files, and exports
+vector PDF figures and PNG previews. It does not rerun inference or modify
+experimental records. Offline plots show replay-level standard deviations,
+while the online interval uses the 15 paired seed differences; these are
+different uncertainty summaries.
+
+\input{sections/appendix_results}
+
+\end{document}

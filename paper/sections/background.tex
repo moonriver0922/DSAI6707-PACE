@@ -1,0 +1,90 @@
+\section{Problem structure and design rationale}
+\label{sec:rationale}
+\subsection{Three decisions in a budgeted evolutionary search}
+A prompt optimizer repeatedly makes three different decisions: which instruction
+to generate, which prompt--example outcome to observe, and which candidate to
+retain. A good mutation can be lost through an unreliable survivor decision;
+a careful survivor rule can be ineffective if the variation operator never
+produces useful alternatives. Separating these decisions makes the experimental
+question more precise. PACE changes survival while retaining the same operator
+family and evaluation policy as its primary control. Any downstream change
+includes the resulting feedback through later parents and evaluations.
+
+The evaluation policy determines the observation pattern. If every prompt were
+evaluated on all 160 search examples, accuracy estimates would be comparable on
+that finite set, but the number of affordable prompts would be small. Conversely,
+a large number of lightly evaluated candidates offers more variation while
+making rankings less reliable. The budget limits both how many prompts can be explored and how much evidence
+is available when survivors are chosen.
+PACE operates at that moment. It uses observations already available, rather
+than requesting a separate validation batch whenever a survivor decision is due.
+
+A fourth decision occurs at deployment: selecting one instruction from the
+retained accuracy--cost trade-off. This decision is held fixed by the utility
+in Equation~\ref{eq:winner}. Preserving a diverse retained set and selecting a
+single winner serve different purposes. A candidate can be valuable for
+maintaining the frontier without maximizing the chosen deployment utility.
+Reporting only final accuracy would hide this distinction; reporting only
+retention would not answer whether users receive a better prompt.
+
+\subsection{Why common examples matter}
+Suppose prompts $p$ and $q$ are tested on the same $n$ independent examples from
+a fixed target distribution. For this illustrative sampling model,
+\begin{equation}
+ \operatorname{Var}(\widehat a_p-\widehat a_q)
+ =\frac{\operatorname{Var}(z_p)+\operatorname{Var}(z_q)
+       -2\operatorname{Cov}(z_p,z_q)}{n}.
+ \label{eq:paired-var}
+\end{equation}
+The covariance term captures shared example difficulty. If both prompts succeed
+on easy examples and fail on difficult ones, comparing them on common examples
+can remove part of this nuisance variation. Pairing is not guaranteed to reduce
+variance for every pair: the sign and size of the covariance matter. Equation~\ref{eq:paired-var} assumes the simple sampling model above.
+The adaptive search does not inherit a coverage guarantee from this calculation.
+
+For binary correctness, only discordant examples contribute a nonzero paired
+difference. Let $n_{10}$ count examples on which $p$ is correct and $q$ is wrong,
+and $n_{01}$ count the reverse. Then
+\begin{equation}
+ \widehat\Delta_{pq}=\frac{n_{10}-n_{01}}{n},\qquad
+ n=n_{00}+n_{01}+n_{10}+n_{11}.
+ \label{eq:discordance}
+\end{equation}
+This representation distinguishes evidence of equality on the observed examples
+from a lack of opportunities to observe disagreement. A pair can have eight
+common examples and no discordances; that does not establish equality on future
+examples. The bootstrap resamples the observed support and cannot invent an
+unseen failure mode.
+
+\subsection{Dominance, preference, and uncertainty}
+In the two-objective problem, prompt $p$ point-dominates $q$ when
+$\widehat a(p)\geq\widehat a(q)$ and $\widehat c(p)\leq\widehat c(q)$, with at
+least one strict inequality. NSGA-II ranks candidates by these estimated
+relations and uses crowding to preserve spread within a partially accepted
+front~\cite{nsga2}. A prompt with higher accuracy but higher cost may be
+non-dominated even when another prompt wins under the fixed deployment utility.
+Dominance and preference are therefore not interchangeable criteria.
+
+PACE applies a narrower sufficient condition for evidence-based removal: the
+potential dominator must have no greater estimated cost and a strictly positive
+lower bound on paired accuracy difference. This rule does not confidence-certify
+the entire Pareto ordering. In particular, it does not evidence-eliminate a
+cheaper prompt whose paired accuracy advantage is unresolved, nor does it use a
+confidence interval for token cost. The retained set can include competitive prompts, poorly measured prompts,
+and prompts favored by crowding-based truncation. Retention alone does not
+validate a candidate's quality.
+
+\subsection{What the bounded archive is intended to do}
+An unresolved prompt has option value only if retaining it can affect a later
+decision. It may acquire more observations, re-enter the active population, or
+remain available for final winner selection. None of those events is guaranteed.
+Archive slots also consume a fixed capacity: protecting one uncertain candidate
+can force the eviction of another. This makes the archive a resource allocation
+mechanism, not free insurance against noisy selection.
+
+We measure both retention and final performance. Offline reference-Pareto recall measures
+whether known finite-pool competitors remain accessible. Online held-out
+performance measures the complete search outcome after retention affects
+subsequent evolution. A lower false-elimination rate can coexist with unchanged
+or worse online accuracy. The experiment is designed to expose that possibility
+rather than define success solely through the intermediate retention metric.

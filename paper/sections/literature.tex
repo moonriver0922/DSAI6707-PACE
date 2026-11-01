@@ -1,0 +1,197 @@
+\section{Related work: a classified review of 20 studies}
+\label{sec:literature}
+\subsection{Review framework and classification}
+We group 20 studies on prompt optimization, evaluation and evolutionary selection
+into five categories according to the decision they primarily address: candidate
+generation and refinement (7), cost and evaluation allocation (5), structured
+search and operator control (2), evaluation robustness (3), and noisy evolutionary
+selection (3). The three surveys provide broader context
+\cite{survey_li,survey_cui,survey_ramnath}; NSGA-II is foundational algorithmic
+background~\cite{nsga2}. They are not counted among the 20 studies in
+Table~\ref{tab:twenty-studies}.
+
+Some methods span more than one category. Table~\ref{tab:twenty-studies}
+groups them by their main decision, then compares their mechanisms with PACE.
+The final column gives our interpretation of that connection. Conference and
+journal records are distinguished from preprints in the references. Because
+benchmarks, models, operators and accounting conventions differ, no cross-paper
+accuracy ranking is constructed.
+
+\subsection{Candidate generation, refinement and structured search}
+\paragraph{Evolutionary and self-referential operators.}
+EvoPrompt connects LLM-generated language variation with a population-based
+evolutionary search over discrete instructions~\cite{evoprompt}. Promptbreeder
+adds a second adaptive level: mutation prompts themselves evolve alongside task
+prompts~\cite{promptbreeder}. Their common lesson for this study is that survival
+has consequences beyond the current ranking, because selected instructions shape
+future candidates. Their operator designs are substantially richer than PACE's
+rule-based mutations. PACE uses simpler rule-based mutations to keep the survivor comparison
+controlled. Results from these different operator families cannot be compared
+directly.
+
+\paragraph{Optimization histories and latent search.}
+OPRO supplies an LLM with previous candidate solutions and their values, allowing
+that history to guide the next proposals~\cite{opro}. InstructZero instead
+optimizes a low-dimensional soft prompt applied to an open model, which generates
+discrete instructions for a black-box target; Bayesian optimization uses the
+target's evaluations~\cite{instructzero}. These approaches differ in search
+representation and update mechanism. Both illustrate that a prompt optimizer's
+information state matters. PACE's contribution lies in filtering removal decisions
+within a population, rather than replacing the proposal mechanism with either
+history-conditioned generation or a continuous surrogate search.
+
+\paragraph{Critique, residual structure, and Pareto reuse.}
+PromptWizard iteratively critiques and synthesizes instructions and in-context
+examples~\cite{promptwizard}. RiOT generates diverse refinements from text
+gradients and uses residual connections to retain useful content while limiting
+semantic drift~\cite{riot}. GEPA reflects on system trajectories and combines
+complementary lessons from a Pareto frontier of attempts~\cite{gepa}. These methods
+make feedback more informative than a single scalar score. However, useful
+feedback and uncertain numerical rankings address different bottlenecks. Our
+research question is whether removal should wait for paired evidence after the
+chosen evaluations have been observed. The present experiment addresses this survival decision while keeping the
+feedback and proposal mechanism fixed.
+
+\paragraph{Structured search and operator control.}
+AutoPDL casts prompting patterns and demonstrations as a structured AutoML space
+and uses successive halving to allocate effort~\cite{autopdl}. Its human-readable
+program outputs show that the optimization object can be more complex than a
+single instruction string. The evolutionary toolbox of Grie{\ss}haber et al.
+separates evolutionary stages and studies operator verification, human feedback
+and more efficient evaluation~\cite{toolbox}. Both make process decomposition
+useful for diagnosis. PACE adopts that analytical separation between generation,
+evaluation and survival, while empirically changing only its survivor rule
+within the frozen implementation.
+
+\subsection{Cost objectives and evaluation allocation}
+CAPO is the closest architectural motivation: it combines evolutionary prompt
+optimization, racing and prompt-length considerations~\cite{capo}. MO-CAPO makes
+the accuracy--inference-cost frontier explicit and studies budget allocation
+within multi-objective search~\cite{mocapo}. They motivate evaluating both the cost
+of the search process and the cost of the deployed solution. PACE follows that
+distinction but uses a small fixed protocol and holds its evaluation policy
+constant in the primary comparison. A positive accuracy difference accompanied
+by higher token cost is consequently a trade-off, not unconditional dominance.
+
+BudgetAPO directly targets small evaluation budgets using noise-adaptive slices,
+paired accept/reject comparisons and reflective rewriting~\cite{budgetapo}. Pairing is already part of BudgetAPO, so it provides a direct precedent
+for paired comparisons under tight budgets. The
+specific distinction is a gate for population survival coupled to an explicit
+bounded archive and separate capacity-eviction logs. BudgetAPO is cited as a preprint. Its different proposal and evaluation
+policies would need to be controlled in a direct empirical comparison.
+
+IPOMP selects representative evaluation examples through semantic clustering,
+boundary analysis and performance-guided refinement~\cite{ipomp}. Its focus is
+which data support an informative comparison. That consideration matters for
+interpreting bootstrap evidence: a narrow or unrepresentative observation set
+can give a stable-looking ranking that transfers poorly. PACE uses randomly
+shared samples and does not implement IPOMP's data selection. Combining adaptive
+example selection with the gate would require reconsidering what distribution
+the paired statistic estimates.
+
+IAPO jointly considers prompt choice and inference scale under user preferences
+and an inference budget, with a sequential-trimming algorithm and finite-budget
+error analysis~\cite{iapo}. This extends the decision space beyond the fixed
+greedy-decoding configuration used here. Its guarantees apply to its own
+formulation and algorithm; they do not transfer to PACE's percentile bootstrap.
+For PACE, both the deployment preference and greedy decoding configuration
+are fixed before winner selection.
+
+\subsection{Evaluation robustness and noisy selection}
+\paragraph{Model dependence and evaluation design.}
+Revisiting OPRO reports limitations when relatively small LLMs act as optimizers
+and recommends accounting for model ability and computational
+cost~\cite{opro_revisit}. It cautions against treating a successful optimization
+strategy on one model as universally effective. Our experiment uses one 7B model and rule-based proposals. It leaves open how
+the survivor rule would behave with larger models or stronger proposal operators.
+
+Yang et al. provide a unified interpretation of probability-based prompt
+selection through mutual information and study calibration by
+marginalization~\cite{probsel}. Their score and supervision assumptions differ
+from PACE's observed binary correctness. The scoring rule, calibration and access to model outputs are part of
+the selection problem. PACE does not assume token-probability access, and no
+probability-based baseline is evaluated here.
+
+Optimization before Evaluation shows that optimizing prompts separately for
+models can alter model rankings~\cite{evalbefore}. A common unoptimized prompt
+is therefore not always a neutral comparison. In this report, both methods use
+the same target model and task, and each final winner is selected using search
+observations only. This controls one comparison axis, while the shared held-out
+set and narrow operator family still limit external conclusions.
+
+\paragraph{Different sources of evolutionary selection noise.}
+Depth over Fidelity studies the tension between denoising rankings and retaining
+more evolutionary updates under a fixed budget. Its probabilistic elite
+membership replaces hard rank weights with conditional expected weights and is
+instantiated through residual bootstrapping~\cite{depth}. This is a close
+conceptual alternative to delaying hard elimination. It concerns evolution
+strategies in its own search spaces, whereas PACE uses discrete prompt strings,
+a bounded archive and deterministic truncation after its gate.
+
+Gulayeva et al. analyze \emph{selection noise} as genetic drift caused by stochastic
+reproduction, including takeover-time and reproduction-rate measures
+\cite{selectionnoise}. That is different from noisy fitness estimation from a
+small example sample. Protecting a prompt from uncertain removal leaves stochastic parent sampling
+and its effect on diversity unchanged.
+
+Martin and Collins allocate sampling time according to predicted sorting
+difficulty in noisy robot optimization with adaptive-sampling
+CMA-ES~\cite{robotnoise}. Their work illustrates that evaluation precision can be
+adapted to the selection problem. Its observations, continuous policy space and
+physical time costs differ from prompt--article queries. We use it as motivation
+for the depth--precision trade-off, not as a directly comparable benchmark.
+
+\subsection{Synthesis and the precise research gap}
+The review identifies several established ingredients: language-based variation,
+reflection, cost-aware multi-objective search, paired comparisons, adaptive
+allocation and uncertainty-aware selection. PACE combines these ingredients
+to test how a
+particular paired-evidence survival rule interacts with finite retention capacity
+when the surrounding prompt-search implementation is held fixed.
+
+The experiment therefore records gate eliminations and capacity evictions
+separately, matches total retention capacity online, and reports retention
+alongside held-out performance. These measurements test whether the extra
+protection changes the outcome of search. The code and per-seed records allow
+each comparison to be checked.
+
+\begingroup\small
+\setlength{\LTleft}{0pt}\setlength{\LTright}{0pt plus 1fill}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{2.3cm}>{\raggedright\arraybackslash}p{4.1cm}>{\raggedright\arraybackslash}p{6.5cm}@{}}
+\caption{Classification and analytical comparison of 20 core studies. Category
+counts are 7/5/2/3/3. The PACE connection is a qualitative synthesis; these studies
+are not empirical baselines in the present experiment.}\label{tab:twenty-studies}\\
+\toprule Study & Main mechanism or decision & Connection and boundary for PACE\\\midrule
+\endfirsthead
+\multicolumn{3}{l}{\textit{Table~\thetable\ continued: classification of 20 core studies}}\\
+\toprule Study & Main mechanism or decision & Connection and boundary for PACE\\\midrule
+\endhead
+\midrule\multicolumn{3}{r}{\textit{Continued on next page}}\\\endfoot
+\bottomrule\endlastfoot
+\multicolumn{3}{@{}l}{\textbf{A. Candidate generation and refinement (7)}}\\*[3pt]
+EvoPrompt (2024)~\cite{evoprompt} & LLM variation inside evolutionary prompt search. & Establishes population-based discrete search; PACE studies the later survival decision.\\[3pt]
+Promptbreeder (2024)~\cite{promptbreeder} & Co-evolution of task prompts and mutation prompts. & Shows that retained prompts affect future variation; PACE does not evolve mutation instructions.\\[3pt]
+OPRO (2024)~\cite{opro} & History-conditioned LLM proposals from scored solutions. & Uses optimization feedback; differs from a population-level removal gate.\\[3pt]
+InstructZero (2024)~\cite{instructzero} & Bayesian optimization of a soft prompt that generates discrete instructions. & Black-box target optimization with a different representation and proposal mechanism.\\[3pt]
+PromptWizard (2025)~\cite{promptwizard} & Critique and synthesis of instructions and examples. & Richer feedback and variation; no head-to-head inference from PACE's small search.\\[3pt]
+RiOT (2025)~\cite{riot} & Text-gradient refinement, residual connections and a search tree. & Addresses diversity and semantic drift rather than the same bounded survivor rule.\\[3pt]
+GEPA (2026)~\cite{gepa} & Reflection on trajectories and Pareto reuse of lessons. & Reuses complementary successes; PACE uses binary paired observations and a simpler operator.\\[3pt]
+\multicolumn{3}{@{}l}{\textbf{B. Cost objectives and evaluation allocation (5)}}\\*[3pt]
+CAPO (2025)~\cite{capo} & Evolutionary search, racing and length-aware optimization. & Closest architectural motivation; PACE isolates a survivor-rule contrast.\\[3pt]
+MO-CAPO (2026)~\cite{mocapo} & Multi-objective performance--cost search with budget allocation. & Motivates deployment trade-offs; PACE does not claim a better frontier across tasks.\\[3pt]
+BudgetAPO (2026)~\cite{budgetapo} & Noise-adaptive evaluation slices and paired accept/reject decisions. & Direct precedent for pairing under tight budgets; PACE adds its particular archive/survival integration.\\[3pt]
+IPOMP (2025)~\cite{ipomp} & Representative data selection refined by model performance. & Changes which examples inform comparisons; not implemented in PACE's random shared sampling.\\[3pt]
+IAPO (2026)~\cite{iapo} & Joint prompt and inference-scale selection; sequential trimming. & Makes budget and preference explicit; its error guarantees are not PACE guarantees.\\[3pt]
+\multicolumn{3}{@{}l}{\textbf{C. Structured search and operator control (2)}}\\*[3pt]
+AutoPDL (2025)~\cite{autopdl} & Structured prompting-program search with successive halving. & Broadens the search object beyond strings; highlights allocation as a separate design choice.\\[3pt]
+Evolutionary toolbox (2025)~\cite{toolbox} & Stage decomposition, operator checking, feedback and evaluation improvements. & Supports modular analysis; PACE freezes these surrounding components.\\[3pt]
+\multicolumn{3}{@{}l}{\textbf{D. Evaluation robustness and model dependence (3)}}\\*[3pt]
+Revisiting OPRO (2024)~\cite{opro_revisit} & Tests optimizer limitations in smaller LLMs. & Motivates model-specific conclusions and simple baselines.\\[3pt]
+Probability-based selection (2024)~\cite{probsel} & Unified mutual-information view and calibration. & Selection depends on scoring assumptions; PACE uses correctness rather than token probabilities.\\[3pt]
+Optimization before Evaluation (2025)~\cite{evalbefore} & Examines ranking changes after model-specific prompt optimization. & Motivates controlled evaluation; does not resolve PACE's shared-test-set uncertainty.\\[3pt]
+\multicolumn{3}{@{}l}{\textbf{E. Noisy evolutionary selection (3)}}\\*[3pt]
+Depth over Fidelity (2026)~\cite{depth} & Probabilistic elite membership under fixed evaluation budgets. & Integrates rank uncertainty through weights, unlike PACE's gate and archive.\\[3pt]
+Selection-noise analysis (2025)~\cite{selectionnoise} & Genetic drift in stochastic selection schemes. & Reproduction noise differs from noisy estimated fitness; PACE addresses only part of the problem.\\[3pt]
+Adaptive-sampling CMA-ES (2026)~\cite{robotnoise} & Sampling-time allocation based on sorting difficulty. & Motivates precision-aware evaluation; continuous robotics results are not prompt benchmarks.\\
+\end{longtable}
+\endgroup

@@ -1,0 +1,26 @@
+\paragraph{Dataset construction and output interpretation.}
+The frozen manifest contains 40 search examples per class and 50 held-out examples
+per class. Search articles come from the AG News training split and held-out
+articles from its test split. The four class names are World, Sports, Business,
+and Sci/Tech. Disjointness is checked both by stored sample IDs and by
+source-split/index pairs. Stratification controls class counts in these small
+samples, but does not remove all variation in article difficulty or topic mix.
+The reported accuracy is ordinary micro-accuracy on a class-balanced fixed set;
+per-class errors are not reconstructed from the winner summaries.
+
+Each rendered prompt is supplied as a user message through the target model's
+chat template, with a generation prompt added. Greedy decoding and an eight-token
+output cap are used throughout. The parser examines the first output line,
+limited to 80 characters, attempts to extract a label field if present, and
+matches a fixed set of label patterns. Its pattern order is Sci/Tech, Sports,
+Business, then World; a numeric label from one to four is a fallback. Outputs
+that cannot be parsed are counted as incorrect. Measured fitness
+reflects the combination of instruction, model response, decoding cap and parser,
+rather than abstract classification ability independently of response format.
+
+This interaction is relevant for the format-oriented prompts. A request for JSON
+or explanatory text can consume the short output allowance, while the parser
+accepts some variants beyond the canonical label strings. Changing the parser or
+the decoding limit after seeing results would change the evaluation task. The
+current study holds them fixed and does not infer that a longer explanation
+would improve or worsen accuracy on this data.

@@ -1,91 +1,145 @@
-# PACE (DSAI6707 course delivery)
+# PACE
 
-**Primary write-up:** [`reports/PACE_Course_Report.md`](reports/PACE_Course_Report.md) · **6-min talk:** [`reports/PACE_Presentation_6slides.md`](reports/PACE_Presentation_6slides.md)  
+**Paired-Assessment with Confidence-Preserving Evolution**
 
-Experiments are **frozen** (no new algorithms / GPU runs for delivery).  
-DICE-PO negatives stay historical under `outputs/gate1/` and `reports/DICE_PO_Technical_Report.md`.
+Guosheng Wang · DSAI6707 Advanced Computational Intelligence
 
-## Status
+PACE studies survivor selection in evolutionary prompt optimization. It uses
+paired observations to decide when a prompt can be removed, and a bounded archive
+to keep unresolved candidates. The experiments use AG News and Qwen2.5-7B-Instruct.
 
-| Track | Gate | Status |
-|------|------|--------|
-| DICE (legacy) | Gate 1 | NO-GO (retained, not in main story) |
-| **PACE** | Gate 0 / 1 | pass / GO |
-| **PACE** | Gate 2 **15-seed primary** | `outputs/pace/gate2_cap_align_15seed/` |
+[Read the paper](paper/main.pdf) · [LaTeX source](paper/main.tex) ·
+[Paper build instructions](paper/README.md) ·
+[Primary results](outputs/pace/gate2_cap_align_15seed/PACE_GATE2_15SEED.md)
 
-See `PROJECT_DIRECTION.md`.
+## Results
 
-## Setup
+The primary online comparison matches the active population, archive capacity,
+search budget and evaluation policy across 15 paired search seeds.
 
-```bash
-cd /home3/river/DSAI6707/DICE_PO
-# CPU / Gate 0 env (already created at .conda)
-source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate /home3/river/DSAI6707/DICE_PO/.conda
+| Measure | B0+Archive | PACE |
+| --- | ---: | ---: |
+| Held-out accuracy | 78.4% | 80.1% |
+| Deployment tokens per example | 112.6 | 115.5 |
+| Mean acquired search observations | 1,275 | 1,276 |
+| Retention capacity | 16 | 16 |
 
-# Keep HF downloads on /home3 (root disk is full):
-export HF_HOME=/home3/river/DSAI6707/DICE_PO/.hf_cache
-export HUGGINGFACE_HUB_CACHE=$HF_HOME/hub
+The mean paired accuracy difference is **+1.70 percentage points**, with a
+95% Student-t interval of **[−0.65, 4.05] points** and a two-sided sign-flip
+permutation p-value of **0.150**. The interval includes zero. The first three
+seeds were exploratory; the remaining twelve extend that study. All runs use
+the same 200 held-out examples.
 
-# GPU runtime used for smoke (torch+CUDA already available):
-#   /home3/river/comfyui-minimax-h3/.venv/bin/python
-```
+![Paired online accuracy differences](paper/figures/online_paired.png)
 
-Frozen assets already present:
+Offline replay reduced false elimination from 18.3% to 2.5% at budget 640.
+That comparison uses different retention capacities (8 for B0, 16 for PACE),
+so it measures the combined gate-and-archive effect. The bootstrap gate is a
+selection heuristic; it has no simultaneous or anytime-valid coverage guarantee.
 
-- `data/prompt_pool.json` — 16 prompts
-- `data/split_manifest.json` — 160 search + 200 test AG News IDs (seed 6707)
+## Repository contents
 
-## Gate 0
+| Path | Contents |
+| --- | --- |
+| `paper/` | Current manuscript, compiled PDF, seven figures and plotting script |
+| `src/pace/` | Paired bootstrap, survivor rule and audit metrics |
+| `src/policies/` | Evaluation-allocation policies, including Paired Racing |
+| `configs/pace_gate2_cap_align_15seed.yaml` | Frozen primary online configuration |
+| `data/` | Prompt pool and fixed search/test manifest |
+| `outputs/pace/gate1/` | Offline PACE replay records |
+| `outputs/pace/gate2_cap_align_15seed/` | 30 primary run records and paired summaries |
+| `outputs/pace/gate2_cap_align_15seed/analysis/` | Descriptive archive audit |
+| `tests/` | Budget, pairing, metrics and information-access checks |
+| `reports/` | Earlier course report and presentation outline |
 
-```bash
-.conda/bin/pytest
-```
+The current paper reviews 20 core studies in five categories. Each section has
+at most five subsections. Earlier DICE experiments are retained under
+`outputs/gate1/`, `outputs/gate2/` and `reports/DICE_PO_Technical_Report.md`;
+they are not included in the PACE primary estimate.
 
-## GPU smoke
+## Setup and CPU checks
 
-```bash
-export HF_HOME=/home3/river/DSAI6707/DICE_PO/.hf_cache
-export HUGGINGFACE_HUB_CACHE=$HF_HOME/hub
-PYTHONPATH=src /home3/river/comfyui-minimax-h3/.venv/bin/python scripts/smoke_gpu.py --device cuda:0
-```
-
-## Gate 1 (after GPU smoke)
-
-```bash
-# One-shot precompute 16 × (160+200) evaluations (GPU python)
-PYTHONPATH=src /home3/river/comfyui-minimax-h3/.venv/bin/python \
-  scripts/precompute_matrix.py --device cuda:0
-
-# Offline replay (CPU conda ok; no new LLM calls)
-.conda/bin/python scripts/run_replay.py
-
-# Pipeline dry-run without a matrix:
-.conda/bin/python scripts/run_replay.py --synthetic --smoke
-```
-
-Primary metric: **test preference selection regret** at budget **640**.
-
-## Gate 2 (PACE online)
-
-Requires **PACE Gate 1 GO** (`outputs/pace/gate1/PACE_GO_NOGO.md`). Survivor-only contrast under shared Paired Racing: **B0** `point_estimate_truncate` vs **PACE** `pace_bounded_survive`. Winner from search observations only, then sealed test. Writes only under `outputs/pace/gate2/` (does not touch `outputs/gate1`, legacy `outputs/gate2`, or `reports/`).
+Use Python 3.11 or a compatible environment. From a fresh checkout:
 
 ```bash
-export HF_HOME=/home3/river/DSAI6707/DICE_PO/.hf_cache
-export HUGGINGFACE_HUB_CACHE=$HF_HOME/hub
-PY=/home3/river/comfyui-minimax-h3/.venv/bin/python
-
-# Smoke (small gen/budget)
-PYTHONPATH=src $PY scripts/run_pace_gate2.py --smoke --device cuda:0
-
-# Full (pop=8, gen=4, seeds=42/123/456, calls_cap=1280)
-PYTHONPATH=src $PY scripts/run_pace_gate2.py --device cuda:0
+git clone https://github.com/moonriver0922/DSAI6707-PACE.git
+cd DSAI6707-PACE
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
 
-Config: `configs/pace_gate2.yaml` (ε=0, n_min=8, B=200, μ=8, K=8).
+The following commands use the stored records and do not load the language model:
 
-Legacy EC stub (historical, not PACE): `scripts/run_online.py --go` → `outputs/gate2/`.
+```bash
+python -m pytest
+python paper/make_figures.py
+PYTHONPATH=src python scripts/run_pace_gate1.py \
+  --config configs/pace_gate1.yaml \
+  --out-dir outputs/reproduced/pace_gate1
+```
 
-## Layout
+The plotting script validates online values against the 30 raw JSON records and
+writes vector PDFs plus PNG previews to `paper/figures/`. To recompute the primary
+summary without overwriting the archived results:
 
-See plan §6. Policies implement `BudgetPolicy.select_queries(state, remaining_calls)`.
+```bash
+mkdir -p outputs/reproduced/primary
+cp outputs/pace/gate2_cap_align_15seed/{pace,b0_archive}_s*.json \
+  outputs/reproduced/primary/
+PYTHONPATH=src python scripts/aggregate_pace_gate2_15seed.py \
+  --config configs/pace_gate2_cap_align_15seed.yaml \
+  --out-dir outputs/reproduced/primary
+```
+
+## Build the paper
+
+The paper uses the official NeurIPS 2026 style in preprint mode. Compile with
+Tectonic or a LaTeX installation that includes `latexmk`:
+
+```bash
+cd paper
+tectonic main.tex
+# Alternative: latexmk -pdf main.tex
+```
+
+For Overleaf, upload `main.tex`, `neurips_2026.sty`, `sections/` and `figures/`,
+then select `main.tex` as the main document. References are embedded in the TeX;
+a separate BibTeX step is unnecessary. See [paper/README.md](paper/README.md)
+for the figure list and source-verification notes.
+
+## Run new model evaluations
+
+The original runs used one NVIDIA A100 80GB, BF16 and greedy decoding with at
+most eight new tokens. The CPU requirements file does not install the GPU stack.
+Install CUDA-compatible PyTorch, Transformers, Accelerate, Datasets, Tokenizers
+and SentencePiece in the inference environment, with access to
+`Qwen/Qwen2.5-7B-Instruct`.
+
+Use a separate output directory for new runs:
+
+```bash
+PYTHONPATH=src python scripts/run_pace_gate2.py \
+  --config configs/pace_gate2_cap_align_15seed.yaml \
+  --out-dir outputs/reproduced/online \
+  --experiment reproduced_primary \
+  --device cuda:0
+```
+
+This is the entry point for rerunning the protocol, not a claim that a new GPU
+run has been performed. Existing JSON records remain the evidence for the paper.
+
+## Accounting and limitations
+
+- The 1,280-observation budget counts newly acquired prompt–sample pairs within
+  each search state. An inference-cache hit can still count as a new observation
+  for that run; the counter is not a physical GPU-call total.
+- The evaluator retains historical prompt IDs after survivor removal. The paper
+  documents this behavior; changing it would require new experiments.
+- Parent IDs are incomplete in the saved logs. Archive-to-active transitions
+  indicate breeding opportunities, not verified descendant contributions.
+- One dataset, one target model and a shared 200-example test set limit how far
+  the observed effect can be generalized.
+
+The stored results and configurations are kept unchanged. Generated replay
+outputs, environments, model weights and caches are excluded from version control.
